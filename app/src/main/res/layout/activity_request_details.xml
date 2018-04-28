@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLightBlue"
+            android:gravity="center"
+            android:padding="@dimen/dp5w"
+            android:text="@string/label_work_shop_offer"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp120h"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp120h"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_temp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.7"
+                android:background="@color/colorDarkGray"
+                android:orientation="vertical">
+
+            </RelativeLayout>
+
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/rb_request_details_rating"
+                style="@style/Widget.MaterialRatingBar.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/tv_opened_request_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rb_request_details_rating"
+                android:layout_centerHorizontal="true"
+                android:text="(3.0) rate"
+                android:textColor="@color/colorYellow" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5h"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/label_average_price"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5h"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/label_average_price"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5h"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/label_average_price"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp120h"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp120h"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_temp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorLightBlue"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp5w">
+
+                <TextView
+                    android:id="@+id/tv_request_details_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5h"
+                    android:drawableStart="@mipmap/ic_fix"
+                    android:drawablePadding="@dimen/dp5w"
+                    android:gravity="center"
+                    android:text="@string/label_average_price"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_request_details_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp5w"
+                    android:layout_below="@+id/tv_request_details_type"
+                    android:layout_marginTop="@dimen/dp5h"
+                    android:drawableStart="@mipmap/ic_car"
+                    android:gravity="center"
+                    android:text="@string/label_average_price"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_request_details_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp5w"
+                    android:layout_below="@+id/tv_request_details_model"
+                    android:layout_marginTop="@dimen/dp5h"
+                    android:drawableStart="@mipmap/ic_location"
+                    android:gravity="center"
+                    android:text="@string/label_average_price"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_request_details_calender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp5w"
+                    android:layout_below="@+id/tv_request_details_model"
+                    android:layout_marginStart="@dimen/dp5w"
+                    android:layout_marginTop="@dimen/dp5h"
+                    android:layout_toEndOf="@+id/tv_request_details_location"
+                    android:drawableStart="@mipmap/ic_calendar"
+                    android:gravity="center"
+                    android:text="@string/label_average_price"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.cuieney.progress.library.RainbowProgressBar
+            android:id="@+id/progress1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp10h"
+            app:progress_max="100"
+            app:progress_current="30"
+            app:progress_start_color="#09f736"
+            app:progress_unreached_color="@color/colorWhite"
+            app:progress_end_color="#f7e309"
+            app:progress_type="line"
+            app:progress_height="@dimen/dp100h"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2w"
+            android:background="@drawable/view_dashed_background" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp5w"
+            android:text="@string/label_description"
+            android:textColor="@color/colorGrayLevel3"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp5w"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/sp12" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2w"
+            android:background="@drawable/view_dashed_background" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp5w"
+            android:text="@string/offer_info"
+            android:textColor="@color/colorGrayLevel3"
+            android:textSize="@dimen/sp12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp1w"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5h"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/label_average_price"
+                android:textColor="@color/colorDarkGray2"
+                android:textSize="@dimen/sp12"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5h"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/label_average_price"
+                android:textColor="@color/colorDarkGray2"
+                android:textSize="@dimen/sp12"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5h"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/label_average_price"
+                android:textColor="@color/colorDarkGray2"
+                android:textSize="@dimen/sp12"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2w"
+            android:background="@drawable/view_dashed_background" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp5w"
+            android:text="@string/label_work_shop_info"
+            android:textColor="@color/colorGrayLevel3"
+            android:textSize="@dimen/sp12" />
+    </LinearLayout>
+</ScrollView>

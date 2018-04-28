@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlueDark"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+
+        android:id="@+id/iv_active_mail_logo"
+        android:layout_width="@dimen/dp170w"
+        android:layout_height="@dimen/dp90h"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp15h"
+        android:src="@drawable/img_find_fix_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_active_mail_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp10h"
+        android:text="@string/label_check_mail"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:layout_above="@+id/tv_active_mail_site"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp10h"
+        android:text="@string/label_for_more_details"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/tv_active_mail_site"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/label_find_fix_site"
+        android:layout_marginBottom="@dimen/dp15h"
+        android:textColor="@color/colorWhite" />
+
+</RelativeLayout>
+
+

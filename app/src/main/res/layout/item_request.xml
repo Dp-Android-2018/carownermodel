@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <View
+        android:layout_width="@dimen/dp10h"
+        android:layout_height="match_parent"
+        android:background="@drawable/view_to_bottom_left_border_background" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp15h"
+        android:layout_marginEnd="@dimen/dp2w"
+        android:layout_marginStart="@dimen/dp2w"
+        android:layout_marginTop="@dimen/dp15h"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_item_request_avg_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/label_average_price"
+            android:textColor="@color/colorBlueDark2" />
+
+        <TextView
+            android:id="@+id/tv_item_request_avg_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_request_avg_price_text"
+
+            android:text="100 : 499"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorBlueDark2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_request_avg_price_text"
+            android:layout_marginStart="@dimen/dp2w"
+            android:layout_marginTop="@dimen/dp5h"
+            android:layout_toEndOf="@+id/tv_item_request_avg_price"
+            android:text="SAR"
+            android:textColor="@color/colorBlueDark2"
+            android:textSize="@dimen/sp12" />
+
+
+        <TextView
+            android:id="@+id/tv_item_request_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_item_request_time"
+            android:layout_centerHorizontal="true"
+            android:text="Today"
+            android:textColor="@color/colorBlueDark2" />
+
+        <TextView
+            android:id="@+id/tv_item_request_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="07 : 15"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorBlueDark2"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="@dimen/dp1w"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp2w"
+        android:background="@color/colorBlue" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_request_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5h"
+            android:layout_marginStart="@dimen/dp5w"
+            android:text="@string/label_average_price"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorBlueDark2"
+            android:textStyle="bold" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            style="@style/Widget.MaterialRatingBar.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/dp5w"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_request_title"
+            android:layout_marginTop="@dimen/dp5h" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/view_dashed_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dp15h"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5h"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/sp12"
+                android:text="@string/label_average_price"
+                android:textColor="@color/colorGrayLevel3"
+
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5h"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/sp12"
+                android:text="@string/label_average_price"
+                android:textColor="@color/colorGrayLevel3"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5h"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/sp12"
+                android:text="@string/label_average_price"
+                android:textColor="@color/colorGrayLevel3"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
