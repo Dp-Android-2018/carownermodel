@@ -1,4 +1,4 @@
-package com.example.mohamedatef.findandfix;
+package com.example.dp.findandfix;
 
 import org.junit.Test;
 

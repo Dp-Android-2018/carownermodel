@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FindandFix</string>
     <string name="label_login_find_fix">Login to Find and fix</string>
-    <string name="label_register_find_fix">Register to Find and fix</string>
+    <string name="label_register_find_fix">Login to Find and fix</string>
     <string name="hint_password">Password</string>
     <string name="hint_confirm_password">Confirm Password</string>
     <string name="hint_email">Email</string>
@@ -43,6 +43,7 @@
     <string name="action_no_another">No, another car</string>
     <string name="label_choose_brand">Choose Brand</string>
     <string name="label_choose_model">Choose Model</string>
+    <string name="label_choose_year">Choose Year</string>
     <string name="label_year">Year</string>
     <string name="label_car">Car</string>
     <string name="label_problem">Problem</string>
@@ -55,4 +56,18 @@
     <string name="hint_write_car_notes">Write your notes about your car</string>
     <string name="label_average_price">Average Price</string>
     <string name="label_work_shop_offer">Workshop Offer</string>
+    <string name="label_step_one">Step 1 of 3</string>
+    <string name="label_step_two">Step 2 of 3</string>
+    <string name="label_step_three">Step 3 of 3</string>
+    <string name="waiting_workshops">Waiting Search for Workshops</string>
+    <string name="msg_fill_data">Please fill data</string>
+    <string name="msg_invalid_email_password">Wrong email or password</string>
+    <string name="msg_invalid_data">Wrong data</string>
+    <string name="msg_internet_connection">Check internet connection</string>
+    <string name="label_choose_country">Choose Country</string>
+    <string name="label_choose_city">Choose City</string>
+    <string name="msg_select_country">Please select country</string>
+    <string name="label_select_action">Select Action</string>
+    <string name="label_select_gallery">Select photo from Gallery</string>
+    <string name="label_select_camera">Capture photo from Camera</string>
 </resources>

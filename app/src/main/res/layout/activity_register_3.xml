@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="UploadImageModelView"
+            type="findandfix.viewmodel.UploadImageModelView" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_upload_photo"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorBlueDark"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rl_register_3_image_container"
+                android:layout_width="@dimen/dp150w"
+                android:layout_height="@dimen/dp150w"
+                android:layout_marginTop="@dimen/dp5h"
+                android:background="@drawable/rl_circle_background"
+                android:onClick="@{UploadImageModelView::selectImage}">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_register_3_upload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp5h"
+                        android:gravity="center"
+                        android:text="@string/label_upload"
+                        android:textColor="@color/colorGray"
+                        android:textStyle="bold" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/rl_register_3_image"
+                        android:layout_width="@dimen/dp70w"
+                        android:layout_height="@dimen/dp70w"
+                        android:layout_below="@+id/tv_register_3_upload"
+                        android:layout_centerHorizontal="true"
+                        bind:imageBitmap="@{UploadImageModelView.picBitmap}"
+                        android:layout_marginTop="@dimen/dp5h"
+                        android:src="@drawable/img_upload"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_register_2_next"
+            android:layout_width="@dimen/dp130w"
+            android:layout_height="@dimen/dp30h"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp30h"
+            android:background="@drawable/btn_border_background"
+
+            android:text="@string/action_register"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+
+    </RelativeLayout>
+
+</layout>

@@ -1,4 +1,4 @@
-package com.example.mohamedatef.findandfix.utils;
+package findandfix.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

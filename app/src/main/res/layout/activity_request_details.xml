@@ -246,7 +246,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/label_average_price"
-                android:textColor="@color/colorDarkGray2"
+                android:textColor="@color/colorDarkGray3"
                 android:textSize="@dimen/sp12"
                 android:textStyle="bold" />
 
@@ -257,7 +257,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/label_average_price"
-                android:textColor="@color/colorDarkGray2"
+                android:textColor="@color/colorDarkGray3"
                 android:textSize="@dimen/sp12"
                 android:textStyle="bold" />
 
@@ -268,7 +268,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/label_average_price"
-                android:textColor="@color/colorDarkGray2"
+                android:textColor="@color/colorDarkGray3"
                 android:textSize="@dimen/sp12"
                 android:textStyle="bold" />
         </LinearLayout>

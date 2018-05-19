@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBlueDark"
@@ -7,7 +8,6 @@
     android:orientation="vertical">
 
     <ImageView
-
         android:id="@+id/iv_active_mail_logo"
         android:layout_width="@dimen/dp170w"
         android:layout_height="@dimen/dp90h"
@@ -16,6 +16,7 @@
         android:src="@drawable/img_find_fix_logo" />
 
     <TextView
+        android:id="@+id/tv_active_mail_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/iv_active_mail_logo"
@@ -24,7 +25,19 @@
         android:text="@string/label_check_mail"
         android:textColor="@color/colorWhite" />
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_animation_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/tv_active_mail_text"
+        android:layout_above="@+id/tv_active_mail_more"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="mailLoading.json"
+        app:lottie_loop="true" />
+
     <TextView
+        android:id="@+id/tv_active_mail_more"
         android:layout_above="@+id/tv_active_mail_site"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

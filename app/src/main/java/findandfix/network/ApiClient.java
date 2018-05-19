@@ -1,10 +1,8 @@
-package com.example.mohamedatef.findandfix.network;
+package findandfix.network;
 
 
-import com.example.dell.workshopmodule.utils.ConfigurationFile;
-
+import findandfix.utils.ConfigurationFile;
 import java.util.concurrent.TimeUnit;
-
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;

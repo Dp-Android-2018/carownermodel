@@ -1,9 +1,8 @@
-package com.example.mohamedatef.findandfix.utils;
+package findandfix.utils;
 
 import android.app.Activity;
 import android.app.TimePickerDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -14,10 +13,13 @@ import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.util.Base64;
 import android.widget.TimePicker;
-import com.example.mohamedatef.findandfix.model.global.BaseModel;
-import com.example.mohamedatef.findandfix.model.global.BrandItem;
-import com.example.mohamedatef.findandfix.model.global.UserData;
-import com.example.mohamedatef.findandfix.view.ui.Application.MyApplication;
+
+import com.example.dp.findandfix.R;
+import findandfix.model.global.BaseModel;
+import findandfix.model.global.BrandItem;
+import findandfix.model.global.UserData;
+import findandfix.Application.MyApplication;
+import findandfix.view.ui.callback.UpdateTimeListener;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -61,7 +63,7 @@ public class CustomUtils {
             }
 
         }, hour, minute, true);//Yes 24 hour time
-        mTimePicker.setTitle(context.getString(R.string.select_time));
+        mTimePicker.setTitle(context.getString(R.string.label_car));
         mTimePicker.show();
 
     }
@@ -144,7 +146,7 @@ public class CustomUtils {
     }
 
     public UserData getSaveUserObject(Context context){
-        SharedPrefrenceUtils prefrenceUtils=new SharedPrefrenceUtils(context);
+        SharedPreferenceUtils prefrenceUtils=new SharedPreferenceUtils(context);
         UserData userData=(UserData) prefrenceUtils.getSavedObject(ConfigurationFile.SharedPrefConstants.PREF_WORKSHOP_DATA, UserData.class);
         return userData;
     }
@@ -160,14 +162,15 @@ public class CustomUtils {
     }
 
     public void logout(Activity activity){
-        Intent i=new Intent(activity, LoginActivity.class);
+        /*Intent i=new Intent(activity, LoginActivity.class);
         activity.finishAffinity();
         clearSharedPref((Context)activity);
         activity.startActivity(i);
+        */
     }
 
     public void clearSharedPref(Context context){
-        SharedPrefrenceUtils prefrenceUtils=new SharedPrefrenceUtils(context);
+        SharedPreferenceUtils prefrenceUtils=new SharedPreferenceUtils(context);
         prefrenceUtils.clearToken();
     }
 
@@ -229,11 +232,12 @@ public class CustomUtils {
     }
 
     public void endSession(Activity activity){
-            SharedPrefrenceUtils utils=new SharedPrefrenceUtils(activity);
+            /*SharedPreferenceUtils utils=new SharedPreferenceUtils(activity);
             utils.clearToken();
             Intent i=new Intent(activity,LoginActivity.class);
             activity.startActivity(i);
             activity.finish();
+            */
     }
 
 

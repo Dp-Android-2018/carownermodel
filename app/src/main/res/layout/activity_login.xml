@@ -1,100 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/img_background"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:weightSum="3"
-    >
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout
+    <data>
+
+        <variable
+            name="LoginViewModel"
+            type="findandfix.viewmodel.LoginViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_parent"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center_horizontal|bottom"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="@dimen/dp170w"
-            android:layout_height="@dimen/dp90h"
-            android:src="@drawable/img_find_fix_logo" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_login_find_fix"
-            android:textStyle="bold"
-            android:textColor="@color/colorBlue" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <EditText
-            android:id="@+id/et_register_email"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dp20w"
-            android:layout_marginStart="@dimen/dp20w"
-            android:background="@drawable/et_border_background"
-            android:hint="@string/hint_email"
-            android:inputType="textEmailAddress"
-            android:paddingBottom="@dimen/dp5h"
-            android:paddingStart="@dimen/dp5w"
-            android:paddingTop="@dimen/dp5h" />
+            android:layout_height="match_parent"
+            android:background="@drawable/img_background"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="3">
 
-        <EditText
-            android:id="@+id/et_register_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dp20w"
-            android:layout_marginStart="@dimen/dp20w"
-            android:layout_marginTop="@dimen/dp20h"
-            android:background="@drawable/et_border_background"
-            android:hint="@string/hint_password"
-            android:inputType="textPassword"
-            android:paddingBottom="@dimen/dp5h"
-            android:paddingStart="@dimen/dp5w"
-            android:paddingTop="@dimen/dp5h" />
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="@dimen/dp170w"
+                    android:layout_height="@dimen/dp90h"
+                    android:src="@drawable/img_find_fix_logo" />
 
-        <Button
-            android:id="@+id/btn_login_enter"
-            android:layout_width="@dimen/dp130w"
-            android:layout_height="@dimen/dp30h"
-            android:background="@drawable/btn_border_background"
-            android:text="@string/action_login"
-            android:textAllCaps="false"
-            android:textColor="@color/colorWhite" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_login_find_fix"
+                    android:textColor="@color/colorBlue"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-        <TextView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_register_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:layout_marginStart="@dimen/dp20w"
+                    android:background="@drawable/et_border_background"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"
+                    android:text="@={LoginViewModel.email}"
+                    android:paddingBottom="@dimen/dp5h"
+                    android:paddingStart="@dimen/dp5w"
+                    android:paddingTop="@dimen/dp5h" />
+
+                <EditText
+                    android:id="@+id/et_register_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:layout_marginStart="@dimen/dp20w"
+                    android:layout_marginTop="@dimen/dp20h"
+                    android:background="@drawable/et_border_background"
+
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="@dimen/dp5h"
+                    android:paddingStart="@dimen/dp5w"
+                    android:paddingTop="@dimen/dp5h" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_login_enter"
+                    android:layout_width="@dimen/dp130w"
+                    android:layout_height="@dimen/dp30h"
+                    android:background="@drawable/btn_border_background"
+                    android:onClick="@{LoginViewModel::checkLogin}"
+                    android:text="@string/action_login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5h"
+                    android:text="@string/label_forgot_password"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/sp10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:text="@string/label_new_user"
+                    android:textColor="@color/colorBlue"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp5h"
-            android:textSize="@dimen/sp10"
-            android:text="@string/label_forgot_password"
-            android:textColor="@color/colorBlue" />
+            android:layout_centerInParent="true"
+            android:visibility="@{LoginViewModel.progressDialog}" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp15h"
-            android:textStyle="bold"
-            android:text="@string/label_new_user"
-            android:textColor="@color/colorBlue" />
-
-    </LinearLayout>
-</LinearLayout>
+    </RelativeLayout>
+</layout>

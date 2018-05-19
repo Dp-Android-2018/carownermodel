@@ -1,4 +1,4 @@
-package com.example.mohamedatef.findandfix.utils;
+package findandfix.utils;
 
 /**
  * Created by DELL on 04/03/2018.
@@ -9,37 +9,15 @@ public class ConfigurationFile {
     public static class SharedPrefConstants{
         public static final String SHARED_PREF_NAME="FIND_AND_FIX_WORKSHOP";
         public static final String PREF_WORKSHOP_DATA="WORKSHOP_DATA";
-        public static final String PREF_REGISTER_OBJECT ="FIRST_STEP";
-        public static final String PREF_REQUEST_OBJECT ="REQUEST_OBJECT";
-        public static final String PREF_COUNTRIES_OBJECT ="COUNTRIES_OBJECT";
-        public static final String PREF_CITIES_OBJECT ="CITIES_OBJECT";
-        public static final String PREF_BRANDS_OBJECT ="BRANDS_OBJECT";
-        public static final String PREF_SPECIALIZATIONS_OBJECT ="SPECIALIZATION_OBJECT";
-        public static final String PREF_URGNENTS_OBJECT ="URGENTS_OBJECT";
     }
 
     public static class UrlConstants{
-        public static final String BASE_URL="http://new.findandfix.com/";
-        public static final String LOGIN_URL="api/workshop/login";
-        public static final String REGISTER_URL="api/workshop/register";
-        public static final String COUNTRIES_URL="api/countries";
-        public static final String CITIES_URL="api/cities/{country_id}";
-        public static final String BRANDS_URL="api/brands";
-        public static final String MODELS_URL="api/models/{brand_id}";
-        public static final String SPECIALIZE_URL="api/specializations";
-        public static final String CHECK_EMAIL_URL="api/workshop/check/email";
-        public static final String CHECK_MOBILE_URL="api/workshop/check/mobile";
-        public static final String URGENT_REQUEST_TYPES_URL="api/urgent-request-types";
-        public static final String WORKSHOP_NORMAL_REQUESTS_URL="api/workshop/normal-requests";
-        public static final String WORKSHOP_PENDING_REQUESTS_URL="api/workshop/normal-requests/status/pending";
-        public static final String WORKSHOP_IN_PROGRESS_REQUESTS_URL="api/workshop/normal-requests/status/in-progress";
-        public static final String WORKSHOP_COMPLETED_REQUESTS_URL="api/workshop/normal-requests/status/completed";
-        public static final String GET_WORKSHOP_OFFERS_URL="api/workshop/offers/{requestID}";
-        public static final String COMPLETE_WORKSHOP_REQUEST_URL="api/workshop/offers/complete-fixing/{offerID}";
-        public static final String ADD_WORKSHOP_OFFER_URL="api/workshop/offers/{requestID}";
-        public static final String UPDATE_DELETE_WORKSHOP_OFFER_URL="api/workshop/offers/{offerID}";
-        public static final String UPDATE_WORKSHOP_PROFILE_URL="api/workshop/profile";
-        public static final String SUBSCRIBED_URL="api/workshop/subscribe";
+        public static final String BASE_URL="http://new.findandfix.com/api/";
+        public static final String LOGIN_URL="carowner/login";
+        public static final String COUNTRIES="countries";
+        public static final String CITIES="cities/{country_id}";
+        public static final String BRANDS="brands";
+        public static final String MODELS="models/{brand_id}";
     }
 
 
@@ -112,6 +90,6 @@ public class ConfigurationFile {
 
     public static class PermissionsClass {
         public static final String WRITE_EXTERNAL_STORAGE =android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
-        public static final int REQUEST_CODE_WRITE_EXTERNAL_STORAGE =101;
+        public static final int REQUEST_CODE_WRITE_EXTERNAL_STORAGE = 101;
     }
 }

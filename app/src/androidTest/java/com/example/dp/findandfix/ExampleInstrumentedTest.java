@@ -1,4 +1,4 @@
-package com.example.mohamedatef.findandfix;
+package com.example.dp.findandfix;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

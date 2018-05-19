@@ -5,6 +5,7 @@
     <color name="colorBlueDark2">#114264</color>
     <color name="colorAccent">#2974cf</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorBlackTransparent">#3d000000</color>
     <color name="colorYellow">#efce4a</color>
     <color name="colorBlue">#2974cf</color>
     <color name="colorLightBlue">#3498db</color>
@@ -15,6 +16,8 @@
     <color name="colorGrayLevel3">#ababab</color>
     <color name="colorGrayLevel4">#ebebeb</color>
     <color name="colorDarkGray">#28252e</color>
-    <color name="colorDarkGray2">#4d4d4d</color>
+    <color name="colorDarkGray2">#a3a3a3</color>
+    <color name="colorDarkGray3">#4d4d4d</color>
+
 
 </resources>

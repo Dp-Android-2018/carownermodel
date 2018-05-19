@@ -32,7 +32,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_margin="@dimen/dp5w"
                 android:text="3:10 pm"
-                android:textColor="@color/colorDarkGray2" />
+                android:textColor="@color/colorDarkGray3" />
         </RelativeLayout>
 
         <TextView
@@ -42,6 +42,6 @@
             android:layout_alignParentEnd="true"
             android:layout_margin="@dimen/dp5w"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            android:textColor="@color/colorDarkGray2" />
+            android:textColor="@color/colorDarkGray3" />
     </LinearLayout>
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.mohamedatef.findandfix;
+package findandfix;
 
 import android.animation.Animator;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.example.dp.findandfix.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

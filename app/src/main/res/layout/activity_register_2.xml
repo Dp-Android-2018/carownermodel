@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="RegisterModelView2"
+            type="findandfix.viewmodel.RegisterModelView2" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_background"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_register_2_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:layout_marginStart="@dimen/dp20w"
+                    android:background="@drawable/et_border_background"
+                    android:hint="@string/hint_first_name"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="@dimen/dp5h"
+                    android:paddingStart="@dimen/dp15w"
+                    android:paddingTop="@dimen/dp5h" />
+
+                <EditText
+                    android:id="@+id/et_register_2_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:layout_marginStart="@dimen/dp20w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:background="@drawable/et_border_background"
+                    android:hint="@string/hint_last_name"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="@dimen/dp5h"
+                    android:paddingStart="@dimen/dp15w"
+                    android:paddingTop="@dimen/dp5h" />
+
+                <EditText
+                    android:id="@+id/et_register_2_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:layout_marginStart="@dimen/dp20w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:background="@drawable/et_border_background"
+                    android:hint="@string/hint_phone_number"
+                    android:inputType="phone"
+                    android:paddingBottom="@dimen/dp5h"
+                    android:paddingStart="@dimen/dp15w"
+                    android:paddingTop="@dimen/dp5h" />
+
+                <EditText
+                    android:id="@+id/et_register_2_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:layout_marginStart="@dimen/dp20w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:background="@drawable/et_border_background"
+                    android:onClick="@{RegisterModelView2::showCountries}"
+                    android:text="@={RegisterModelView2.country}"
+                    android:hint="@string/hint_country"
+                    android:inputType="textPersonName"
+                    android:focusable="false"
+                    android:paddingBottom="@dimen/dp5h"
+                    android:paddingStart="@dimen/dp15w"
+                    android:paddingTop="@dimen/dp5h" />
+
+                <EditText
+                    android:id="@+id/et_register_2_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:layout_marginStart="@dimen/dp20w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:focusable="false"
+                    android:background="@drawable/et_border_background"
+                    android:onClick="@{RegisterModelView2::showCities}"
+                    android:text="@={RegisterModelView2.city}"
+                    android:hint="@string/hint_city"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="@dimen/dp5h"
+                    android:paddingStart="@dimen/dp15w"
+                    android:paddingTop="@dimen/dp5h" />
+
+                <EditText
+                    android:id="@+id/et_register_2_car_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:layout_marginStart="@dimen/dp20w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:onClick="@{RegisterModelView2::showCarBrands}"
+                    android:text="@={RegisterModelView2.brand}"
+                    android:focusable="false"
+                    android:background="@drawable/et_border_background"
+                    android:hint="@string/hint_car_brand"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="@dimen/dp5h"
+                    android:paddingStart="@dimen/dp15w"
+                    android:paddingTop="@dimen/dp5h" />
+
+                <EditText
+                    android:id="@+id/et_register_2_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:layout_marginStart="@dimen/dp20w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:background="@drawable/et_border_background"
+                    android:onClick="@{RegisterModelView2::showModels}"
+                    android:text="@={RegisterModelView2.model}"
+                    android:focusable="false"
+                    android:hint="@string/hint_model"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="@dimen/dp5h"
+                    android:paddingStart="@dimen/dp15w"
+                    android:paddingTop="@dimen/dp5h" />
+
+                <EditText
+                    android:id="@+id/et_register_2_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:layout_marginStart="@dimen/dp20w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:background="@drawable/et_border_background"
+                    android:onClick="@{RegisterModelView2::showYears}"
+                    android:text="@={RegisterModelView2.year}"
+                    android:focusable="false"
+                    android:hint="@string/hint_year"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="@dimen/dp5h"
+                    android:paddingStart="@dimen/dp15w"
+                    android:paddingTop="@dimen/dp5h" />
+
+                <Button
+                    android:id="@+id/btn_register_2_next"
+                    android:layout_width="@dimen/dp130w"
+                    android:layout_height="@dimen/dp30h"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:background="@drawable/btn_border_background"
+                    android:onClick="@{RegisterModelView2::next}"
+                    android:text="@string/action_next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </ScrollView>
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="@{RegisterModelView2.progressDialog}" />
+
+    </RelativeLayout>
+
+</layout>

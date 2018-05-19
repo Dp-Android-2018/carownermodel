@@ -1,7 +1,9 @@
-package com.example.mohamedatef.findandfix;
+package findandfix;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.dp.findandfix.R;
 
 public class Main2Activity extends AppCompatActivity {
 

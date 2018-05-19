@@ -1,4 +1,4 @@
-package com.example.mohamedatef.findandfix.utils;
+package findandfix.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -9,12 +9,12 @@ import com.google.gson.Gson;
  * Created by DELL on 04/03/2018.
  */
 
-public class SharedPrefrenceUtils {
+public class SharedPreferenceUtils {
     Context context;
     SharedPreferences.Editor editor;
     SharedPreferences prefs;
 
-    public SharedPrefrenceUtils(Context context) {
+    public SharedPreferenceUtils(Context context) {
         this.context = context;
         prefs = context.getSharedPreferences(ConfigurationFile.SharedPrefConstants.SHARED_PREF_NAME, context.MODE_PRIVATE);
         editor = context.getSharedPreferences(ConfigurationFile.SharedPrefConstants.SHARED_PREF_NAME, context.MODE_PRIVATE).edit();
