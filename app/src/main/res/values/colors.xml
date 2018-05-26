@@ -6,6 +6,7 @@
     <color name="colorAccent">#2974cf</color>
     <color name="colorBlack">#000000</color>
     <color name="colorBlackTransparent">#3d000000</color>
+    <color name="colorTransparent">#00ffffff</color>
     <color name="colorYellow">#efce4a</color>
     <color name="colorBlue">#2974cf</color>
     <color name="colorLightBlue">#3498db</color>

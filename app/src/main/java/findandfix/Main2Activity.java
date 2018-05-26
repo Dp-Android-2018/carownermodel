@@ -10,6 +10,6 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dialog_add_request_3);
+        setContentView(R.layout.fragment_add_request_3);
     }
 }

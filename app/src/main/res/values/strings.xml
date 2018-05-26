@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FindandFix</string>
+    <string name="app_name">Find&amp;Fix</string>
     <string name="label_login_find_fix">Login to Find and fix</string>
     <string name="label_register_find_fix">Login to Find and fix</string>
     <string name="hint_password">Password</string>
@@ -70,4 +70,5 @@
     <string name="label_select_action">Select Action</string>
     <string name="label_select_gallery">Select photo from Gallery</string>
     <string name="label_select_camera">Capture photo from Camera</string>
+    <string name="action_done">Done</string>
 </resources>

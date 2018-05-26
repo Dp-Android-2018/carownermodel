@@ -1,5 +1,6 @@
 package findandfix.viewmodel;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -12,10 +13,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.example.dp.findandfix.R;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
+
+import findandfix.model.request.RegisterRequest;
 import findandfix.model.response.BrandItem;
 import findandfix.model.response.BrandsResponse;
 import findandfix.model.response.CitiesResponse;
@@ -29,8 +34,8 @@ import findandfix.network.ApiClient;
 import findandfix.network.EndPoints;
 import findandfix.utils.ConfigurationFile;
 import findandfix.utils.ConstantCodes;
+import findandfix.utils.IntentConstants;
 import findandfix.utils.NetWorkConnection;
-import findandfix.view.ui.activities.RegisterActivity2;
 import findandfix.view.ui.activities.UploadImageActivity;
 import findandfix.view.ui.adapters.BrandsAdapter;
 import findandfix.view.ui.adapters.CitiesAdapter;
@@ -68,7 +73,7 @@ public class RegisterModelView2 extends Observable {
     List<YearItem>yearItems;
 
      Dialog dialog=null;
-    int selectedCountry=-1 , selectedCity = -1 ,selectedBrand = -1 , selectedModel ,selectedYear=-1;
+    int selectedCountry=-1 , selectedCity = -1 ,selectedBrand = -1 , selectedModel = -1 ,selectedYear=-1;
     RecyclerView spinnerRecycleView;
 
     public RegisterModelView2(Context context, BaseInterface callback) {
@@ -92,7 +97,18 @@ public class RegisterModelView2 extends Observable {
 
 
     public void next(final View view) {
+        RegisterRequest registerRequest = (RegisterRequest)((Activity)context).getIntent().getSerializableExtra(IntentConstants.REGISTER_MODEL);
+
+        registerRequest.setFirstName(firstName.get());
+        registerRequest.setLastName(lastName.get());
+        registerRequest.setMobile(phoneNumber.get());
+        registerRequest.setCountryId(selectedCountry);
+        registerRequest.setCityId(selectedCity);
+        registerRequest.setBrandId(selectedBrand);
+        registerRequest.setModelId(selectedModel);
+        registerRequest.setYear(selectedYear);
         Intent intent = new Intent(context, UploadImageActivity.class);
+        intent.putExtra(IntentConstants.REGISTER_MODEL,registerRequest);
         context.startActivity(intent);
     }
 

@@ -13,7 +13,8 @@ public class ConfigurationFile {
 
     public static class UrlConstants{
         public static final String BASE_URL="http://new.findandfix.com/api/";
-        public static final String LOGIN_URL="carowner/login";
+        public static final String LOGIN ="carowner/login";
+        public static final String REGISTER="carowner/login";
         public static final String COUNTRIES="countries";
         public static final String CITIES="cities/{country_id}";
         public static final String BRANDS="brands";
