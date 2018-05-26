@@ -72,4 +72,9 @@
     <string name="label_select_camera">Capture photo from Camera</string>
     <string name="action_done">Done</string>
     <string name="label_rights">All right received © Find&amp;Fix</string>
+    <string name="label_home">Home</string>
+    <string name="label_settings">Settings</string>
+    <string name="label_share">Share</string>
+    <string name="label_rate">Rate us</string>
+    <string name="about_find_fix">About Find&amp;Fix</string>
 </resources>
