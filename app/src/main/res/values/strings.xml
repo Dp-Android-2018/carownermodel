@@ -71,4 +71,5 @@
     <string name="label_select_gallery">Select photo from Gallery</string>
     <string name="label_select_camera">Capture photo from Camera</string>
     <string name="action_done">Done</string>
+    <string name="label_rights">All right received © Find&amp;Fix</string>
 </resources>
