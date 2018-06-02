@@ -42,7 +42,7 @@
                     android:layout_height="@dimen/dp100h"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/dp15h"
-                    android:src="@drawable/img_location" />
+                    android:src="@drawable/img_colored_location" />
 
                 <Button
                     android:layout_width="@dimen/dp130w"

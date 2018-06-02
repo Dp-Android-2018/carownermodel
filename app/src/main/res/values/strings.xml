@@ -77,4 +77,21 @@
     <string name="label_share">Share</string>
     <string name="label_rate">Rate us</string>
     <string name="about_find_fix">About Find&amp;Fix</string>
+    <string name="label_pic_location">Please pic your location to reach to you ASAP</string>
+    <string name="label_choose_type">Please Choose Your problem type</string>
+    <string name="label_gas">Gas</string>
+    <string name="label_tire">Tire</string>
+    <string name="label_towed">Towed</string>
+    <string name="label_battery">Battery</string>
+    <string name="hint_type_message">Type here your message</string>
+    <string name="label_tell_notes">Please tell us your notes about your problem</string>
+    <string name="action_send">Send</string>
+    <string name="label_please_hold">Please hold microphone to record your message</string>
+    <string name="label_today">Today</string>
+    <string name="label_normal_requests">Normal Requests</string>
+    <string name="label_urgent_requests">Urgent Requests</string>
+    <string name="label_distance">Distance</string>
+    <string name="label_km">Km</string>
+    <string name="action_accept">Accept Offer</string>
+    <string name="label_your_record">Your record</string>
 </resources>
