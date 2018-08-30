@@ -9,6 +9,7 @@ import java.io.Serializable;
 
 public class BaseModel implements Serializable{
 
+
     @SerializedName("name")
     private String name;
 

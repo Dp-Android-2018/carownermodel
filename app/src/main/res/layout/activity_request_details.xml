@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data></data>
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/ll_parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <include layout="@layout/toolbar_layout"
+            android:id="@+id/toolbar"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorLightBlue"
-            android:gravity="center"
-            android:padding="@dimen/dp5w"
-            android:text="@string/label_work_shop_offer"
-            android:textColor="@color/colorWhite"
-            android:textStyle="bold" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp120h"
+            android:layout_height="@dimen/dp114h"
             android:orientation="vertical">
 
 
             <ImageView
+                android:id="@+id/head_image"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/dp120h"
                 android:scaleType="centerCrop"
@@ -42,67 +39,105 @@
             </RelativeLayout>
 
             <me.zhanghai.android.materialratingbar.MaterialRatingBar
-                android:id="@+id/rb_request_details_rating"
-                style="@style/Widget.MaterialRatingBar.RatingBar.Small"
+
+                android:id="@+id/rating_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true" />
+                style="@style/Widget.MaterialRatingBar.RatingBar.Small"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp25w"
+                android:layout_marginEnd="@dimen/dp5h"
+                android:backgroundTint="@color/colorYellow"
+                android:foregroundTint="@color/colorYellow"
+                android:progressBackgroundTint="@color/colorYellow"
+                android:progressTint="@color/colorYellow"
+                android:secondaryProgressTint="@color/colorYellow"/>
 
             <TextView
-                android:id="@+id/tv_opened_request_rate"
+                android:id="@+id/tv_rate_value_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rb_request_details_rating"
+                android:layout_below="@+id/rating_content"
+                android:textSize="@dimen/sp11"
+                android:fontFamily="sans-serif"
                 android:layout_centerHorizontal="true"
-                android:text="(3.0) rate"
-                android:textColor="@color/colorYellow" />
+                android:textStyle="bold"
+                android:textColor="@color/colorYellow"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="20sp"
+                android:gravity="center_horizontal"
+                android:text="( 0.0 ) rate"
+                />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="bottom"
-                android:orientation="horizontal"
-                android:weightSum="3">
+            <TextView
+                android:id="@+id/tv_distance_content"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/gray_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/head_image"
+                android:paddingBottom="@dimen/dp9h"
+                android:paddingStart="@dimen/dp20h"
+                android:text="@string/requests_count_mock" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp5h"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/label_average_price"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/sp12"
-                    android:textStyle="bold" />
+            <TextView
+                android:textSize="@dimen/sp9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_distance_content"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/gray_background"
+                android:paddingStart="@dimen/dp18h"
+                android:gravity="center_horizontal"
+                android:text="@string/distance" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp5h"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/label_average_price"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/sp12"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_urgent_request_num_content"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/gray_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/head_image"
+                android:paddingBottom="@dimen/dp9h"
+                android:paddingEnd="@dimen/dp20h"
+                android:layout_alignParentEnd="true"
+                android:text="@string/weight_mock" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp5h"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/label_average_price"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/sp12"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            <TextView
+                android:textSize="@dimen/sp9"
+                android:textColor="@color/gray_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_urgent_request_num_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp18h"
+                android:text="@string/urgent_request_text" />
+
+            <TextView
+                android:id="@+id/tv_normal_request_num_content"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/gray_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/head_image"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="@dimen/dp9h"
+                android:text="@string/pledge_mock" />
+
+            <TextView
+                android:textSize="@dimen/sp9"
+                android:textColor="@color/gray_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_normal_request_num_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/normal_request_text" />
 
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp120h"
+            android:layout_height="@dimen/dp95h"
             android:orientation="horizontal">
 
             <ImageView
@@ -157,7 +192,7 @@
                     android:gravity="center"
                     android:text="@string/label_average_price"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/sp12"
+                    android:textSize="@dimen/sp8"
                     android:textStyle="bold" />
 
                 <TextView
@@ -173,29 +208,42 @@
                     android:gravity="center"
                     android:text="@string/label_average_price"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/sp12"
+                    android:textSize="@dimen/sp8"
                     android:textStyle="bold" />
             </RelativeLayout>
 
         </LinearLayout>
-
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp14h">
         <com.cuieney.progress.library.RainbowProgressBar
             android:id="@+id/progress1"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp10h"
+            android:layout_height="@dimen/dp14h"
             app:progress_max="100"
             app:progress_current="30"
             app:progress_start_color="#09f736"
             app:progress_unreached_color="@color/colorWhite"
             app:progress_end_color="#f7e309"
             app:progress_type="line"
-            app:progress_height="@dimen/dp100h"
-            />
+            app:progress_height="@dimen/dp100h"/>
+
+    <TextView
+        android:id="@+id/tv_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/label_description"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/sp6" />
+</RelativeLayout>
+
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp2w"
-            android:background="@drawable/view_dashed_background" />
+            android:layout_height="@dimen/dp1w"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="@dimen/dp1h"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -207,6 +255,7 @@
             android:textSize="@dimen/sp12" />
 
         <TextView
+            android:id="@+id/tv_desc_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -214,13 +263,14 @@
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             android:textColor="@color/colorBlue"
-            android:textSize="@dimen/sp12" />
+            android:textSize="@dimen/sp7_5"
+            android:textStyle="bold"/>
 
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp2w"
-            android:background="@drawable/view_dashed_background" />
+            android:layout_height="@dimen/dp1h"
+            android:background="@color/colorPrimary" />
 
         <TextView
             android:layout_width="match_parent"
@@ -231,54 +281,99 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             android:textColor="@color/colorGrayLevel3"
             android:textSize="@dimen/sp12" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp1w"
             android:gravity="bottom"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:layout_marginStart="@dimen/dp10h"
+            android:layout_marginEnd="@dimen/dp10h">
 
             <TextView
-                android:layout_width="0dp"
+                android:id="@+id/tv_price_label_content"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp5h"
-                android:layout_weight="1"
+                android:layout_marginStart="@dimen/dp4h"
                 android:gravity="center"
+                android:layout_alignParentStart="true"
                 android:text="@string/label_average_price"
-                android:textColor="@color/colorDarkGray3"
-                android:textSize="@dimen/sp12"
-                android:textStyle="bold" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp7_5" />
 
             <TextView
-                android:layout_width="0dp"
+                android:id="@+id/tv_price_value_content"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp5h"
-                android:layout_weight="1"
+                android:layout_marginStart="@dimen/dp4h"
                 android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_price_label_content"
                 android:text="@string/label_average_price"
-                android:textColor="@color/colorDarkGray3"
+                android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/sp12"
-                android:textStyle="bold" />
+                android:layout_marginBottom="@dimen/dp5h"/>
 
             <TextView
-                android:layout_width="0dp"
+                android:id="@+id/tv_average_time_text"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp5h"
-                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
                 android:gravity="center"
+                android:text="@string/average_time"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp7_5"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_avg_time_value_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5h"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_average_time_text"
                 android:text="@string/label_average_price"
-                android:textColor="@color/colorDarkGray3"
+                android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/sp12"
-                android:textStyle="bold" />
-        </LinearLayout>
+                android:layout_marginBottom="@dimen/dp5h"/>
+
+            <TextView
+                android:id="@+id/tv_offer_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5h"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:text="@string/offer_time"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp7_5" />
+
+            <TextView
+                android:id="@+id/tv_offer_time_value_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5h"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:layout_below="@+id/tv_offer_time_text"
+                android:text="@string/label_average_price"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp12"
+                android:layout_marginBottom="@dimen/dp5h"/>
+        </RelativeLayout>
+
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp2w"
-            android:background="@drawable/view_dashed_background" />
+            android:layout_height="@dimen/dp1h"
+            android:background="@color/colorPrimary" />
 
         <TextView
+            android:id="@+id/tv_workshop_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -286,5 +381,51 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             android:text="@string/label_work_shop_info"
             android:textColor="@color/colorGrayLevel3"
             android:textSize="@dimen/sp12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_workshop_info"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp10h">
+
+            <Button
+                android:id="@+id/btn_call"
+                android:layout_width="@dimen/dp123h"
+                android:layout_height="@dimen/dp32h"
+                android:layout_marginTop="@dimen/dp14h"
+                android:layout_marginBottom="@dimen/dp14h"
+                android:layout_below="@+id/tv_request_need_winch"
+                android:background="@drawable/workshop_info_button_background"
+                android:layout_centerHorizontal="true"
+                android:text="@string/call_workshop"
+                android:textColor="@color/colorLightBlue"
+                android:textSize="11.7sp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:layout_marginEnd="@dimen/dp9w"
+                />
+
+            <Button
+                android:id="@+id/btn_chat"
+                android:layout_width="@dimen/dp123h"
+                android:layout_height="@dimen/dp32h"
+                android:layout_marginTop="@dimen/dp14h"
+                android:layout_marginBottom="@dimen/dp14h"
+                android:layout_below="@+id/tv_request_need_winch"
+                android:background="@drawable/workshop_info_button_background"
+                android:layout_centerHorizontal="true"
+                android:text="@string/start_chat"
+                android:textColor="@color/colorLightBlue"
+                android:textSize="11.7sp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
+</layout>

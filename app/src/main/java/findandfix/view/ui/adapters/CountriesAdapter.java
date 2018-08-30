@@ -8,12 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.dp.findandfix.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import findandfix.model.response.CountryItem;
+import findandfix.R;
 import findandfix.view.ui.callback.RecycleItemClickListener;
 
 /**
@@ -22,13 +21,13 @@ import findandfix.view.ui.callback.RecycleItemClickListener;
 
 public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.ViewHolder> {
 
-    private List<CountryItem> countryItems;
+    private List<findandfix.model.global.CountryItem> countryItems;
     private LayoutInflater mInflater;
     private RecycleItemClickListener recycleItemClickListener;
     Context context;
 
     // data is passed into the constructor
-    public CountriesAdapter(Context context, List<CountryItem> countryItems) {
+    public CountriesAdapter(Context context, List<findandfix.model.global.CountryItem> countryItems) {
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
         this.countryItems = countryItems;
@@ -44,9 +43,10 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.View
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        CountryItem countryItem = countryItems.get(position);
+        findandfix.model.global.CountryItem countryItem = countryItems.get(position);
         holder.title.setText(countryItem.getName());
-        Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(holder.image);
+        System.out.println("Path Image :"+"http://new.findandfix.com/"+countryItem.getImage());
+        Picasso.with(context).load("http://new.findandfix.com/"+countryItem.getImage()).into(holder.image);
     }
 
     // total number of rows

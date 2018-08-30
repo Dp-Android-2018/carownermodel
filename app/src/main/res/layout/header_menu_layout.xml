@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<data>
+    <variable
+        name="headerviewmodel"
+        type="findandfix.viewmodel.MainActViewModel"/>
+</data>
+
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/dp229h">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp178h">
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp127w"
+            android:src="@mipmap/ic_header_background"
+            android:scaleType="fitXY"/>
+
+
+
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user"
+            android:layout_width="@dimen/dp103w"
+            android:layout_height="@dimen/dp103w"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+
+
+
+
+    <TextView
+
+        android:id="@+id/tv_workshop_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp15"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:textColor="@color/colorDarkGray"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/dp11w"
+        />
+
+    <TextView
+        android:id="@+id/tv_workshop_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp10"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorRed"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp7h"
+        />
+
+
+ </LinearLayout>
+</layout>

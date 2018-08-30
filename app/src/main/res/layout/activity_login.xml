@@ -60,10 +60,13 @@
                     android:layout_marginStart="@dimen/dp20w"
                     android:background="@drawable/et_border_background"
                     android:hint="@string/hint_email"
+                    android:textDirection="locale"
                     android:inputType="textEmailAddress"
                     android:text="@={LoginViewModel.email}"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimary"
                     android:paddingBottom="@dimen/dp5h"
-                    android:paddingStart="@dimen/dp5w"
+                    android:paddingStart="@dimen/dp15w"
                     android:paddingTop="@dimen/dp5h" />
 
                 <EditText
@@ -73,12 +76,16 @@
                     android:layout_marginEnd="@dimen/dp20w"
                     android:layout_marginStart="@dimen/dp20w"
                     android:layout_marginTop="@dimen/dp20h"
+                    android:textDirection="locale"
                     android:background="@drawable/et_border_background"
-
+                    android:text="@={LoginViewModel.password}"
                     android:hint="@string/hint_password"
                     android:inputType="textPassword"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimary"
                     android:paddingBottom="@dimen/dp5h"
-                    android:paddingStart="@dimen/dp5w"
+                    android:paddingStart="@dimen/dp15w"
+                    android:paddingEnd="@dimen/dp15w"
                     android:paddingTop="@dimen/dp5h" />
 
             </LinearLayout>
@@ -101,6 +108,7 @@
                     android:textColor="@color/colorWhite" />
 
                 <TextView
+                    android:id="@+id/tv_forgot_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp5h"
@@ -113,6 +121,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp15h"
                     android:text="@string/label_new_user"
+                    android:onClick="@{LoginViewModel::moveToRegisterAct}"
                     android:textColor="@color/colorBlue"
                     android:textStyle="bold" />
 

@@ -8,13 +8,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.dp.findandfix.R;
-import com.squareup.picasso.Picasso;
-
 import java.util.List;
 
-import findandfix.model.response.CityItem;
-import findandfix.model.response.CountryItem;
+import findandfix.R;
+import findandfix.model.global.BaseModel;
 import findandfix.view.ui.callback.RecycleItemClickListener;
 
 /**
@@ -23,13 +20,13 @@ import findandfix.view.ui.callback.RecycleItemClickListener;
 
 public class CitiesAdapter extends RecyclerView.Adapter<CitiesAdapter.ViewHolder> {
 
-    private List<CityItem> cityItems;
+    private List<BaseModel> cityItems;
     private LayoutInflater mInflater;
     private RecycleItemClickListener recycleItemClickListener;
     Context context;
 
     // data is passed into the constructor
-    public CitiesAdapter(Context context, List<CityItem> cityItems) {
+    public CitiesAdapter(Context context, List<BaseModel> cityItems) {
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
         this.cityItems = cityItems;
@@ -45,7 +42,7 @@ public class CitiesAdapter extends RecyclerView.Adapter<CitiesAdapter.ViewHolder
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        CityItem cityItem = cityItems.get(position);
+        BaseModel cityItem = cityItems.get(position);
         holder.title.setText(cityItem.getName());
         holder.image.setVisibility(View.GONE);
     }

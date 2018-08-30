@@ -1,24 +1,30 @@
 package findandfix.view.ui.activities;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
-import com.example.dp.findandfix.R;
-import com.example.dp.findandfix.databinding.ActivityRegisterBinding;
+
 import com.google.firebase.FirebaseApp;
+
 import java.util.Observable;
 import java.util.Observer;
+
+import findandfix.R;
+import findandfix.databinding.ActivityFirstStepRegisterLayoutBinding;
 import findandfix.view.ui.callback.BaseInterface;
-import findandfix.viewmodel.RegisterModelView;
+import findandfix.viewmodel.FirstStepRegisterValidation;
+import findandfix.viewmodel.RegisterViewModel;
 
 
-public class RegisterActivity extends AppCompatActivity implements Observer, BaseInterface {
+public class FirstStepRegister extends BaseActivity implements Observer, BaseInterface {
 
-    private ActivityRegisterBinding activityRegisterBinding;
-    private RegisterModelView registerModelView;
+    private ActivityFirstStepRegisterLayoutBinding activityRegisterBinding;
+    private RegisterViewModel registerModelView;
+    private   FirstStepRegisterValidation validation;
+    private FirstStepRegisterValidation firstStepRegisterValidation;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -33,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity implements Observer, Bas
 
     @Override
     public void update(Observable o, Object arg) {
-        if (o instanceof RegisterModelView) {
+        if (o instanceof RegisterViewModel) {
 
         }
     }
@@ -49,9 +55,11 @@ public class RegisterActivity extends AppCompatActivity implements Observer, Bas
     }
 
     public void initBinding() {
-        registerModelView = new RegisterModelView(getApplicationContext(), this);
-        activityRegisterBinding = DataBindingUtil.setContentView(RegisterActivity.this, R.layout.activity_register);
+        validation=new FirstStepRegisterValidation(getApplicationContext());
+        registerModelView = new RegisterViewModel(FirstStepRegister.this, this,validation);
+        activityRegisterBinding = DataBindingUtil.setContentView(FirstStepRegister.this, R.layout.activity_first_step_register_layout);
         activityRegisterBinding.setRegisterModelView(registerModelView);
+        activityRegisterBinding.setValidator(validation);
     }
 
     public void subscribe() {
@@ -59,5 +67,10 @@ public class RegisterActivity extends AppCompatActivity implements Observer, Bas
     }
 
 
-
+    @Override
+    public void onBackPressed() {
+        Intent i=new Intent(FirstStepRegister.this,LoginActivity.class);
+        startActivity(i);
+        finishAffinity();
+    }
 }

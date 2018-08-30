@@ -5,24 +5,55 @@
     <color name="colorBlueDark2">#114264</color>
     <color name="colorAccent">#2974cf</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorBlackLevel2">#cc4d4d4d</color>
     <color name="colorBlackTransparent">#a1000000</color>
+    <color name="advertisment_toolbar_color">#212121</color>
     <color name="colorTransparent">#00ffffff</color>
     <color name="colorYellow">#efce4a</color>
+    <color name="colorOrange">#fa983a</color>
+    <color name="cardcolor">#dedede</color>
+    <color name="no_items_found">#a6a6a6</color>
+    <color name="suncolor">#fad2ac</color>
     <color name="colorBlue">#2974cf</color>
+    <color name="colorredDark">#e8aea7</color>
+    <color name="recorder_bg">#F4511E</color>
     <color name="colorLightBlue">#3498db</color>
     <color name="colorBlueDark">#1456a6</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="colorWhite2">#defafafa</color>
+    <color name="colorWhiteLevel3">#fafafa</color>
+    <color name="colorgraydark">#6c6c6c</color>
+    <color name="darkbluecolor">#216eb7</color>
+    <color name="blue">#2569bc</color>
+    <color name="greencolor">#27ae60</color>
+    <color name="darkcolor">#144054</color>
     <color name="colorGray">#c1c0c0</color>
+    <color name="gray_relative_background">#d5d5d5</color>
     <color name="colorGrayLevel2">#adadad</color>
+    <color name="gray_background">#f3f3f3</color>
     <color name="colorGrayLevel3">#ababab</color>
     <color name="colorGrayLevel4">#ebebeb</color>
     <color name="colorGrayLevel5">#939393</color>
+    <color name="colorGrayLevel6">#dedede</color>
     <color name="colorDarkGray">#28252e</color>
     <color name="colorDarkGray2">#a3a3a3</color>
     <color name="colorDarkGray3">#4d4d4d</color>
+    <color name="colorDarkGray4">#c7c7c7</color>
+    <color name="colorDarkGray5">#233b46</color>
+    <color name="colorDarkGray6">#546e7a</color>
+    <color name="colorDarkGray7">#141831</color>
+    <color name="colorGrayLevel7">#66000000</color>
+    <color name="font_setting_color">#989898</color>
     <color name="colorRed">#e74c3c</color>
     <color name="colorLightRed">#d97f76</color>
     <color name="colorDarkRed">#692119</color>
+    <color name="colorwhitetransparent">#80fafafa</color>
+    <color name="setting_background_color">#d3d3d3</color>
 
+//////////////////////////////////////////////////////////////////////////
+    <color name="bgBackSideColor">#f4f0ff</color>
+    <color name="mainTextColor">#343d43</color>
+    <color name="new_blue">#2569bc</color>
+    //////////////////////////////////////////////////////////////////
 
 </resources>

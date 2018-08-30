@@ -1,35 +1,27 @@
 {
   "project_info": {
-    "project_number": "335416906030",
-    "firebase_url": "https://busco-9510e.firebaseio.com",
-    "project_id": "busco-9510e",
-    "storage_bucket": "busco-9510e.appspot.com"
+    "project_number": "470725562493",
+    "firebase_url": "https://findandfix-2f4a9.firebaseio.com",
+    "project_id": "findandfix-2f4a9",
+    "storage_bucket": "findandfix-2f4a9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:335416906030:android:bd77aa2ce7350298",
+        "mobilesdk_app_id": "1:470725562493:android:f6510548df69bbf2",
         "android_client_info": {
-          "package_name": "ast.busco"
+          "package_name": "com.example.dell.workshopmodule"
         }
       },
       "oauth_client": [
         {
-          "client_id": "335416906030-fkel2i86iq3kmnl7vhnogu3lestbm8bp.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "ast.busco",
-            "certificate_hash": "0f30a46633fe50aef2ba931e90854fd29a2200d6"
-          }
-        },
-        {
-          "client_id": "335416906030-k3vb0uagvnnusagmdqb89cgdiu9oku3n.apps.googleusercontent.com",
+          "client_id": "470725562493-49av4sirgaa6h1e4er0ebcpis9i7fpvq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA4Fy0iuGs1yZ4NretZUfqH3xMCkL7DtwU"
+          "current_key": "AIzaSyC9VUDIcAXbf78_YXJsWeZFaE_TMZgU1-0"
         }
       ],
       "services": {
@@ -37,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "335416906030-k3vb0uagvnnusagmdqb89cgdiu9oku3n.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
@@ -52,20 +39,51 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:335416906030:android:eee95812253e5cdb",
+        "mobilesdk_app_id": "1:470725562493:android:d19b5c480738989c",
+        "android_client_info": {
+          "package_name": "com.example.dp.findandfix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "470725562493-49av4sirgaa6h1e4er0ebcpis9i7fpvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9VUDIcAXbf78_YXJsWeZFaE_TMZgU1-0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:470725562493:android:eee95812253e5cdb",
         "android_client_info": {
           "package_name": "dp.findandfix"
         }
       },
       "oauth_client": [
         {
-          "client_id": "335416906030-k3vb0uagvnnusagmdqb89cgdiu9oku3n.apps.googleusercontent.com",
+          "client_id": "470725562493-49av4sirgaa6h1e4er0ebcpis9i7fpvq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA4Fy0iuGs1yZ4NretZUfqH3xMCkL7DtwU"
+          "current_key": "AIzaSyC9VUDIcAXbf78_YXJsWeZFaE_TMZgU1-0"
         }
       ],
       "services": {

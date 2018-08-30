@@ -7,13 +7,13 @@ import com.google.gson.annotations.SerializedName;
 public class CountriesResponse{
 
 	@SerializedName("data")
-	private List<CountryItem> data;
+	private List<findandfix.model.global.CountryItem> data;
 
-	public void setData(List<CountryItem> data){
+	public void setData(List<findandfix.model.global.CountryItem> data){
 		this.data = data;
 	}
 
-	public List<CountryItem> getData(){
+	public List<findandfix.model.global.CountryItem> getData(){
 		return data;
 	}
 

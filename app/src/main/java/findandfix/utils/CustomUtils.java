@@ -1,25 +1,35 @@
 package findandfix.utils;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.databinding.BaseObservable;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
+import android.graphics.drawable.ColorDrawable;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.util.Base64;
+import android.view.Window;
 import android.widget.TimePicker;
 
-import com.example.dp.findandfix.R;
-import findandfix.model.global.BaseModel;
-import findandfix.model.global.BrandItem;
-import findandfix.model.global.UserData;
-import findandfix.Application.MyApplication;
-import findandfix.view.ui.callback.UpdateTimeListener;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.location.places.ui.PlacePicker;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -32,6 +42,21 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import findandfix.Application.MyApplication;
+import findandfix.R;
+import findandfix.model.global.BaseModel;
+import findandfix.model.global.BrandItem;
+import findandfix.model.global.UserData;
+import findandfix.view.ui.activities.AddRequestMediaActivity;
+import findandfix.view.ui.activities.LoginActivity;
+import findandfix.view.ui.callback.BaseInterface;
+import findandfix.view.ui.callback.TaskMonitor;
+import findandfix.view.ui.callback.UpdateTimeListener;
+import findandfix.viewmodel.ChatViewModel;
+import findandfix.viewmodel.EditProfileInfoViewModel;
+import findandfix.viewmodel.FixationPaperViewModel;
+import findandfix.viewmodel.UploadImageModelView;
+
 /**
  * Created by DELL on 28/03/2018.
  */
@@ -40,6 +65,7 @@ public class CustomUtils {
 
     private static  CustomUtils customUtils=null;
     private static String selectedTime;
+    private Dialog dialog=null;
     private CustomUtils(){}
     public static CustomUtils getInstance(){
         if(customUtils==null)
@@ -55,15 +81,11 @@ public class CustomUtils {
         int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
         int minute = mcurrentTime.get(Calendar.MINUTE);
         TimePickerDialog mTimePicker;
-        mTimePicker = new TimePickerDialog(context, new TimePickerDialog.OnTimeSetListener() {
-            @Override
-            public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                selectedTime=(selectedHour < 10 ? "0" + selectedHour : selectedHour) + ":" + (selectedMinute < 10 ? "0" + selectedMinute : selectedMinute);
-                listener.updateTime(selectedTime,code);
-            }
-
+        mTimePicker = new TimePickerDialog(context, (timePicker, selectedHour, selectedMinute) -> {
+            selectedTime=(selectedHour < 10 ? "0" + selectedHour : selectedHour) + ":" + (selectedMinute < 10 ? "0" + selectedMinute : selectedMinute);
+            listener.updateTime(selectedTime,code);
         }, hour, minute, true);//Yes 24 hour time
-        mTimePicker.setTitle(context.getString(R.string.label_car));
+        mTimePicker.setTitle(context.getString(R.string.select_time));
         mTimePicker.show();
 
     }
@@ -145,10 +167,134 @@ public class CustomUtils {
         ActivityCompat.requestPermissions((Activity)context, permissions, requestCode);
     }
 
+    public void uploadFireBasePic(StorageReference storageReference, Uri selectedImageUri , TaskMonitor callback){
+
+        final UploadTask photoRef=storageReference.child(selectedImageUri.getLastPathSegment()).putFile(selectedImageUri);
+        photoRef.addOnSuccessListener(taskSnapshot -> {
+            Uri photourl=taskSnapshot.getDownloadUrl();
+            callback.taskCompleted(photourl.toString());});
+
+        photoRef.addOnProgressListener(taskSnapshot -> {
+
+        });
+    }
+
+    public void requirePermission(RxPermissions rxPermissions, int checker, BaseInterface callback){
+        rxPermissions
+                .request(Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.CAMERA)
+                .subscribe(granted -> {
+                    if (granted) { // Always true pre-M
+                        if (checker == 0)
+                            callback.updateUi(ConfigurationFile.Constants.PERMISSION_GRANTED_CAMERA);
+                        else if (checker==  1)
+                            callback.updateUi(ConfigurationFile.Constants.PERMISSION_GRANTED_GALLERY);
+                        else
+                            callback.updateUi(ConfigurationFile.Constants.PERMISSION_GRANTED_VIDEO);
+                    } else {
+                        // Oups permission denied
+                        callback.updateUi(ConfigurationFile.Constants.PERMISSION_DENIED);
+                    }
+                });
+    }
+
+
+    public void requireLocationPermission(RxPermissions rxPermissions, BaseInterface callback){
+        rxPermissions
+                .request(Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION)
+                .subscribe(granted -> {
+                    if (granted) { // Always true pre-M
+
+                        callback.updateUi(ConfigurationFile.Constants.PERMISSION_GRANTED_LOCATION);
+
+                    } else {
+                        // Oups permission denied
+                        callback.updateUi(ConfigurationFile.Constants.PERMISSION_DENIED);
+                    }
+                });
+    }
+
+    public void requirePhonePermission(RxPermissions rxPermissions,BaseInterface callback){
+        rxPermissions
+                .request(Manifest.permission.CALL_PHONE)
+                .subscribe(granted -> {
+                    if (granted) { // Always true pre-M
+
+                        callback.updateUi(ConfigurationFile.Constants.PERMISSION_GRANTED_PHONE_CALL);
+
+                    } else {
+                        // Oups permission denied
+                        callback.updateUi(ConfigurationFile.Constants.PERMISSION_DENIED_PHONE_CALL);
+                    }
+                });
+    }
+
+
+    public void requireRecordSoundPermission(RxPermissions rxPermissions,BaseInterface callback){
+        rxPermissions
+                .request(Manifest.permission.RECORD_AUDIO,Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .subscribe(granted -> {
+                    if (granted) { // Always true pre-M
+
+                        callback.updateUi(ConfigurationFile.Constants.PERMISSION_GRANTED_RECORD_AUDIO);
+
+                    } else {
+                        // Oups permission denied
+                        callback.updateUi(ConfigurationFile.Constants.PERMISSION_DENIED_RECORD_AUDIO);
+                    }
+                });
+    }
+
     public UserData getSaveUserObject(Context context){
-        SharedPreferenceUtils prefrenceUtils=new SharedPreferenceUtils(context);
-        UserData userData=(UserData) prefrenceUtils.getSavedObject(ConfigurationFile.SharedPrefConstants.PREF_WORKSHOP_DATA, UserData.class);
+
+        SharedPrefrenceUtils prefrenceUtils=new SharedPrefrenceUtils(context);
+        UserData userData=(UserData) prefrenceUtils.getSavedObject(ConfigurationFile.SharedPrefConstants.PREF_CAR_OWNER_OBJ_DATA, UserData.class);
         return userData;
+    }
+
+
+    public void showDialog(Context context, final BaseObservable viewModel){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle(R.string.choose_pictures)
+                .setItems(R.array.media, (dialog, which) -> {
+                    if (viewModel instanceof ChatViewModel)
+                        ((ChatViewModel)viewModel).askForPermission(which);
+
+                    else if (viewModel instanceof UploadImageModelView)
+                        ((UploadImageModelView)viewModel).askForPermission(which);
+
+
+                    else if (viewModel instanceof EditProfileInfoViewModel)
+                        ((EditProfileInfoViewModel)viewModel).askForPermission(which);
+
+                    else if (viewModel instanceof FixationPaperViewModel)
+                        ((FixationPaperViewModel)viewModel).askForPermission(which);
+
+                    else if (((Activity)context) instanceof AddRequestMediaActivity)
+                        ((AddRequestMediaActivity)context).askForPermission(which);
+
+
+                });
+
+        AlertDialog alertDialog=builder.create();
+        if (!alertDialog.isShowing())
+                alertDialog.show();
+    }
+
+    public void startPlacePicker(Activity activity){
+        try {
+            PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+            activity.startActivityForResult(builder.build(activity),
+                    ConfigurationFile.Constants.PLACE_PICKER_REQUEST);
+        } catch (GooglePlayServicesRepairableException e) {
+            e.printStackTrace();
+        } catch (GooglePlayServicesNotAvailableException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public boolean getDarkModeVal(Context context){
+        SharedPrefrenceUtils sharedPrefrenceUtils=new SharedPrefrenceUtils(context);
+        return sharedPrefrenceUtils.getBooleanFromSharedPrederances(ConfigurationFile.SharedPrefConstants.DARK_MODE_PARAM);
     }
 
     public Boolean isValidMobileNumber(String s){
@@ -162,15 +308,14 @@ public class CustomUtils {
     }
 
     public void logout(Activity activity){
-        /*Intent i=new Intent(activity, LoginActivity.class);
+        Intent i=new Intent(activity, LoginActivity.class);
         activity.finishAffinity();
         clearSharedPref((Context)activity);
         activity.startActivity(i);
-        */
     }
 
     public void clearSharedPref(Context context){
-        SharedPreferenceUtils prefrenceUtils=new SharedPreferenceUtils(context);
+        SharedPrefrenceUtils prefrenceUtils=new SharedPrefrenceUtils(context);
         prefrenceUtils.clearToken();
     }
 
@@ -205,7 +350,7 @@ public class CustomUtils {
     public List<Integer> getSpecializationIds(){
 
         List<Integer>ids=new ArrayList();
-        List<BaseModel> baseModels=((MyApplication) MyApplication.getAppContext()).getBasicspecializations();
+        List<BaseModel> baseModels=((MyApplication)MyApplication.getAppContext()).getBasicspecializations();
         for(BaseModel model:baseModels)
             ids.add(model.getId());
 
@@ -232,12 +377,17 @@ public class CustomUtils {
     }
 
     public void endSession(Activity activity){
-            /*SharedPreferenceUtils utils=new SharedPreferenceUtils(activity);
+
+            SharedPrefrenceUtils utils = new SharedPrefrenceUtils(activity);
+            String lang = utils.getStringFromSharedPrederances(ConfigurationFile.SharedPrefConstants.APP_LANGUAGE);
             utils.clearToken();
-            Intent i=new Intent(activity,LoginActivity.class);
+            saveAppLanguage(activity, lang);
+            saveisFirstTime(activity, true);
+            Intent i = new Intent(activity, LoginActivity.class);
             activity.startActivity(i);
             activity.finish();
-            */
+            activity.finishAffinity();
+
     }
 
 
@@ -260,5 +410,68 @@ public class CustomUtils {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public void openCamera(Activity activity){
+        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        activity.startActivityForResult(cameraIntent, ConfigurationFile.Constants.CAMERA_REQUEST);
+    }
+
+    public void openGallery(Activity activity,boolean checker){
+        Intent pickPhoto = new Intent(Intent.ACTION_PICK,
+                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            if (checker==true){
+                pickPhoto.setType("image/*"); //allows any image file type. Change * to specific extension to limit it
+//**These following line is the important one!
+                pickPhoto.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+            }
+
+        activity.startActivityForResult(pickPhoto , ConfigurationFile.Constants.GALLERY_REQUEST);
+    }
+
+    public String firstCharacters(String name){
+        String[] splited = name.split("\\s+");
+        String workshoptitle="";
+        for (int i=0;i<splited.length;i++)
+            workshoptitle=workshoptitle+splited[i].toUpperCase().charAt(0);
+
+        return workshoptitle;
+    }
+
+    public void showProgressDialog(Activity activity){
+         dialog = new  Dialog(activity);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.custom_dialog_layout);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        dialog.setCancelable(false);
+        if (!dialog.isShowing())
+        dialog.show();
+
+    }
+
+    public void cancelDialog(){
+        dialog.dismiss();
+    }
+
+    public String getAppLanguage(Context context){
+        SharedPrefrenceUtils sharedPrefrenceUtils=new SharedPrefrenceUtils(context);
+        String lang=sharedPrefrenceUtils.getStringFromSharedPrederances(ConfigurationFile.SharedPrefConstants.APP_LANGUAGE);
+        return lang;
+    }
+
+    public void saveAppLanguage(Context context,String lang){
+        SharedPrefrenceUtils sharedPrefrenceUtils=new SharedPrefrenceUtils(context);
+        sharedPrefrenceUtils.addStringToSharedPrederances(ConfigurationFile.SharedPrefConstants.APP_LANGUAGE,lang);
+    }
+
+    public boolean isFirstTime(Context context){
+        SharedPrefrenceUtils sharedPrefrenceUtils=new SharedPrefrenceUtils(context);
+        boolean isFirstTime=sharedPrefrenceUtils.getBooleanFromSharedPrederances(ConfigurationFile.SharedPrefConstants.FIRST_TIME);
+        return isFirstTime;
+    }
+
+    public void saveisFirstTime(Context context,boolean lang){
+        SharedPrefrenceUtils sharedPrefrenceUtils=new SharedPrefrenceUtils(context);
+        sharedPrefrenceUtils.addBooleanToSharedPrederances(ConfigurationFile.SharedPrefConstants.FIRST_TIME,lang);
     }
 }

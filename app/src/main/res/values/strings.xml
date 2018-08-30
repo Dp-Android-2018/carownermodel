@@ -17,6 +17,11 @@
     <string name="hint_first_name">First name</string>
     <string name="hint_last_name">Last name</string>
     <string name="hint_phone_number">Phone Number</string>
+    <string name="start_journey">We hope you to have a satisfied journey</string>
+    <string name="journey">Find &amp; Fix is a journey Just Start Engine</string>
+    <string name="choose_camera">Choose Picture From Camera</string>
+    <string name="choose_gallery">Choose Picture From Gallery</string>
+    <string name="start_engine">Start</string>
     <string name="hint_country">Country</string>
     <string name="hint_city">City</string>
     <string name="hint_car_brand">Car brand</string>
@@ -24,7 +29,7 @@
     <string name="hint_year">Year</string>
     <string name="label_upload_photo">Please upload your profile photo</string>
     <string name="label_upload">Upload</string>
-    <string name="label_check_mail">check your email to activate your account</string>
+    <string name="label_check_mail">Check Your Email to Activate Your Account</string>
     <string name="label_for_more_details">For more details visit</string>
     <string name="label_description">Description</string>
     <string name="offer_info">Offer info</string>
@@ -37,6 +42,7 @@
     <string name="label_edit_profile">Edit Profile</string>
     <string name="label_requests">Requests</string>
     <string name="label_normal_request">Add Request</string>
+    <string name="label_normal_request_2">Add Request</string>
     <string name="label_add_advertising">Add advertising</string>
     <string name="label_car_info">Car Info</string>
     <string name="action_yes">Yes</string>
@@ -77,7 +83,7 @@
     <string name="label_share">Share</string>
     <string name="label_rate">Rate us</string>
     <string name="about_find_fix">About Find&amp;Fix</string>
-    <string name="label_pic_location">Please pic your location to reach to you ASAP</string>
+    <string name="label_pic_location">Please pic your location </string>
     <string name="label_choose_type">Please Choose Your problem type</string>
     <string name="label_gas">Gas</string>
     <string name="label_tire">Tire</string>
@@ -94,4 +100,242 @@
     <string name="label_km">Km</string>
     <string name="action_accept">Accept Offer</string>
     <string name="label_your_record">Your record</string>
+    <string name="all_rights_recieved_findandfix_2018">All rights recieved FindandFix 2018</string>
+    <string name="home">Home</string>
+    <string name="setting">Setting</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="send_to">Send To</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="find_fix"><![CDATA[Find & Fix]]></string>
+    <string name="select_time">Select Time</string>
+    <string name="type_your_message_here">Type Your Message here</string>
+    <string name="chat">Chat</string>
+    <string name="about">About</string>
+    <string name="cant_complete_request">Can\'t Complete Your Request</string>
+    <string name="email">Email</string>
+    <string name="required_field">This Field is Required</string>
+    <string name="invalid_email_format">Invalid Email Format</string>
+    <string name="password_length">Minimum Required Length for password is 8 character</string>
+    <string name="password_confirm_not_match">Password and it\'s Confirmation must be matches</string>
+    <string name="exist_email">This Email Already Exist</string>
+    <string name="choose_brands">Please Select Your Brands First</string>
+    <string name="label_step_2">Step 2 of 3</string>
+    <string name="label_step_3">Step 3 of 3</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="choose_image">Please Choose Image First</string>
+    <string name="invalid_data">Invalid Data Format Please ensure that all Data is valid</string>
+    <string name="invalid_phone_number">Mobile Number Already Taken</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone">Phone</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="car_information">Car Information</string>
+    <string name="brand">Car Brand</string>
+    <string name="model">Model</string>
+    <string name="year">Year</string>
+    <string name="change_password">Change Password</string>
+    <string name="submit">Submit</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="profile_update_successfully">Profile Updated Successfully</string>
+    <string name="unauthenticated">This is account is logged in from another device</string>
+    <string name="please_write_your_current_password">Please Write Your Current Password</string>
+    <string name="save">Save</string>
+    <string name="matches_password">Password and It\'s Confirmation must be matches</string>
+    <string name="password_updated">Password Updasted Successfully</string>
+    <string name="invalid_current_password">Current Password is Invalid</string>
+    <string name="cant_complete_your_request">Can\'t Complete Your Request</string>
+    <string name="data_matches"><![CDATA[Data Of Model & City Must Match to it\'s parents]]></string>
+    <string name="no_desc_available">No Description Available</string>
+    <string name="offer_detail">Offer Detail</string>
+    <string name="are_you_want_to_make_this_request">Are you want to make this Request</string>
+    <string name="for_this_car_label">for this car</string>
+    <string name="add_request">Add Request</string>
+    <string name="select_your_problem">Select Your Problem</string>
+    <string name="select_specialization">Select Specialization</string>
+    <string name="select_specialize_first">Please Select Specialize First</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="maximum_image_number">Maximum Number Of Image is 5</string>
+    <string name="select_video">Select Video</string>
+    <string name="uploading_videos">Uploading Videos</string>
+    <string name="uploading_pictures">Uploading Pictures</string>
+    <string name="server_error">Server Error please Try Again Later</string>
+    <string name="waiting">Waiting</string>
+    <string name="search_for_workshop">Search For Workshop</string>
+    <string name="find_request">Find Request</string>
+    <string name="distance">Distance</string>
+    <string name="workshop_offer">Workshop Offer</string>
+    <string name="workshop_name">Workshop Name</string>
+    <string name="achievments">Achievments</string>
+    <string name="accept_offer">Accept Offer</string>
+    <string name="unuthenticated">UnUthenticated</string>
+    <string name="sar">SAR</string>
+    <string name="km">Km</string>
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    <string name="requests_count_mock" translatable="false">5</string>
+    <string name="requests_count_badge" translatable="false">REQUESTS</string>
+    <string name="weight_mock" translatable="false">50 oz</string>
+    <string name="weight_badge" translatable="false">WEIGHT</string>
+    <string name="pledge_mock" translatable="false">$150</string>
+    <string name="pledge_badge" translatable="false">PLEDGE</string>
+    <string name="client_name_mock" translatable="false">Edward Norton</string>
+    <string name="request_btn_text" translatable="false">REQUEST</string>
+    <string name="today">Today</string>
+    <string name="urgent_request_text">Urgent Request</string>
+    <string name="normal_request_text">Normal Request</string>
+    <string name="average_price">Avg Price</string>
+    <string name="average_time">Average Time</string>
+    <string name="rate_label">Rate</string>
+    <string name="no_desc">There is No Description</string>
+    <string name="show_location">Show Location</string>
+    <string name="start_chat">Start Chat</string>
+    <string name="call_workshop">Call Workshop</string>
+    <string name="offer_accepted_notification">Offer Accepted</string>
+    <string name="no_achievements_yet">No Achievements, yet.</string>
+    <string name="no_achievements_for_this_workshop_right_now">No achievements for this workshop right now</string>
+    <string name="before">Before</string>
+    <string name="after">After</string>
+    <string name="workshop_achievment">WorkShop Achievment</string>
+    <string name="rate_added_successfully">Your Rate Added Successfully</string>
+    <string name="maxmimum_image_num">Maximum Number Of Images Is 5</string>
+    <string name="to_reach_your_asap">To Reach Your Asap</string>
+    <string name="please_choose_your">Please Choose Your</string>
+    <string name="problem_type">Problem Type</string>
+    <string name="choose_your_problem">Please Choose Your Problem</string>
+    <string name="winch_type">Winch Type</string>
+
+    <string name="winch">Winch</string>
+    <string name="normal_winch">Normal Winch</string>
+    <string name="hydrolic_winch">Hydrolic Winch</string>
+    <string name="select_winch_type">Please Select Winch Type</string>
+
+    <string name="voicE_notes">Voice Notes</string>
+    <string name="typing">Typing</string>
+    <string name="audio_not_recorded">Audio Wasn\'t Recorded</string>
+    <string name="audio_recorded_successfully">Audio Recorded Successfully</string>
+    <string name="urgent_request_label">Urgent Request</string>
+    <string name="date">Date</string>
+    <string name="request_info">Request Info</string>
+    <string name="urgent_offer_accepted">Urgent Offer Accepted</string>
+    <string name="no_message_yet">No Message Yet</string>
+    <string name="no_message">No Message In Your Inbox</string>
+    <string name="no_offers_yet">No Offers Yet</string>
+    <string name="there_is_no_advertising_right_now_in_this_area">There is no advertising right now in this area</string>
+    <string name="request_detail_label">Request Detail</string>
+    <string name="urgent_offers">Urgent Offers</string>
+    <string name="general">General</string>
+    <string name="language">Language</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="account">Account</string>
+    <string name="deactive">DeActive</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="terms_and_condition">Terms and Conditions</string>
+    <string name="about_content">Who Are We?
+Find &amp; Fix L.L.C was established in 2017 to meet the urgent need for regulating the working process of vehicle maintenance and repair workshops, and to find basic spare parts and consumables. The company is considered the first of its kind that is specialized in providing vehicle maintenance and repair services, and finding suitable spare parts for each and every automobile manufacturer and car category, as well as used spare parts from auto salvage yards.
+
+Find &amp; Fix L.L.C offers to transport broke down vehicles, due to mechanical failures or the occurrence of accidents, to repair workshops after consulting with workshop owners and maintenance locations through the “Find &amp; Fix App.” Additionally, the “Find &amp; Fix App.” enables a user’s registration either as a vehicle owner or a maintenance and repair workshop owner.
+
+Vision
+Find &amp; Fix L.L.C aspires to become one of the best companies in the Arab region and across the globe; to achieve a leadership position in vehicle maintenance and repair on the local, Arab and international levels; to offer the highest quality standards in customer services to facilitate and achieve customer goals; to provide the best solutions for vehicle maintenance and to find appropriate spare parts through the easiest and fastest way.
+
+Mission
+To provide vehicle maintenance and repair services; to find spare parts for customers; to improve vehicle maintenance services and to regulate the working process of vehicle repair.
+
+Values
+Provide the best means to serve customers.
+Quality standards.
+Leadership and responsibility.
+Development and innovation.
+Passion and ambition.
+
+Objectives
+To occupy a distinct position locally and internationally in the field of vehicle maintenance and sale of spare parts.
+To deliver services to all customers in a proper way across all cities.
+Expansion of maintenance to reach every city and country in the world.
+Creation of international trade links for the sale of spare parts.
+To provide the best maintenance solutions and knowledge of the ways to modify vehicles to ensure formal fitment.
+To enable customers through the “Find &amp; Fix App.” to follow up the maintenance and repair works carried out on their vehicles.
+To meet all the customer needs covering various aspects of maintenance services and sale of spare parts.
+To achieve full customer satisfaction of the services provided and to ensure upgrading the service level.
+To provide a wide array of vehicle maintenance and repair services to suit all kinds of situations starting from the transport of broke down vehicles up to completion of maintenance and exit from the workshop.</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="enter_your_mobile">Enter Your Mobile</string>
+    <string name="please_enter_data">Please Enter Data</string>
+    <string name="please_enter_code">Please Enter Your Code</string>
+    <string name="reset_password_success">Your Password Reset Successfully</string>
+    <string name="invalid_code">Invalid Code</string>
+    <string name="reset_your_password">Please Enter Your New Password</string>
+    <string name="press_again_to_exit">Press Again To Exit</string>
+    <string name="offer_time">Offer Time</string>
+    <string name="something_wrong_with_your_internet">Something Wrong With Your Internet</string>
+    <string name="change_language">Change Language</string>
+    <string name="are_you_sure_you_want_to_change_app_language">Are You Sure You Want To Change App Language?</string>
+    <string name="fill_data">Please Fill All Data</string>
+    <string name="please_write_new_password">Please write new password</string>
+    <string name="confirm_new_password">Confirm new password</string>
+    <string name="choose_pictures">Choose Pictures</string>
+    <string name="choose_car_problem">choose your car problem</string>
+    <string name="search_for_professional_workshop">search for a professional workshop</string>
+    <string name="choose_best_offer">Choose the best offer</string>
+    <string name="pick_location">pick your location</string>
+    <string name="choose_problem">choose your problem</string>
+    <string name="choose_offer">choose the best offer</string>
+    <string name="accept">Accept</string>
+    <string name="new_message">New Message</string>
+    <string name="photo">Photo</string>
+    <string name="done">Done</string>
+    <string name="wensh_types">Wensh Types</string>
+    <string name="cancel_search">Cancel Search</string>
+    <string name="developed_by">Developed By</string>
+    <string name="this_is_your_last_orders">This is your last orders</string>
+    <string name="no_requests_yet">No Requests Yet</string>
+    <string name="my_orders">My Orders</string>
+    <string name="need_winch">Need Winch</string>
+    <string name="dont_need_winch">Doesn\'t need Winch</string>
+    <string name="request_detail">Request Detail</string>
+    <string name="find_and_fix_app_version_1_0_0">Find and fix app version 1.0.0</string>
+    <string name="you_can_active_your_account_by_mobile">you can active your account by mobile</string>
+    <string name="active_by_mobile">Active By Mobile</string>
+    <string name="phone_number_recived">you have received code number on your phone</string>
+    <string name="check">Check</string>
+    <string name="working_time">Working Time</string>
+    <string name="sa">Sa</string>
+    <string name="sع">Su</string>
+    <string name="Mo">Mo</string>
+    <string name="Tue">Tue</string>
+    <string name="Wed">Wed</string>
+    <string name="Thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="morning_shift">Morning Shift</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="night_shift">Night Shift</string>
+    <string name="service_provider">Service Provider</string>
+    <string name="active_mobile">Active Mobile</string>
+    <string name="code_sent_success">Code Sent Successfully</string>
+    <string name="enter_code">Please Enter Code First</string>
+    <string name="invalid_code_checker">Invalid Code</string>
+    <string name="if_you_have_fixation_paper">If You Have Fixation Paper</string>
+    <string name="please_upload_it">Please Upload It</string>
+    <string name="next">Next</string>
+    <string name="skip_this_step">Skip this step</string>
+    <string name="workshop">Workshop</string>
+    <string name="nearest_workshop">Nearest Workshop</string>
+    <string name="tempspecializations">Specializations</string>
+    <string name="workshop_specializations">workshop tempspecializations</string>
+    <string name="winch_specializations">Winch Specializations</string>
+    <string name="choose_specialization">Choose Specialization</string>
+    <string name="sub_specialization">Sub Specialization</string>
+    <string name="service_type">Service Type</string>
+    <string name="wensh">Winch</string>
+    <string name="filter">Filter</string>
+    <string name="choose_specialization_filter">Please Choose Specialization Or Winch Types</string>
+    <string name="version_update_available">New Update Available</string>
+    <string name="update_txt">Update</string>
+    <string name="update_current_version_text"><![CDATA[A new Version Of Find & Fix is available on the store please update Current Version]]></string>
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
 </resources>

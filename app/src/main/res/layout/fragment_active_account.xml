@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+<data>
+<variable
+    name="viewmodel"
+    type="findandfix.viewmodel.ActivateAccountViewModel"/>
+</data>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -37,6 +44,33 @@
         app:lottie_loop="true" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp7_5"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhiteLevel3"
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/btn_active_mobile"
+        android:layout_centerHorizontal="true"
+        android:text="@string/you_can_active_your_account_by_mobile"
+        />
+    
+    <Button
+        android:id="@+id/btn_active_mobile"
+        android:layout_width="@dimen/dp130h"
+        android:layout_height="@dimen/dp30h"
+        android:text="@string/active_by_mobile"
+        android:textColor="@color/colorPrimary"
+        android:layout_above="@+id/tv_active_mail_more"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp6w"
+       android:background="@drawable/btn_activate_mobile_background"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp12"
+        android:onClick="@{viewmodel::activeByMobile}"/>
+    <TextView
         android:id="@+id/tv_active_mail_more"
         android:layout_above="@+id/tv_active_mail_site"
         android:layout_width="wrap_content"
@@ -58,4 +92,4 @@
 
 </RelativeLayout>
 
-
+</layout>

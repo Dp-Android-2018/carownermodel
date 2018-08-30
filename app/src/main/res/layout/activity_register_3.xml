@@ -1,88 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <import type="android.view.View" />
         <variable
             name="UploadImageModelView"
             type="findandfix.viewmodel.UploadImageModelView" />
+
+        <variable
+            name="registerviewmodel"
+            type="findandfix.viewmodel.HandleRegisterViewModel"/>
     </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/img_background"
+        android:id="@+id/rl_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/label_upload_photo"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorBlueDark"
+            android:textStyle="bold"
+            android:layout_above="@+id/rl_container"
+            android:layout_marginTop="@dimen/dp45h"
+            android:layout_marginBottom="@dimen/dp15h"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_container"
+            android:layout_width="@dimen/dp180w"
+            android:layout_height="@dimen/dp180w"
+            android:background="@drawable/rl_circle_background"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp14_5"
+                android:textColor="@color/colorGray"
+                android:lineSpacingExtra="-5.5sp"
+                android:text="@string/label_upload"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp30h"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_layer"
+                android:layout_centerInParent="true"
+                android:visibility="@{UploadImageModelView.picBitmap==null ? View.VISIBLE : View.INVISIBLE}"
+                android:onClick="@{UploadImageModelView::displayDialog}"
+                />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:id="@+id/iv_car_owner_image"
+                android:layout_width="@dimen/dp171h"
+                android:layout_height="@dimen/dp171h"
+                android:layout_centerInParent="true"
+                bind:imageBitmap="@{UploadImageModelView.picBitmap}"
+                android:onClick="@{UploadImageModelView::displayDialog}"
+                android:visibility="@{UploadImageModelView.picBitmap!=null ? View.VISIBLE : View.INVISIBLE}"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp171h"
+            android:layout_height="@dimen/dp171h"
+            android:layout_centerInParent="true"
+            android:background="@color/colorwhitetransparent">
+
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="@{registerviewmodel.progressDialog}"/>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="@dimen/dp50h"
+                android:layout_height="@dimen/dp50h"
+                app:lottie_fileName="loadingLine.json"
+                app:lottie_loop="false"
+                app:lottie_autoPlay="false"
+                bind:setprogress="@{UploadImageModelView.progress}"
+
+                bind:animation="@{UploadImageModelView.onAnimationEnd}"
+                android:layout_centerInParent="true"
+                android:visibility="@{UploadImageModelView.loading}"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:gravity="center"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/btn_register_2_next"
+                android:layout_width="@dimen/dp130w"
+                android:layout_height="@dimen/dp30h"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp30h"
+                android:background="@drawable/btn_border_background"
+                android:onClick="@{UploadImageModelView::validate}"
+                android:text="@string/action_register"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp5w"
+                android:text="@string/label_step_3"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp12" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
                 android:gravity="center"
-                android:text="@string/label_upload_photo"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="@color/colorBlueDark"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:weightSum="3">
 
-            <RelativeLayout
-                android:id="@+id/rl_register_3_image_container"
-                android:layout_width="@dimen/dp150w"
-                android:layout_height="@dimen/dp150w"
-                android:layout_marginTop="@dimen/dp5h"
-                android:background="@drawable/rl_circle_background"
-                android:onClick="@{UploadImageModelView::selectImage}">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp10h"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp10h"
+                    android:layout_marginStart="@dimen/dp2w"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary" />
 
-                    <TextView
-                        android:id="@+id/tv_register_3_upload"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="@dimen/dp5h"
-                        android:gravity="center"
-                        android:text="@string/label_upload"
-                        android:textColor="@color/colorGray"
-                        android:textStyle="bold" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp10h"
+                    android:layout_marginStart="@dimen/dp2w"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary" />
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/rl_register_3_image"
-                        android:layout_width="@dimen/dp70w"
-                        android:layout_height="@dimen/dp70w"
-                        android:layout_below="@+id/tv_register_3_upload"
-                        android:layout_centerHorizontal="true"
-                        bind:imageBitmap="@{UploadImageModelView.picBitmap}"
-                        android:layout_marginTop="@dimen/dp5h"
-                        android:src="@drawable/img_upload"
-                        />
-                </LinearLayout>
-            </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_register_2_next"
-            android:layout_width="@dimen/dp130w"
-            android:layout_height="@dimen/dp30h"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/dp30h"
-            android:background="@drawable/btn_border_background"
-
-            android:text="@string/action_register"
-            android:textAllCaps="false"
-            android:textColor="@color/colorWhite" />
 
 
     </RelativeLayout>

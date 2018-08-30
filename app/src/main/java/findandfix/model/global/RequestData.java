@@ -40,7 +40,7 @@ public class RequestData implements Serializable{
     @SerializedName("specializations")
     private List<BaseModel> specializations;
 
-    @SerializedName("image")
+    @SerializedName("images")
     private List<Media> image;
 
     @SerializedName("videos")

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="RegisterModelView2"
+            type="findandfix.viewmodel.SecondStepRegisterViewModel" />
+        <variable
+            name="validation"
+            type="findandfix.viewmodel.SecondStepRegisterValidation"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_background"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_sign_up_fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20h"
+                    android:layout_marginStart="@dimen/dp20h"
+                    android:layout_marginTop="@dimen/dp13h"
+                    android:textDirection="locale"
+                    android:textColorHint="@color/colorPrimary"
+                    bind:errorText="@{validation.fnameError}">
+
+
+                    <EditText
+                        android:id="@+id/et_register_2_first_name"
+                        android:textDirection="locale"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp35h"
+                        android:layout_marginTop="@dimen/dp5h"
+
+                        android:background="@drawable/login_edittext_rounded_background"
+                        android:hint="@string/hint_first_name"
+                        android:inputType="text"
+                        android:text="@={RegisterModelView2.firstName}"
+                        android:paddingStart="@dimen/dp15h"
+                        android:paddingEnd="@dimen/dp5w"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_sign_up_lname"
+                    android:textDirection="locale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20h"
+                    android:layout_marginStart="@dimen/dp20h"
+                    android:layout_marginTop="@dimen/dp13h"
+                    android:textColorHint="@color/colorPrimary"
+                    bind:errorText="@{validation.lnameError}">
+
+
+                    <EditText
+                        android:id="@+id/et_register_2_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp35h"
+                        android:layout_marginTop="@dimen/dp5h"
+                        android:textDirection="locale"
+                        android:background="@drawable/login_edittext_rounded_background"
+                        android:hint="@string/hint_last_name"
+                        android:inputType="text"
+                        android:text="@={RegisterModelView2.lastName}"
+                        android:paddingStart="@dimen/dp15h"
+                        android:paddingEnd="@dimen/dp5w"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_sign_up_phone"
+                    android:textDirection="locale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20h"
+                    android:layout_marginStart="@dimen/dp20h"
+                    android:layout_marginTop="@dimen/dp13h"
+                    android:textColorHint="@color/colorPrimary"
+                    bind:errorText="@{validation.phoneError}">
+
+
+                    <EditText
+                        android:id="@+id/et_register_2_phone_number"
+                        android:layout_width="match_parent"
+                        android:textDirection="locale"
+                        android:layout_height="@dimen/dp35h"
+                        android:layout_marginTop="@dimen/dp5h"
+                        android:background="@drawable/login_edittext_rounded_background"
+                        android:hint="@string/hint_phone_number"
+                        android:inputType="phone"
+                        android:text="@={RegisterModelView2.phoneNumber}"
+                        android:paddingStart="@dimen/dp15h"
+                        android:paddingEnd="@dimen/dp5w"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_sign_up_country"
+                    android:layout_width="match_parent"
+                    android:textDirection="locale"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20h"
+                    android:layout_marginStart="@dimen/dp20h"
+                    android:layout_marginTop="@dimen/dp13h"
+                    android:textColorHint="@color/colorPrimary"
+                    bind:errorText="@{validation.countryError}">
+
+
+                    <EditText
+                        android:id="@+id/et_register_2_country"
+                        android:layout_width="match_parent"
+                        android:textDirection="locale"
+                        android:layout_height="@dimen/dp35h"
+                        android:layout_marginTop="@dimen/dp5h"
+                        android:background="@drawable/login_edittext_rounded_background"
+                        android:onClick="@{RegisterModelView2::showCountries}"
+                        android:text="@={RegisterModelView2.country}"
+                        android:hint="@string/hint_country"
+                        android:inputType="textPersonName"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dp15h"
+                        android:paddingEnd="@dimen/dp5w"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_sign_up_city"
+                    android:layout_width="match_parent"
+                    android:textDirection="locale"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20h"
+                    android:layout_marginStart="@dimen/dp20h"
+                    android:layout_marginTop="@dimen/dp13h"
+                    android:textColorHint="@color/colorPrimary"
+                    bind:errorText="@{validation.cityError}">
+
+
+                    <EditText
+                        android:id="@+id/et_register_2_city"
+                        android:layout_width="match_parent"
+                        android:textDirection="locale"
+                        android:layout_height="@dimen/dp35h"
+                        android:layout_marginTop="@dimen/dp5h"
+                        android:background="@drawable/login_edittext_rounded_background"
+                        android:onClick="@{RegisterModelView2::showCities}"
+                        android:text="@={RegisterModelView2.city}"
+                        android:hint="@string/hint_city"
+                        android:inputType="textPersonName"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dp15h"
+                        android:paddingEnd="@dimen/dp5w"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_sign_up_brand"
+                    android:layout_width="match_parent"
+                    android:textDirection="locale"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20h"
+                    android:layout_marginStart="@dimen/dp20h"
+                    android:layout_marginTop="@dimen/dp13h"
+                    android:textColorHint="@color/colorPrimary"
+                    bind:errorText="@{validation.brandError}">
+
+
+                    <EditText
+                        android:id="@+id/et_register_2_car_brand"
+                        android:layout_width="match_parent"
+                        android:textDirection="locale"
+                        android:layout_height="@dimen/dp35h"
+                        android:layout_marginTop="@dimen/dp5h"
+                        android:background="@drawable/login_edittext_rounded_background"
+                        android:onClick="@{RegisterModelView2::showCarBrands}"
+                        android:text="@={RegisterModelView2.brand}"
+                        android:hint="@string/hint_car_brand"
+                        android:inputType="textPersonName"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dp15h"
+                        android:paddingEnd="@dimen/dp5w"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_sign_up_model"
+                    android:layout_width="match_parent"
+                    android:textDirection="locale"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20h"
+                    android:layout_marginStart="@dimen/dp20h"
+                    android:layout_marginTop="@dimen/dp13h"
+                    android:textColorHint="@color/colorPrimary"
+                    bind:errorText="@{validation.modelError}">
+
+
+                    <EditText
+                        android:id="@+id/et_register_2_model"
+                        android:layout_width="match_parent"
+                        android:textDirection="locale"
+                        android:layout_height="@dimen/dp35h"
+                        android:layout_marginTop="@dimen/dp5h"
+                        android:background="@drawable/login_edittext_rounded_background"
+                        android:onClick="@{RegisterModelView2::showModels}"
+                        android:text="@={RegisterModelView2.model}"
+                        android:hint="@string/hint_model"
+                        android:inputType="textPersonName"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dp15h"
+                        android:paddingEnd="@dimen/dp5w"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_sign_up_year"
+                    android:layout_width="match_parent"
+                    android:textDirection="locale"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20h"
+                    android:layout_marginStart="@dimen/dp20h"
+                    android:layout_marginTop="@dimen/dp13h"
+                    android:textColorHint="@color/colorPrimary"
+                    bind:errorText="@{validation.yearError}">
+
+
+                    <EditText
+                        android:id="@+id/et_register_2_year"
+                        android:layout_width="match_parent"
+                        android:textDirection="locale"
+                        android:layout_height="@dimen/dp35h"
+                        android:layout_marginTop="@dimen/dp5h"
+                        android:background="@drawable/login_edittext_rounded_background"
+                        android:onClick="@{RegisterModelView2::showYears}"
+                        android:text="@={RegisterModelView2.year}"
+                        android:hint="@string/hint_year"
+                        android:inputType="textPersonName"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dp15h"
+                        android:paddingEnd="@dimen/dp5w"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary" />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <Button
+                    android:id="@+id/btn_register_2_next"
+                    android:layout_width="@dimen/dp130w"
+                    android:layout_height="@dimen/dp30h"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:layout_marginBottom="@dimen/dp25h"
+                    android:background="@drawable/btn_border_background"
+                    android:onClick="@{RegisterModelView2::next}"
+                    android:text="@string/action_next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </ScrollView>
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="@{RegisterModelView2.progressDialog}" />
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp5w"
+                android:text="@string/label_step_2"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp12" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp10h"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp10h"
+                    android:layout_marginStart="@dimen/dp2w"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp10h"
+                    android:layout_marginStart="@dimen/dp2w"
+                    android:layout_weight="1"
+                    android:background="@color/colorGrayLevel2" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

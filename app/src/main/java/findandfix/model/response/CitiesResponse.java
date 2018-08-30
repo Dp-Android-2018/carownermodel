@@ -1,19 +1,22 @@
 package findandfix.model.response;
 
-import java.util.List;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
+import findandfix.model.global.BaseModel;
 
 
 public class CitiesResponse{
 
 	@SerializedName("data")
-	private List<CityItem> data;
+	private List<BaseModel> data;
 
-	public void setData(List<CityItem> data){
+	public void setData(List<BaseModel> data){
 		this.data = data;
 	}
 
-	public List<CityItem> getData(){
+	public List<BaseModel> getData(){
 		return data;
 	}
 

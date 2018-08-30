@@ -1,6 +1,6 @@
 package findandfix.view.ui.callback;
 
-import android.view.View;
+import findandfix.model.global.RequestOfferObj;
 
 /**
  * Created by mohamedatef on 5/5/18.
@@ -9,4 +9,5 @@ import android.view.View;
 public interface RecycleItemClickListener {
 
     void onItemClick(int position);
+    void getWorkshopOffer(RequestOfferObj offerObj);
 }

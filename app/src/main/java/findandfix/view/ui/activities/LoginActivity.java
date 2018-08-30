@@ -1,26 +1,30 @@
 package findandfix.view.ui.activities;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.WindowManager;
-import com.example.dp.findandfix.R;
-import com.example.dp.findandfix.databinding.ActivityLoginBinding;
+
 import com.google.firebase.FirebaseApp;
+
+import java.util.Observable;
+import java.util.Observer;
+
+import findandfix.R;
+import findandfix.databinding.ActivityLoginBinding;
 import findandfix.utils.ConfigurationFile;
 import findandfix.view.ui.callback.BaseInterface;
 import findandfix.viewmodel.LoginViewModel;
-import java.util.Observable;
-import java.util.Observer;
 
 /**
  * Created by DELL on 10/03/2018.
  */
 
-public class LoginActivity extends AppCompatActivity implements Observer,BaseInterface{
+public class LoginActivity extends BaseActivity implements Observer,BaseInterface{
 
     private ActivityLoginBinding activityLoginBinding;
     private LoginViewModel loginViewModel;
@@ -31,6 +35,7 @@ public class LoginActivity extends AppCompatActivity implements Observer,BaseInt
         super.onCreate(savedInstanceState);
         FirebaseApp.initializeApp(this);
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+
         initBinding();
         subscribe();
     }
@@ -39,7 +44,7 @@ public class LoginActivity extends AppCompatActivity implements Observer,BaseInt
     @Override
     public void update(Observable o, Object arg) {
             if(o instanceof LoginViewModel) {
-                moveToNextActivity(0);
+                moveToNextActivity(ConfigurationFile.Constants.MOVE_TO_MAIN_ACT);
             }
     }
 
@@ -52,11 +57,11 @@ public class LoginActivity extends AppCompatActivity implements Observer,BaseInt
         else if(code==ConfigurationFile.Constants.INVALID_DATA)
             Snackbar.make(activityLoginBinding.rlParent, R.string.msg_invalid_data,Snackbar.LENGTH_LONG).show();
         else if(code==ConfigurationFile.Constants.MOVE_TO_REGISTER_ACTIVITY)
-            moveToNextActivity(1);
-        else if(code==ConfigurationFile.Constants.MOVE_TO_SUBSCRIBTION_ACTIVITY)
-            moveToNextActivity(2);
+            moveToNextActivity(ConfigurationFile.Constants.MOVE_TO_REGISTER_ACTIVITY);
+
         else if(code==ConfigurationFile.Constants.NO_INTERNET_CONNECTION_CODE)
             Snackbar.make(activityLoginBinding.rlParent, R.string.msg_internet_connection,Snackbar.LENGTH_LONG).show();
+
     }
 
     @Override
@@ -66,8 +71,12 @@ public class LoginActivity extends AppCompatActivity implements Observer,BaseInt
     }
 
     public void initBinding(){
-        loginViewModel=new LoginViewModel(getApplicationContext(),this);
+        loginViewModel=new LoginViewModel(LoginActivity.this,this);
         activityLoginBinding = DataBindingUtil.setContentView(LoginActivity.this,R.layout.activity_login);
+        activityLoginBinding.tvForgotPassword.setOnClickListener(v -> {
+            Intent i=new Intent(LoginActivity.this,ForgetPasswordMobileActivity.class);
+            startActivity(i);
+        });
         activityLoginBinding.setLoginViewModel(loginViewModel);
     }
 
@@ -76,6 +85,14 @@ public class LoginActivity extends AppCompatActivity implements Observer,BaseInt
     }
 
     public void moveToNextActivity(int checker){
+        Intent i=null;
+        if (checker==ConfigurationFile.Constants.MOVE_TO_REGISTER_ACTIVITY) {
+             i = new Intent(LoginActivity.this, FirstStepRegister.class);
+        }else if (checker==ConfigurationFile.Constants.MOVE_TO_MAIN_ACT){
+            i = new Intent(LoginActivity.this, MainActivity.class);
+        }
+        startActivity(i);
+        finishAffinity();
 
     }
 

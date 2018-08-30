@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.dp.findandfix.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import findandfix.R;
 import findandfix.model.response.BrandItem;
-import findandfix.model.response.CityItem;
 import findandfix.view.ui.callback.RecycleItemClickListener;
 
 /**
@@ -46,7 +46,8 @@ public class BrandsAdapter extends RecyclerView.Adapter<BrandsAdapter.ViewHolder
     public void onBindViewHolder(ViewHolder holder, int position) {
         BrandItem cityItem = brandItems.get(position);
         holder.title.setText(cityItem.getName());
-        holder.image.setVisibility(View.GONE);
+        System.out.println("Brand Image Path :"+"http://new.findandfix.com/"+cityItem.getImage());
+        Picasso.with(context).load("http://new.findandfix.com"+cityItem.getImage()).into(holder.image);
     }
 
     // total number of rows

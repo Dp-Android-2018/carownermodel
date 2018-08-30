@@ -29,8 +29,20 @@ public class RegisterRequest implements Serializable {
     private double latitude;
     @SerializedName("longitude")
     private double longitude;
+    @SerializedName("password_confirmation")
+    private String passwordConfirmation;
+
+    public String getPasswordConfirmation() {
+        return passwordConfirmation;
+    }
+
+    public void setPasswordConfirmation(String passwordConfirmation) {
+        this.passwordConfirmation = passwordConfirmation;
+    }
+
     @SerializedName("password")
     private String password;
+
     @SerializedName("device_token")
     private String deviceToken;
     @SerializedName("image")

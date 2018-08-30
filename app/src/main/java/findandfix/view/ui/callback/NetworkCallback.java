@@ -10,4 +10,6 @@ public interface NetworkCallback {
 
     public void  onFailure(Throwable throwable);
 
+    public <E>void  onUnUthenticated(int code);
+
 }

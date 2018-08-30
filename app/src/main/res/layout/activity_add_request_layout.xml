@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<data> </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_background_2"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar"/>
+    <RelativeLayout
+        android:id="@+id/rl_car_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp15h"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/are_you_want_to_make_this_request"
+            android:textColor="@color/colorBlue"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_below="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/for_this_car_label"
+            android:textColor="@color/colorBlue"
+            android:layout_marginTop="@dimen/dp5h"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_below="@+id/tv2"
+            android:id="@+id/tv_car_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="BM3-X3-2018"
+            android:textColor="@color/colorBlue"
+            android:layout_marginTop="@dimen/dp5h"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10w"
+        android:layout_below="@+id/rl_car_info"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_login_enter"
+            android:layout_width="@dimen/dp130w"
+            android:layout_height="@dimen/dp30h"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_light_blue_border_background"
+            android:text="@string/action_yes"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btn_login_another"
+            android:layout_width="@dimen/dp130w"
+            android:layout_height="@dimen/dp30h"
+            android:background="@drawable/btn_light_blue_border_background"
+            android:text="@string/action_no_another"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+</RelativeLayout>
+</layout>

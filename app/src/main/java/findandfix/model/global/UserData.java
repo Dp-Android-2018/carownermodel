@@ -10,14 +10,6 @@ public class UserData {
 	@SerializedName("country")
 	private CountryItem country;
 
-	@SerializedName("website")
-	private String website;
-
-	@SerializedName("brands")
-	private List<BrandItem> brands;
-
-	@SerializedName("specializations")
-	private List<BaseModel> specializations;
 
 	@SerializedName("city")
 	private BaseModel city;
@@ -31,17 +23,16 @@ public class UserData {
 	@SerializedName("token")
 	private String token;
 
-	@SerializedName("subscribed")
-	private boolean subscribed;
 
-	@SerializedName("workdays")
-	private List<WorkdaysItem> workdays;
+	@SerializedName("first_name")
+	private String firstName;
 
-	@SerializedName("urgent_request_types")
-	private List<BaseModel> urgentRequestTypes;
 
-	@SerializedName("name")
-	private String name;
+	@SerializedName("garage")
+	private List<Garage>garages;
+
+	@SerializedName("last_name")
+	private String lastName;
 
 	@SerializedName("id")
 	private int id;
@@ -52,145 +43,127 @@ public class UserData {
 	@SerializedName("longitude")
 	private String longitude;
 
-	public void setCountry(CountryItem country){
-		this.country = country;
-	}
 
-	public CountryItem getCountry(){
+	@SerializedName("image")
+	private String image;
+
+	@SerializedName("confirmed")
+	private int confirmed;
+
+
+
+	@SerializedName("device_token")
+	private String deviceToken;
+
+	public CountryItem getCountry() {
 		return country;
 	}
 
-	public void setWebsite(String website){
-		this.website = website;
+	public void setCountry(CountryItem country) {
+		this.country = country;
 	}
 
-	public String getWebsite(){
-		return website;
-	}
-
-	public void setBrands(List<BrandItem> brands){
-		this.brands = brands;
-	}
-
-	public List<BrandItem> getBrands(){
-		return brands;
-	}
-
-	public void setSpecializations(List<BaseModel> specializations){
-		this.specializations = specializations;
-	}
-
-	public List<BaseModel> getSpecializations(){
-		return specializations;
-	}
-
-	public void setCity(BaseModel city){
-		this.city = city;
-	}
-
-	public BaseModel getCity(){
+	public BaseModel getCity() {
 		return city;
 	}
 
-	public void setLatitude(String latitude){
-		this.latitude = latitude;
+	public void setCity(BaseModel city) {
+		this.city = city;
 	}
 
-	public String getLatitude(){
+	public String getLatitude() {
 		return latitude;
 	}
 
-	public void setMobile(String mobile){
-		this.mobile = mobile;
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
 	}
 
-	public String getMobile(){
+	public String getMobile() {
 		return mobile;
 	}
 
-	public void setToken(String token){
-		this.token = token;
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
 	}
 
-	public String getToken(){
+	public String getToken() {
 		return token;
 	}
 
-	public void setSubscribed(boolean subscribed){
-		this.subscribed = subscribed;
+	public void setToken(String token) {
+		this.token = token;
 	}
 
-	public boolean isSubscribed(){
-		return subscribed;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setWorkdays(List<WorkdaysItem> workdays){
-		this.workdays = workdays;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public List<WorkdaysItem> getWorkdays(){
-		return workdays;
+	public List<Garage> getGarages() {
+		return garages;
 	}
 
-	public void setUrgentRequestTypes(List<BaseModel> urgentRequestTypes){
-		this.urgentRequestTypes = urgentRequestTypes;
+	public void setGarages(List<Garage> garages) {
+		this.garages = garages;
 	}
 
-	public List<BaseModel> getUrgentRequestTypes(){
-		return urgentRequestTypes;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setName(String name){
-		this.name = name;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public String getName(){
-		return name;
-	}
-
-	public void setId(int id){
-		this.id = id;
-	}
-
-	public int getId(){
+	public int getId() {
 		return id;
 	}
 
-	public void setEmail(String email){
-		this.email = email;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getEmail(){
+	public String getEmail() {
 		return email;
 	}
 
-	public void setLongitude(String longitude){
-		this.longitude = longitude;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getLongitude(){
+	public String getLongitude() {
 		return longitude;
 	}
 
-	@Override
- 	public String toString(){
-		return 
-			"RegisterItem{" +
-			"country = '" + country + '\'' + 
-			",website = '" + website + '\'' + 
-			",brands = '" + brands + '\'' + 
-			",specializations = '" + specializations + '\'' + 
-			",city = '" + city + '\'' + 
-			",latitude = '" + latitude + '\'' + 
-			",mobile = '" + mobile + '\'' + 
-			",token = '" + token + '\'' + 
-			",subscribed = '" + subscribed + '\'' + 
-			",workdays = '" + workdays + '\'' + 
-			",urgent_request_types = '" + urgentRequestTypes + '\'' + 
-			",name = '" + name + '\'' + 
-			",id = '" + id + '\'' + 
-			",email = '" + email + '\'' + 
-			",longitude = '" + longitude + '\'' + 
-			"}";
-		}
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public int getConfirmed() {
+		return confirmed;
+	}
+
+	public void setConfirmed(int confirmed) {
+		this.confirmed = confirmed;
+	}
+
+	public String getDeviceToken() {
+		return deviceToken;
+	}
+
+	public void setDeviceToken(String deviceToken) {
+		this.deviceToken = deviceToken;
+	}
 }

@@ -10,4 +10,8 @@ import java.io.Serializable;
 public class Media implements Serializable{
     @SerializedName("path")
     private String path;
+
+    public String getPath() {
+        return path;
+    }
 }

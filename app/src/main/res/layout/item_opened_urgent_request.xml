@@ -150,9 +150,9 @@
     </RelativeLayout>
 
     <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp2w"
-        android:background="@drawable/view_red_dashed_background" />
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp2w"
+    android:background="@drawable/view_red_dashed_background" />
 
     <TextView
         android:layout_width="match_parent"

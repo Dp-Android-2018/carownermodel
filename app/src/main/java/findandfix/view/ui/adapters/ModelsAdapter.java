@@ -8,11 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.dp.findandfix.R;
-
 import java.util.List;
 
-import findandfix.model.response.BrandItem;
+import findandfix.R;
 import findandfix.model.response.ModelItem;
 import findandfix.view.ui.callback.RecycleItemClickListener;
 

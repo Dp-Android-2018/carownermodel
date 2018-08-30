@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data></data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_background_2"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar"/>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_add_request_2_steps_holder"
+        android:layout_marginBottom="@dimen/dp15w"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_add_request_car_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp15h"
+                android:gravity="center"
+                android:text="@string/label_car_info"
+                android:textColor="@color/colorBlue"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/dp200w"
+                android:layout_height="@dimen/dp100h"
+                android:layout_below="@+id/tv_add_request_car_info"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp15h"
+                android:src="@drawable/img_car_info" />
+
+            <TextView
+                android:id="@+id/tv_brand"
+                android:editable="false"
+                android:focusable="false"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp30w"
+                android:layout_marginStart="@dimen/dp30w"
+                android:layout_marginTop="@dimen/dp15h"
+                android:background="@drawable/tv_light_blue_border_background"
+                android:gravity="center"
+                android:padding="@dimen/dp5w"
+                android:text="@string/label_choose_brand"
+                android:textColor="@color/colorLightBlue" />
+
+            <TextView
+                android:id="@+id/tv_model"
+                android:editable="false"
+                android:focusable="false"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp30w"
+                android:layout_marginStart="@dimen/dp30w"
+                android:layout_marginTop="@dimen/dp15h"
+                android:background="@drawable/tv_light_blue_border_background"
+                android:gravity="center"
+                android:padding="@dimen/dp5w"
+                android:text="@string/label_choose_model"
+                android:textColor="@color/colorLightBlue" />
+
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:editable="false"
+                android:focusable="false"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp30w"
+                android:layout_marginStart="@dimen/dp30w"
+                android:layout_marginTop="@dimen/dp15h"
+                android:background="@drawable/tv_light_blue_border_background"
+                android:gravity="center"
+                android:padding="@dimen/dp5w"
+                android:text="@string/label_year"
+                android:textColor="@color/colorLightBlue" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="@dimen/dp130w"
+                android:layout_height="@dimen/dp30h"
+                android:layout_marginTop="@dimen/dp30h"
+                android:background="@drawable/btn_light_blue_border_background"
+                android:text="@string/action_next"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_add_request_2_steps_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/label_car"
+                android:textColor="@color/colorLightBlue"
+                android:textSize="@dimen/sp12"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp10h"
+                android:background="@color/colorLightBlue" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp1w"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/label_problem"
+                android:textColor="@color/colorGrayLevel2"
+                android:textSize="@dimen/sp12"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp10h"
+                android:background="@color/colorGrayLevel2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp1w"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/label_location"
+                android:textColor="@color/colorGrayLevel2"
+                android:textSize="@dimen/sp12"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp10h"
+                android:background="@color/colorGrayLevel2" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp1w"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/label_images"
+                android:textColor="@color/colorGrayLevel2"
+                android:textSize="@dimen/sp12"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp10h"
+                android:background="@color/colorGrayLevel2" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp1w"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/label_notes"
+                android:textColor="@color/colorGrayLevel2"
+                android:textSize="@dimen/sp12"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp10h"
+                android:background="@color/colorGrayLevel2" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+</layout>

@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data></data>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/dp15w"
-    android:orientation="vertical">
+    android:orientation="vertical"
+
+   >
+
 
 
     <TextView
@@ -33,6 +39,13 @@
             android:src="@drawable/img_colored_microphone" />
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
     <TextView
         android:layout_below="@+id/ll_add_urgent_request_microphone_holder"
         android:layout_width="match_parent"
@@ -41,17 +54,20 @@
         android:gravity="center"
         android:text="00:00:00"
         android:textColor="@color/colorRed"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="gone"/>
 
     <Button
+        android:id="@+id/btn_send"
         android:layout_width="@dimen/dp130w"
         android:layout_height="@dimen/dp30h"
         android:layout_alignParentBottom="true"
         android:layout_below="@+id/tv_add_urgent_request_splitter"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/dp30h"
-        android:background="@drawable/btn_gray_border_background"
+        android:background="@drawable/btn_red_border_background"
         android:text="@string/action_send"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite" />
 </RelativeLayout>
+</layout>
