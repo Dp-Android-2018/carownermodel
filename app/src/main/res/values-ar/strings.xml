@@ -1,0 +1,551 @@
+<resources>
+    <string name="app_name">Find&amp;Fix</string>
+
+    <string name="label_login_find_fix">تسجيل الدخول</string>
+
+    <string name="label_register_find_fix">تسجل</string>
+
+    <string name="hint_password">كلمه المرور</string>
+
+    <string name="hint_confirm_password">تأكيد كلمه المرور</string>
+
+    <string name="hint_email">البريد الالكترونى</string>
+
+    <string name="action_login">تسجيل الدخول</string>
+
+    <string name="action_next">التالى</string>
+
+    <string name="action_choose_location">اختر المكان</string>
+
+    <string name="action_select_location">اختر المكان</string>
+
+    <string name="action_choose_image">اختر صوره</string>
+
+    <string name="action_choose_video">اختر فديو</string>
+
+    <string name="action_register">سجل</string>
+
+    <string name="label_forgot_password">نسيت كلمه المرور؟</string>
+
+    <string name="label_new_user">تسجيل مستخدم جديد</string>
+
+    <string name="hint_first_name">الاسم الاول</string>
+
+    <string name="hint_last_name">اسم العائله</string>
+
+    <string name="hint_phone_number">رقم الهاتف</string>
+
+    <string name="start_journey">نتمنى لك رحله ممتعه</string>
+
+    <string name="journey">البحث والاصلاح رحلة فقط اضغط المحرك لتبدأها</string>
+
+    <string name="start_engine">ابدء</string>
+
+    <string name="hint_country">الدوله</string>
+
+    <string name="hint_city">المدينه</string>
+
+    <string name="hint_car_brand">ماركه السياره</string>
+
+    <string name="hint_model">الموديل</string>
+
+    <string name="hint_year">سنه الصنع</string>
+
+    <string name="label_upload_photo">اضف صوره شخصيه</string>
+
+    <string name="label_upload">ارفع الصوره</string>
+
+    <string name="label_check_mail">فعل الحساب من خلال البريد الالكترونى</string>
+
+    <string name="label_for_more_details">لمعلومات اكثر قم بزياره</string>
+
+    <string name="label_description">الوصف</string>
+
+    <string name="offer_info">معلومات العرض</string>
+
+    <string name="label_work_shop_info">معلومات عن الورشه</string>
+
+    <string name="label_find_fix_site">www.Findandfix.com</string>
+
+    <string name="label_start_engine">ابدء</string>
+
+    <string name="label_urgent_request">طلب عاجل</string>
+
+    <string name="label_add_request">اطلب</string>
+
+    <string name="label_offers">العروض</string>
+
+    <string name="label_edit_profile">تعديل الحساب</string>
+
+    <string name="label_requests">الطلبات</string>
+
+    <string name="label_normal_request">اطلب</string>
+    <string name="label_normal_request_2">صلح سيارتك</string>
+    <string name="label_add_advertising">ضيف اعلان</string>
+
+    <string name="label_car_info">معلومات عن السياره</string>
+
+    <string name="action_yes">نعم</string>
+
+    <string name="action_no_another">سياره اخرى</string>
+
+    <string name="label_choose_brand">ماركه السياره</string>
+
+    <string name="label_choose_model">الموديل</string>
+
+    <string name="label_choose_year">سنه الصنع</string>
+
+    <string name="label_year">السنه</string>
+
+    <string name="label_car">السياره</string>
+
+    <string name="label_problem">مشكله</string>
+
+    <string name="label_location">الموقع</string>
+
+    <string name="label_images">الصور</string>
+
+    <string name="label_notes">ملاحظات</string>
+
+    <string name="label_choose_problem">حدد مشكلتك</string>
+
+    <string name="label_upload_car_images">ارفع صور السياره</string>
+
+    <string name="label_upload_car_videos">ارفع فديو للسياره</string>
+
+    <string name="hint_write_car_notes">ملاحظاتك عن السياره</string>
+
+    <string name="label_average_price">متوسط الثمن</string>
+
+    <string name="label_work_shop_offer">عروض الورش</string>
+
+    <string name="label_step_one">خطوه 1 من 3</string>
+
+    <string name="label_step_two">خطوه 2 من 3</string>
+
+    <string name="label_step_three">خطوه 3 من 3</string>
+
+    <string name="waiting_workshops">قيد البحث عن الورش</string>
+
+    <string name="msg_fill_data">ااكتب جميع البيانات</string>
+
+    <string name="msg_invalid_email_password">كلمه المرور او البريد خطأ</string>
+
+    <string name="msg_invalid_data">معلومات خاطئه</string>
+
+    <string name="msg_internet_connection">خطأ في الاتصال بالانترنت</string>
+
+    <string name="label_choose_country">اختر الدوله</string>
+
+    <string name="label_choose_city">اختر المدينه</string>
+
+    <string name="msg_select_country">اختر الدوله</string>
+
+    <string name="label_select_action">اختر العمليه</string>
+
+    <string name="label_select_gallery">اختار صوره من الاستديو</string>
+
+    <string name="label_select_camera">افتح الكاميرا</string>
+
+    <string name="action_done">تم</string>
+
+    <string name="label_rights">جميع الحقوق محفوظه © Find&amp;Fix</string>
+
+    <string name="label_home">الصفحه الرئيسيه</string>
+
+    <string name="label_settings">الأعدادات</string>
+
+    <string name="label_share">مشاركه</string>
+
+    <string name="label_rate">التقيم</string>
+
+    <string name="about_find_fix">ماذا عنا</string>
+
+    <string name="label_pic_location">اختر المكان لنصلك باسرع مايمكن</string>
+
+    <string name="label_choose_type">نوع المشكله</string>
+
+    <string name="label_gas">سولار</string>
+
+    <string name="label_tire">اطار</string>
+
+    <string name="label_towed">السطحة</string>
+
+    <string name="label_battery">البطاريه</string>
+
+    <string name="hint_type_message">اكتب رسالتك</string>
+
+    <string name="label_tell_notes">ملاحظاتك عن المشكله</string>
+
+    <string name="action_send">ارسال</string>
+
+    <string name="label_please_hold">اضغط رمز المايك وسجل رسالتك</string>
+
+    <string name="label_today">اليوم</string>
+
+    <string name="label_normal_requests">الطلبات</string>
+
+    <string name="label_urgent_requests">الطلبات العاجله</string>
+
+    <string name="label_distance">المسافه</string>
+
+    <string name="label_km">ك.م</string>
+
+    <string name="action_accept">قبول العرض</string>
+
+    <string name="label_your_record">تسجيلك</string>
+
+    <string name="all_rights_recieved_findandfix_2018">جميع الحقوق محفوظه البحث والاصلاح 2018</string>
+
+    <string name="home">الصفحه الرئيسيه</string>
+
+    <string name="setting">الاعدادات</string>
+
+    <string name="share">مشاركه</string>
+
+    <string name="rate_us">التقيم</string>
+
+    <string name="send_to">ارسل الى</string>
+
+    <string name="open_drawer">Open Drawer</string>
+
+    <string name="close_drawer">Close Drawer</string>
+
+
+    -<string name="find_fix">
+
+البحث و الاصلاح
+</string>
+
+    <string name="select_time">اختر الوقت</string>
+
+    <string name="type_your_message_here">اترك رسالتك هنا</string>
+
+    <string name="chat">الدردشه</string>
+
+    <string name="about">ماذا عنا</string>
+
+    <string name="cant_complete_request">Can\'t Complete Your Request</string>
+
+    <string name="email">البريد الالكترونى</string>
+
+    <string name="required_field">من فضلك ادخل هذا الحقل</string>
+
+    <string name="invalid_email_format">بريد الكترونى خاطئ</string>
+
+    <string name="password_length">كلمه المرور لابد ان تكون اكثر من 8 احرف</string>
+
+    <string name="password_confirm_not_match">كلمه المرور وتأكيد كلمه المرور غير متطابقان</string>
+
+    <string name="exist_email">هذا البريد مُسجل</string>
+
+    <string name="choose_brands">اختر الماركه اولا</string>
+
+    <string name="label_step_2">خطوه 2 من 3</string>
+
+    <string name="label_step_3">خطوه 3 من 3</string>
+
+    <string name="permission_denied">غير مسموح</string>
+
+    <string name="choose_image">اختر الصوره اولا</string>
+
+    <string name="invalid_data">تأكد من صحه البيانات</string>
+
+    <string name="invalid_phone_number">هذا الهاتف مُسجل</string>
+
+    <string name="personal_information">البيانات الشخصيه</string>
+
+    <string name="first_name">الاسم الاول</string>
+
+    <string name="last_name">اسم العائله</string>
+
+    <string name="phone">رقم الهاتف</string>
+
+    <string name="country">الدوله</string>
+
+    <string name="city">المدينه</string>
+
+    <string name="car_information">معلومات عن السياره</string>
+
+    <string name="brand">ماركه السياره</string>
+
+    <string name="model">الموديل</string>
+
+    <string name="year">سنه الصنع</string>
+
+    <string name="change_password">تغيير كلمه المرور</string>
+
+    <string name="submit">سجل</string>
+
+    <string name="edit_profile">تعديل الملف الشخصى</string>
+
+    <string name="profile_update_successfully">تم التعديل بنجاح</string>
+
+    <string name="unauthenticated">هذا الحساب سجل من جهاز اخر</string>
+
+    <string name="please_write_your_current_password">كلمه المرور الحاليه</string>
+
+    <string name="save">حفظ</string>
+
+    <string name="matches_password">كلمه المرور وتأكيد كلمه المرور غير متطابقان</string>
+
+    <string name="password_updated">تم تعديل كلمه المرور</string>
+
+    <string name="invalid_current_password">كلمه المرور الحاليه غير صحيحه</string>
+
+    <string name="cant_complete_your_request">لايمكن اتمام طلبك</string>
+
+
+    -<string name="data_matches">
+
+-<![CDATA[Data Of Model & City Must Match to it\'s parents]]>
+</string>
+
+    <string name="no_desc_available">الوصف غير متاح</string>
+
+    <string name="offer_detail">تفاصيل العرض</string>
+
+    <string name="are_you_want_to_make_this_request">هل تريد اتمام هذا الطلب</string>
+
+    <string name="for_this_car_label">لهذه السياره</string>
+
+    <string name="add_request">اطلب</string>
+
+    <string name="select_your_problem">اختر مشكلتك</string>
+
+    <string name="select_specialization">اختر التخصص</string>
+
+    <string name="select_specialize_first">اختر التخصص اولا</string>
+
+    <string name="cancel">الغاء</string>
+
+    <string name="ok">تم</string>
+
+    <string name="maximum_image_number">اقصى عدد من الصور 5</string>
+
+    <string name="select_video">اختر فديو</string>
+
+    <string name="uploading_videos">رفع الفديو</string>
+
+    <string name="uploading_pictures">ارفع الصوره</string>
+
+    <string name="server_error">خطأ فى الخادم!من فضلك حاول لاحقا</string>
+
+    <string name="waiting">قيد الانتظار</string>
+
+    <string name="search_for_workshop">ابحث عن الورشه</string>
+
+    <string name="find_request">اوجد الطلب</string>
+
+    <string name="distance">المسافه</string>
+
+    <string name="workshop_offer">عرض الورشه</string>
+
+    <string name="workshop_name">اسم الورشه</string>
+
+    <string name="achievments">الانجازات</string>
+
+    <string name="accept_offer">قبول العرض</string>
+
+    <string name="unuthenticated">غير موثق</string>
+
+    <string name="sar">SAR</string>
+
+    <string name="km">ك.م</string>
+
+    <string name="today">اليوم</string>
+
+    <string name="urgent_request_text">طلب عاجل</string>
+
+    <string name="normal_request_text">طلب عادى</string>
+
+    <string name="average_price">متوسط الثمن</string>
+
+    <string name="average_time">متوسط الوقت</string>
+
+    <string name="offer_time">عرض الوقت</string>
+
+    <string name="rate_label">التقيم</string>
+
+    <string name="no_desc">لايوجد وصف</string>
+
+    <string name="show_location">اظهر الموقع</string>
+
+    <string name="start_chat">ابدء الدردشه</string>
+
+    <string name="call_workshop">الاتصال بالورشه</string>
+
+    <string name="offer_accepted_notification">تم قبول العرض</string>
+
+    <string name="no_achievements_yet">لا يوجد انجازات بعد</string>
+
+    <string name="no_achievements_for_this_workshop_right_now">لايوجد انجازات لهذه الورشه حتي الان</string>
+
+    <string name="before">قبل</string>
+
+    <string name="after">بعد</string>
+
+    <string name="workshop_achievment">انجازات الورشه</string>
+
+    <string name="rate_added_successfully">تم اضافه التقييم بنجاح</string>
+
+    <string name="maxmimum_image_num">اقصى عدد من الصور 5</string>
+
+    <string name="to_reach_your_asap">اختر</string>
+
+    <string name="please_choose_your">اختر</string>
+
+    <string name="problem_type">نوع المشكله</string>
+
+    <string name="choose_your_problem">اختر المشكله</string>
+
+    <string name="winch_type">اى نوع</string>
+
+    <string name="winch">سطحه</string>
+
+    <string name="normal_winch">سطحه عاديه</string>
+
+    <string name="hydrolic_winch">سطحه هيدروليكيه</string>
+
+    <string name="select_winch_type">اخر النوع</string>
+
+    <string name="voicE_notes">ملاحظات صوتيه</string>
+
+    <string name="typing">ملاحظة كتابية</string>
+
+    <string name="audio_not_recorded">لم يتم تسجيل الصوت</string>
+
+    <string name="audio_recorded_successfully">تم تسجيل الصوت بنجاح</string>
+
+    <string name="urgent_request_label">طلب عاجل</string>
+
+    <string name="date">التاريخ</string>
+
+    <string name="request_info">معلومات عن الطلب</string>
+
+    <string name="urgent_offer_accepted">تم قبول العرض العاجل</string>
+    <string name="no_message_yet">لا توجد رسائل حتى الان</string>
+    <string name="no_message">لا توجد لديك رسائل</string>
+    <string name="no_offers_yet">لا توجد عروض حتى الان</string>
+    <string name="there_is_no_advertising_right_now_in_this_area">لا توجد اعلانات حاليا فى هذة المنطقة</string>
+    <string name="request_detail_label">تفاصيل الطلب</string>
+    <string name="urgent_offers">عروض الطلب العاجل </string>
+    <string name="general">عام</string>
+    <string name="language">اللغة</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="account">الحساب</string>
+    <string name="deactive">اغلاق الحساب</string>
+    <string name="sign_out">تسجيل الخروج</string>
+    <string name="terms_and_condition">الشروط و الاحكام</string>
+    <string name="about_content">
+من نحن؟
+
+تأسست شركة البحث والإصلاح Find &amp; Fix ش.ذ.م.م. في عام ٢٠١٧م، وذلك للحاجة الملحة في تقنين سير أعمال ورش اصلاح المركبات ولإيجاد قطع الغيار الاستهلاكية والاساسية، وتعتبر أول شركة من نوعها في تقديم خدمات اصلاح المركبات والبحث عن قطع الغيار الملائمة لكل شركة وكل فئة، وأيضاً قطع الغيار المستخدمة كما هو موجود في تشليح قطع الغيار.
+
+وتتيح شركة البحث والإصلاح إمكانية إيصال المركبات المتعطلة ميكانيكياً أو المتعرضة للحوادث لورش الإصلاح، بعد المفاهمة مع أصحاب الورش وأماكن الصيانة من خلال تطبيق البحث والإصلاح Find &amp; Fix، كما يتيح تطبيق البحث والإصلاح إمكانية التسجيل كصاحب مركبة أو كصاحب ورشة صيانة.
+
+الرؤية
+
+نتطلع أن تكون شركة البحث والإصلاح من أفضل الشركات العربية والعالمية وتحقيق الريادة في مجال صيانة المركبات على المستوى المحلي والعربي والعالمي، وتوفير أعلى معايير الجودة في تقديم الخدمات للعملاء للتيسير لهم وتحقيق مبتغاهم، وتوفير أفضل الحلول في مجال صيانة المركبات وإيجاد قطع الغيار المناسبة في أسهل الطرق وأسرعها.
+
+الرسالة
+
+تقديم خدمات اصلاح المركبات وإيجاد قطع الغيار للعملاء والرقي في خدمات صيانة المركبات وتقنين سير أعمال الإصلاح.
+
+القيم
+
+تقديم أفضل الطرق لخدمة العملاء.
+الجودة في المعايير.
+القيادة والمسؤولية.
+التنمية والابتكار.
+الشغف والطموح.
+
+الأهداف
+
+وضع شركة البحث والإصلاح في مكانة متقدمة في مجال صيانة المركبات وبيع قطع الغيار محلياً وعالمياً.
+تقديم الخدمات لكافة العملاء بالشكل الملائم في جميع المدن.
+توسيع رقعة أعمال الصيانة لتصل لكل مدينة ودولة في العالم.
+صناعة حلقة تجارية عالمية في مجال بيع قطع الغيار.
+توفير أفضل حلول الصيانة، وللإلمام بطرق تعديل المركبات والتزويد بالطرق الرسمية.
+تمكين العملاء من متابعة سير أعمال صيانة مركباتهم من خلال تطبيق البحث والإصلاح.
+أن نحقق جميع احتياجات العملاء من شتى نواحي مجال الصيانة وخدمات بيع قطع الغيار.
+تحقيق الرضى التام للعملاء عن الخدمات المقدمة إليهم والتأكد من رفع سقف مستوى الخدمة.
+توفير كافة سبل الصيانة للمركبات، من إيصال للمركبات المتعطلة حتى خروجها من ورشة الصيانة.
+</string>
+    <string name="forgot_password">نسيت كلمة السر</string>
+    <string name="enter_your_mobile">من فضلك ادخل رقم الهاتف</string>
+    <string name="please_enter_data">من فضلك ادخل البيانات </string>
+    <string name="please_enter_code">من فضلك ادخل الرمز الكودى</string>
+    <string name="reset_password_success">قد تم تعين كلمة السر بنجاح</string>
+    <string name="invalid_code">رمز خاطىء</string>
+    <string name="reset_your_password">من فضلك ادخل كلمة السر الجديدة</string>
+    <string name="press_again_to_exit">اضغط مرة اخرى للخروج</string>
+    <string name="something_wrong_with_your_internet">لقد حدث خطأ فى الاتصال بالانترنت</string>
+    <string name="change_language">تغير اللغة</string>
+    <string name="are_you_sure_you_want_to_change_app_language">هل انت متأكد من انك تريد تغير اللغة ؟</string>
+    <string name="fill_data">من فضلك ادخل كل البيانات</string>
+    <string name="please_write_new_password">من فضلك اكتب كلمة السر الجديدة</string>
+    <string name="confirm_new_password">تأكيد كلمة السر</string>
+    <string name="choose_pictures">اختر صورة</string>
+    <string name="choose_camera">اختر صورة من الكاميرا</string>
+    <string name="choose_gallery">اختر صورة من المعرض</string>
+    <string name="choose_car_problem">اختر مشكلة سيارتك</string>
+    <string name="search_for_professional_workshop">ابحث عن مقدم خدمة محترف</string>
+    <string name="choose_best_offer">اختر افضل العروض</string>
+    <string name="pick_location">حدد مكانك</string>
+    <string name="choose_problem">اختر مشكلتك</string>
+    <string name="choose_offer">اختر افضل العروض</string>
+    <string name="accept">قبول</string>
+    <string name="new_message">New Message</string>
+    <string name="photo">عرض الصورة</string>
+    <string name="done">تم</string>
+    <string name="wensh_types">اتواع السطحات</string>
+    <string name="cancel_search">الغاء البحث</string>
+    <string name="developed_by">تمت البرمجة بواسطة</string>
+    <string name="this_is_your_last_orders">هذة اخر الطلبات</string>
+    <string name="no_requests_yet">لا توجد طلبات حتى الان</string>
+    <string name="my_orders">طلباتى</string>
+    <string name="need_winch">اريد سطحة</string>
+    <string name="dont_need_winch">لا اريد سطحة</string>
+    <string name="request_detail">تفاصيل الطلب</string>
+    <string name="find_and_fix_app_version_1_0_0">إصدار البحث والإصلاح 1.0.1</string>
+    <string name="you_can_active_your_account_by_mobile">تستطيع تفعيل حسابك من خلال رقم الهاتف</string>
+    <string name="active_by_mobile">تفعيل برقم الهاتف</string>
+    <string name="phone_number_recived">تم استلام رمز التفعيل على هاتفك</string>
+    <string name="check">افحص</string>
+    <string name="working_time">مواعيد العمل</string>
+    <string name="sa">السبت</string>
+    <string name="sع">الاحد</string>
+    <string name="Tue">الثلاثاء</string>
+    <string name="Wed">الاربعاء</string>
+    <string name="fri">الجمعه</string>
+    <string name="Thu">الخميس</string>
+    <string name="Mo">الاتنين</string>
+    <string name="morning_shift">الفترة الصباحية</string>
+    <string name="from">من</string>
+    <string name="to">To</string>
+    <string name="night_shift">الفترة المسائية</string>
+    <string name="service_provider">مقدم خدمة</string>
+    <string name="active_mobile">تفعيل بالهاتف</string>
+    <string name="code_sent_success">تم ارسال الرمز الخاص بنجاح</string>
+    <string name="enter_code">من فضلك ادخل الرمز اولا</string>
+    <string name="invalid_code_checker">رمز خاطىء</string>
+    <string name="if_you_have_fixation_paper">لو لديك ورق اصلاح السيارة</string>
+    <string name="please_upload_it">من فضلك قم برفعه</string>
+    <string name="next">التالى</string>
+    <string name="skip_this_step">تخطى</string>
+    <string name="workshop">مقدم خدمة</string>
+    <string name="nearest_workshop">مقدمو الخدمات الاقرب اليك</string>
+    <string name="tempspecializations">التخصصات</string>
+    <string name="workshop_specializations">اختصاصات مقدم الخدمة</string>
+    <string name="winch_specializations">تخصصات السطحة</string>
+    <string name="choose_specialization">اختر التخصصات</string>
+    <string name="sub_specialization">التخصصات الفرعية</string>
+    <string name="service_type">نوع الخدمة</string>
+    <string name="wensh">سطحة</string>
+    <string name="filter">بحث</string>
+    <string name="choose_specialization_filter">من فضلك اختر التخصصات او انواع السطحات</string>
+    <string name="version_update_available">تحدبث جديد متاح</string>
+    <string name="update_txt">تحدبث</string>
+    <string name="update_current_version_text">هناك نسخة جديدة من تطبيق البحث و الاصلاح من فضلك قم بتحديث التطبيق الحالى</string>
+</resources>

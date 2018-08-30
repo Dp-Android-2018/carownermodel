@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">470725562493-49av4sirgaa6h1e4er0ebcpis9i7fpvq.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://findandfix-2f4a9.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">470725562493</string>
+    <string name="google_api_key" translatable="false">AIzaSyC9VUDIcAXbf78_YXJsWeZFaE_TMZgU1-0</string>
+    <string name="google_app_id" translatable="false">1:470725562493:android:eee95812253e5cdb</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC9VUDIcAXbf78_YXJsWeZFaE_TMZgU1-0</string>
+    <string name="google_storage_bucket" translatable="false">findandfix-2f4a9.appspot.com</string>
+    <string name="project_id" translatable="false">findandfix-2f4a9</string>
+</resources>

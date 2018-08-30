@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="media">
+        <item>@string/choose_camera</item>
+        <item>@string/choose_gallery</item>
+    </string-array>
+</resources>
