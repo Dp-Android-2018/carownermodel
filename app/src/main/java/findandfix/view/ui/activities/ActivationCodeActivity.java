@@ -13,6 +13,7 @@ import com.google.gson.Gson;
 
 import findandfix.R;
 import findandfix.databinding.ActivityActivationCodeLayoutBinding;
+import findandfix.databinding.FragmentActiveAccountBinding;
 import findandfix.model.global.CheckActivationCodeRequest;
 import findandfix.model.global.SendActivationCodeRequest;
 import findandfix.model.global.UserData;
@@ -34,7 +35,7 @@ import retrofit2.Response;
  */
 
 public class ActivationCodeActivity extends AppCompatActivity {
-    ActivityActivationCodeLayoutBinding binding;
+    FragmentActiveAccountBinding binding;
     private ToolbarViewModel toolbarViewModel;
     private UserData userData;
     private SendActivationCodeRequest sendActivationCodeRequest;
@@ -43,16 +44,9 @@ public class ActivationCodeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding= DataBindingUtil.setContentView(this, R.layout.activity_activation_code_layout);
+        binding= DataBindingUtil.setContentView(this, R.layout.fragment_active_account);
         userData=CustomUtils.getInstance().getSaveUserObject(getApplicationContext());
-        setUpToolBar();
-        getActivationCode();
-        binding.btnActiveMobile.setOnClickListener(v -> {
-                    if (!binding.etActivateCode.getText().toString().equals(""))
-                        checkActivationCode();
-                    else  Snackbar.make(binding.getRoot(), R.string.enter_code, Snackbar.LENGTH_LONG).show();
-        });
-    }
+        setUpToolBar();}
 
     public void setUpToolBar() {
         setSupportActionBar(binding.toolbar.toolbar);
@@ -64,74 +58,6 @@ public class ActivationCodeActivity extends AppCompatActivity {
     }
 
 
-    public void getActivationCode(){
-        if(NetWorkConnection.isConnectingToInternet(ActivationCodeActivity.this)) {
-            sendActivationCodeRequest=new SendActivationCodeRequest(userData.getMobile());
-            CustomUtils.getInstance().showProgressDialog(ActivationCodeActivity.this);
-            ApiClient.getClient().create(EndPoints.class).sendActivationCode(ConfigurationFile.Constants.API_KEY, CustomUtils.getInstance().getAppLanguage(getApplicationContext()), ConfigurationFile.Constants.Content_Type, ConfigurationFile.Constants.Content_Type, "Bearer "+userData.getToken(),sendActivationCodeRequest)
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(new Consumer<Response<DefaultResponse>>() {
-                        @Override
-                        public void accept(Response<DefaultResponse> defaultResponseResponse) throws Exception {
-                            CustomUtils.getInstance().cancelDialog();
-                            System.out.println("Code :"+defaultResponseResponse.code());
-                            if (defaultResponseResponse.code()==ConfigurationFile.Constants.SUCCESS_CODE) {
-                                System.out.println("Activated Send Successfully");
-                                Snackbar.make(binding.getRoot(), R.string.code_sent_success, Snackbar.LENGTH_LONG).show();
-                            }
 
-                        }
-                    }, new Consumer<Throwable>() {
-                        @Override
-                        public void accept(Throwable throwable) throws Exception {
-                            CustomUtils.getInstance().cancelDialog();
-                            System.out.println("ActivationCodeActivity Ex:"+throwable.getMessage());
-                        }
-                    });
-        }else {
-            Snackbar.make(binding.getRoot(), R.string.msg_internet_connection,Snackbar.LENGTH_LONG).show();
-        }
-    }
-
-
-    public void checkActivationCode(){
-        if(NetWorkConnection.isConnectingToInternet(ActivationCodeActivity.this)) {
-            checkActivationCodeRequest=new CheckActivationCodeRequest(binding.etActivateCode.getText().toString());
-            System.out.println("Request Data :"+new Gson().toJson(checkActivationCodeRequest));
-            CustomUtils.getInstance().showProgressDialog(ActivationCodeActivity.this);
-            ApiClient.getClient().create(EndPoints.class).checkActivationCode(ConfigurationFile.Constants.API_KEY, CustomUtils.getInstance().getAppLanguage(getApplicationContext()), ConfigurationFile.Constants.Content_Type, ConfigurationFile.Constants.Content_Type, "Bearer "+userData.getToken(),checkActivationCodeRequest)
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(new Consumer<Response<DefaultResponse>>() {
-                        @Override
-                        public void accept(Response<DefaultResponse> defaultResponseResponse) throws Exception {
-                            CustomUtils.getInstance().cancelDialog();
-                            System.out.println("Code :"+defaultResponseResponse.code());
-                            System.out.println("Message :"+defaultResponseResponse.body().getMessage());
-                            if (defaultResponseResponse.code()==ConfigurationFile.Constants.SUCCESS_CODE) {
-                               userData.setConfirmed(1);
-                                saveDataToPrefs(userData);
-                                Intent i=new Intent(getApplicationContext(),SplashActivity.class);
-                                startActivity(i);
-                            }else if (defaultResponseResponse.code()==ConfigurationFile.Constants.CANT_COMPLETE_REQUEST_CODE)
-                                Snackbar.make(binding.getRoot(), R.string.invalid_code_checker,Snackbar.LENGTH_LONG).show();
-                        }
-                    }, new Consumer<Throwable>() {
-                        @Override
-                        public void accept(Throwable throwable) throws Exception {
-                            CustomUtils.getInstance().cancelDialog();
-                            System.out.println("ActivationCodeActivity Ex:"+throwable.getMessage());
-                        }
-                    });
-        }else {
-            Snackbar.make(binding.getRoot(), R.string.msg_internet_connection,Snackbar.LENGTH_LONG).show();
-        }
-    }
-
-    public void saveDataToPrefs(UserData data){
-        pref=new SharedPrefrenceUtils(getApplicationContext());
-        pref.saveObjectToSharedPreferences(ConfigurationFile.SharedPrefConstants.PREF_CAR_OWNER_OBJ_DATA,data);
-    }
 
 }

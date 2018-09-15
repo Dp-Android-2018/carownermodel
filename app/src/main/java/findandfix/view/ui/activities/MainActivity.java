@@ -46,6 +46,7 @@ import findandfix.utils.NetWorkConnection;
 import findandfix.utils.SharedPrefrenceUtils;
 import findandfix.view.ui.callback.BaseInterface;
 import findandfix.view.ui.fragments.AboutFragment;
+import findandfix.view.ui.fragments.ActivateMobileFragment;
 import findandfix.view.ui.fragments.ActiveAccountFragment;
 import findandfix.view.ui.fragments.CompletedRequestsFragment;
 import findandfix.view.ui.fragments.HomeFragment;
@@ -123,7 +124,7 @@ public class MainActivity extends BaseActivity implements BaseInterface{
         if (CustomUtils.getInstance().getSaveUserObject(getApplicationContext()).getConfirmed()== ConfigurationFile.Constants.USER_ACTIVATED)
             fragment = new HomeFragment();
         else
-            fragment=new ActiveAccountFragment();
+            fragment=new ActivateMobileFragment();
         if (! isFinishing()) {
             //////////////////////////////////////////////////////////////////////////////////////////////
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -175,8 +176,8 @@ public class MainActivity extends BaseActivity implements BaseInterface{
             navigateBetweenFragments(aboutFragment);
         } else if(code== ConfigurationFile.Constants.MOVE_TO_ACTIVATION_FRAG){
            iconsVisibility();
-            ActiveAccountFragment activeAccountFragment=new ActiveAccountFragment();
-            navigateBetweenFragments(activeAccountFragment);
+            ActivateMobileFragment activateMobileFragment=new ActivateMobileFragment();
+            navigateBetweenFragments(activateMobileFragment);
         }else if(code== ConfigurationFile.Constants.MOVE_TO_SETTING_FRAG){
            iconsVisibility();
             SettingFragment settingFragment=new SettingFragment();
@@ -209,11 +210,9 @@ public class MainActivity extends BaseActivity implements BaseInterface{
     private void navigateBetweenFragments(Fragment fragment){
 
         if(fragment==null) {
-
             if (CustomUtils.getInstance().getSaveUserObject(getApplicationContext()).getConfirmed()== ConfigurationFile.Constants.USER_ACTIVATED)
                     fragment = new HomeFragment();
-            else
-                    fragment=new ActiveAccountFragment();
+            else fragment=new ActivateMobileFragment();
 
         }
 

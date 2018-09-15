@@ -107,7 +107,7 @@ public class ToolbarViewModel extends BaseObservable {
             handleNormalRequestDetailToolbar();
 
         else if (checker== ConfigurationFile.Constants.HANDLE_ACTIVATION_CODE_TOOLBAR)
-            handleSecondaryNormalRequestToolbar(context.getString(R.string.active_mobile));
+            handleSecondaryNormalRequestToolbar(context.getString(R.string.active_account));
     }
     
     public void handleRequestDetailToolBarToolbar(){

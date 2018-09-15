@@ -76,6 +76,7 @@ public class ConfigurationFile {
         public static final String MY_ORDERS_URL="carowner/normal-request/completed";
         public static final String SEND_ACTIVATION_CODE_URL="carowner/activate/phone/send";
         public static final String CHECK_ACTIVATION_CODE_URL="carowner/activate/phone";
+        public static final String CHECK_ACTIVATION_MAIL_URL="carowner/activate/email/send";
         public static final String FIND_WORKSHOPS_URL="carowner/workshops/closest";
     }
 

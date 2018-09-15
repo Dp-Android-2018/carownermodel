@@ -337,5 +337,8 @@ To provide a wide array of vehicle maintenance and repair services to suit all k
     <string name="version_update_available">New Update Available</string>
     <string name="update_txt">Update</string>
     <string name="update_current_version_text"><![CDATA[A new Version Of Find & Fix is available on the store please update Current Version]]></string>
+    <string name="active_by_mail">Active By Mail</string>
+    <string name="active_account">Activate Account</string>
+    <string name="try_again_later">Please Try Again Later</string>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 </resources>

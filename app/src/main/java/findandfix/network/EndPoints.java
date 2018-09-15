@@ -188,4 +188,9 @@ public interface EndPoints {
     @GET(ConfigurationFile.UrlConstants.FIND_WORKSHOPS_URL)
     Observable<Response<WorkshopSearchResponse>> findNearestWorkshop(@Header("x-api-key") String key, @Header("Accept-Language") String lang, @Header("Content-Type") String contentType, @Header("Accept") String accept, @Header("Authorization") String auth, @Query("lat") double lat,
                                                                      @Query("lng") double lng, @Query("winch_types[]") ArrayList<Integer> winch_types, @Query("specializations[]") ArrayList<Integer> specializations);
+
+
+
+    @POST(ConfigurationFile.UrlConstants.CHECK_ACTIVATION_MAIL_URL)
+    Observable<Response<DefaultResponse>> sendActivationMail(@Header("x-api-key") String key, @Header("Accept-Language") String lang, @Header("Content-Type") String contentType, @Header("Accept") String accept, @Header("Authorization") String auth);
 }

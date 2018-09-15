@@ -14,10 +14,15 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar"
+        app:foo="@{1}"/>
+
     <ImageView
         android:id="@+id/iv_active_mail_logo"
         android:layout_width="@dimen/dp170w"
         android:layout_height="@dimen/dp90h"
+        android:layout_below="@+id/toolbar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/dp15h"
         android:src="@drawable/img_find_fix_logo" />
@@ -44,6 +49,7 @@
         app:lottie_loop="true" />
 
     <TextView
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/sp7_5"
@@ -55,7 +61,7 @@
         android:layout_centerHorizontal="true"
         android:text="@string/you_can_active_your_account_by_mobile"
         />
-    
+
     <Button
         android:id="@+id/btn_active_mobile"
         android:layout_width="@dimen/dp130h"
@@ -68,6 +74,7 @@
        android:background="@drawable/btn_activate_mobile_background"
         android:textAllCaps="false"
         android:textStyle="bold"
+        android:visibility="gone"
         android:textSize="@dimen/sp12"
         android:onClick="@{viewmodel::activeByMobile}"/>
     <TextView

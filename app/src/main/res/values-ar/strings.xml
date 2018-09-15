@@ -548,4 +548,7 @@
     <string name="version_update_available">تحدبث جديد متاح</string>
     <string name="update_txt">تحدبث</string>
     <string name="update_current_version_text">هناك نسخة جديدة من تطبيق البحث و الاصلاح من فضلك قم بتحديث التطبيق الحالى</string>
+    <string name="active_by_mail">تفعيل بالبريد الالكترونى</string>
+    <string name="active_account">تفعيل الحساب</string>
+    <string name="try_again_later">من فضلك حاول لاحقا</string>
 </resources>
