@@ -35,6 +35,7 @@ public class ConfigurationFile {
         public static final String URGENT_REQUEST_ID="urgent_request_id";
         public static final String NORMAL_REQUEST_ID="normal_request_id";
         public static final String WORKING_DAYS_TAG="WORKING_DAYS";
+        public static final String WORKSHOP_PROFILE_IMAGES_TAG="WORKSHOP_PROFILE_IMAGES_TAG";
         public static final String WENSH_TYPES="WENSH_TYPES";
         public static final String SPECIALIZATION_TYPES="SPECIALIZATION_TYPES";
     }

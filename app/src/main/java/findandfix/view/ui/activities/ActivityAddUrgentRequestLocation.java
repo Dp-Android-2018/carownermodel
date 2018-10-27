@@ -21,51 +21,53 @@ import findandfix.utils.ConfigurationFile;
 import findandfix.utils.CustomUtils;
 import findandfix.view.ui.callback.BaseInterface;
 import findandfix.viewmodel.ToolbarViewModel;
-public class ActivityAddUrgentRequestLocation extends BaseActivity implements BaseInterface{
+
+public class ActivityAddUrgentRequestLocation extends BaseActivity implements BaseInterface {
 
     private ActivityAddUrgentRequestLocationBinding binding;
     private RxPermissions rxPermissions;
-    private  int PLACE_PICKER_REQUEST = 1;
-    private UrgentRequest urgentRequest=null;
-    private double lat=ConfigurationFile.Constants.EMPTY_VALUE, lang=ConfigurationFile.Constants.EMPTY_VALUE;
-   // private double lat=30.11043750000001, lang=31.37803515624999;
+    private int PLACE_PICKER_REQUEST = 1;
+    private UrgentRequest urgentRequest = null;
+    private double lat = ConfigurationFile.Constants.EMPTY_VALUE, lang = ConfigurationFile.Constants.EMPTY_VALUE;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding= DataBindingUtil.setContentView(this, R.layout.activity_add_urgent_request_location);
-        rxPermissions=new RxPermissions(this);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_add_urgent_request_location);
+        rxPermissions = new RxPermissions(this);
         setUpActionBar();
         binding.btnNext.setVisibility(View.VISIBLE);
-        binding.ivPinLocation.setOnClickListener(v -> CustomUtils.getInstance().requireLocationPermission(rxPermissions,ActivityAddUrgentRequestLocation.this));
+        binding.ivPinLocation.setOnClickListener(v -> CustomUtils.getInstance().requireLocationPermission(rxPermissions, ActivityAddUrgentRequestLocation.this));
 
 
         binding.btnNext.setOnClickListener(v -> {
-           if (lat!= ConfigurationFile.Constants.EMPTY_VALUE && lang!=ConfigurationFile.Constants.EMPTY_VALUE &&
-                   lat!=0.0 && lang!=0.0 && !binding.tvAddUrgentRequestAddress.getText().equals("")){
-                       moveToNextAct();
-            }else {
-                Snackbar.make(binding.getRoot(),R.string.label_pic_location,Snackbar.LENGTH_LONG).show();
+            if (lat != ConfigurationFile.Constants.EMPTY_VALUE && lang != ConfigurationFile.Constants.EMPTY_VALUE &&
+                    lat != 0.0 && lang != 0.0 && !binding.tvAddUrgentRequestAddress.getText().equals("")) {
+                moveToNextAct();
+            } else {
+                Snackbar.make(binding.getRoot(), R.string.label_pic_location, Snackbar.LENGTH_LONG).show();
             }
         });
 
     }
 
 
-    public void setUpActionBar(){
-        setSupportActionBar( binding.toolbar.toolbar);
-        binding.toolbar.setViewmodel(new ToolbarViewModel(ActivityAddUrgentRequestLocation.this, ConfigurationFile.Constants.HANDLE_WORKSHOP_URGENT_REQUEST_TOOLBAR)); }
+    public void setUpActionBar() {
+        setSupportActionBar(binding.toolbar.toolbar);
+        binding.toolbar.setViewmodel(new ToolbarViewModel(ActivityAddUrgentRequestLocation.this, ConfigurationFile.Constants.HANDLE_WORKSHOP_URGENT_REQUEST_TOOLBAR));
+    }
 
-    public void moveToNextAct(){
+    public void moveToNextAct() {
 
-        urgentRequest=new UrgentRequest();
+        urgentRequest = new UrgentRequest();
         urgentRequest.setLat(String.valueOf(lat));
         urgentRequest.setLng(String.valueOf(lang));
-        Intent i=new Intent(ActivityAddUrgentRequestLocation.this,ActivityAddUrgentRequestType.class);
-        i.putExtra(ConfigurationFile.IntentsConstants.CAR_OWNER_ADD_URGENT_REQUEST_OBJ,urgentRequest);
+        Intent i = new Intent(ActivityAddUrgentRequestLocation.this, ActivityAddUrgentRequestType.class);
+        i.putExtra(ConfigurationFile.IntentsConstants.CAR_OWNER_ADD_URGENT_REQUEST_OBJ, urgentRequest);
         startActivity(i);
     }
 
-    public void startPlacePicker(){
+    public void startPlacePicker() {
         try {
             PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
             startActivityForResult(builder.build(ActivityAddUrgentRequestLocation.this),
@@ -80,10 +82,10 @@ public class ActivityAddUrgentRequestLocation extends BaseActivity implements Ba
     @Override
     public void updateUi(int code) {
 
-        if (code==ConfigurationFile.Constants.PERMISSION_GRANTED_LOCATION)
+        if (code == ConfigurationFile.Constants.PERMISSION_GRANTED_LOCATION)
             startPlacePicker();
-        else if (code==ConfigurationFile.Constants.PERMISSION_DENIED)
-            Snackbar.make(binding.getRoot(),R.string.permission_denied,Snackbar.LENGTH_LONG).show();
+        else if (code == ConfigurationFile.Constants.PERMISSION_DENIED)
+            Snackbar.make(binding.getRoot(), R.string.permission_denied, Snackbar.LENGTH_LONG).show();
     }
 
     @Override

@@ -551,4 +551,6 @@
     <string name="active_by_mail">تفعيل بالبريد الالكترونى</string>
     <string name="active_account">تفعيل الحساب</string>
     <string name="try_again_later">من فضلك حاول لاحقا</string>
+    <string name="profile_pics">صور الورشة</string>
+    <string name="profile_pictures">Profile Pictures</string>
 </resources>

@@ -37,6 +37,9 @@
             android:theme="@style/Theme.Intro"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".view.ui.activities.WorkshopProfileImagesActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
 
         <activity android:name=".view.ui.activities.ActivationCodeActivity"
             android:theme="@style/AppTheme.NoActionBar"

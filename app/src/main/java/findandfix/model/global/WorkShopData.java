@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WorkShopData implements Serializable{
+public class WorkShopData implements Serializable {
 
     @SerializedName("id")
     private int id;
@@ -20,10 +20,11 @@ public class WorkShopData implements Serializable{
     @SerializedName("name")
     private String name;
 
-
     @SerializedName("workdays")
     private ArrayList<WorkDayItems> workdays;
 
+    @SerializedName("profile_images")
+    private ArrayList<String> workshopProfileImages;
 
     public ArrayList<WorkDayItems> getWorkdays() {
         return workdays;
@@ -43,5 +44,9 @@ public class WorkShopData implements Serializable{
 
     public String getName() {
         return name;
+    }
+
+    public ArrayList<String> getWorkshopProfileImages() {
+        return workshopProfileImages;
     }
 }

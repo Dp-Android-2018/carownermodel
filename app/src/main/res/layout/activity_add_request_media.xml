@@ -85,10 +85,7 @@
                        android:layout_marginTop="@dimen/dp5h"
                         android:layout_marginStart="@dimen/dp10h"
                         android:layout_marginEnd="@dimen/dp10h"
-                        tools:listitem="@layout/item_image_layout"
-                        />
-
-
+                        tools:listitem="@layout/item_image_layout" />
 
                     <Button
                         android:id="@+id/btn_choose_images"

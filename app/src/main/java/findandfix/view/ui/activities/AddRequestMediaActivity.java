@@ -42,39 +42,40 @@ import findandfix.view.ui.callback.BaseInterface;
 import findandfix.view.ui.callback.RecycleItemClickListener;
 import findandfix.viewmodel.ToolbarViewModel;
 
-public class AddRequestMediaActivity extends BaseActivity implements BaseInterface{
+public class AddRequestMediaActivity extends BaseActivity implements BaseInterface {
     private ActivityAddRequestMediaBinding binding;
     private RxPermissions rxPermissions;
     private Uri selectedImageUri = null;
-    private String selectedVideoUri=null;
+    private String selectedVideoUri = null;
     private Bitmap selectedImageBitmap;
-    private String filemanagerstring=null;
-    private Uri selectedVideoPathUri=null;
-    private ArrayList<Bitmap>bitmaps;
-    private ArrayList<Uri>uris;
-    private ArrayList<String>photoUrls;
+    private String filemanagerstring = null;
+    private Uri selectedVideoPathUri = null;
+    private ArrayList<Bitmap> bitmaps;
+    private ArrayList<Uri> uris;
+    private ArrayList<String> photoUrls;
     private ImagesAdapter imagesAdapter;
     private StorageReference storageReference;
     private ProgressDialog progressdialog;
-    private double progressImages=0;
-    private int index=0;
-    private String uploadedVideoUrl=null;
+    private double progressImages = 0;
+    private int index = 0;
+    private String uploadedVideoUrl = null;
     private AddNormalRequest addNormalRequest;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding= DataBindingUtil.setContentView(AddRequestMediaActivity.this, R.layout.activity_add_request_media);
+        binding = DataBindingUtil.setContentView(AddRequestMediaActivity.this, R.layout.activity_add_request_media);
         setUpActionBar();
         getExtraFromIntents();
-        bitmaps=new ArrayList<>();
-        uris=new ArrayList<>();
-        photoUrls=new ArrayList<>();
-        rxPermissions=new RxPermissions(this);
+        bitmaps = new ArrayList<>();
+        uris = new ArrayList<>();
+        photoUrls = new ArrayList<>();
+        rxPermissions = new RxPermissions(this);
         storageReference = FirebaseStorage.getInstance().getReference().child("app_photos");
         initializeRecycler();
         binding.btnChooseImages.setOnClickListener(v -> {
-            if (bitmaps.size()<5)
-            CustomUtils.getInstance().showDialog(AddRequestMediaActivity.this,null);
+            if (bitmaps.size() < 5)
+                CustomUtils.getInstance().showDialog(AddRequestMediaActivity.this, null);
             else
                 showSnackBar(getString(R.string.maximum_image_number));
         });
@@ -82,32 +83,32 @@ public class AddRequestMediaActivity extends BaseActivity implements BaseInterfa
         binding.btnChooseVideo.setOnClickListener(v -> askForPermission(2));
 
         binding.btnNext.setOnClickListener(v -> {
-            if (bitmaps.size()!=0){
+            if (bitmaps.size() != 0) {
                 binding.btnNext.setEnabled(false);
                 uploadImagesToFireBase();
-            }else if (selectedVideoPathUri !=null){
+            } else if (selectedVideoPathUri != null) {
                 binding.btnNext.setEnabled(false);
                 uploadVideoTOFireBase();
-            }else {
-               moveTonextAct();
+            } else {
+                moveTonextAct();
             }
         });
     }
 
-    public void getExtraFromIntents(){
-        addNormalRequest=(AddNormalRequest)getIntent().getSerializableExtra(ConfigurationFile.IntentsConstants.CAR_OWNER_ADD_REQUEST_OBJ);
+    public void getExtraFromIntents() {
+        addNormalRequest = (AddNormalRequest) getIntent().getSerializableExtra(ConfigurationFile.IntentsConstants.CAR_OWNER_ADD_REQUEST_OBJ);
     }
 
-    public void startVideoFromGallery(){
+    public void startVideoFromGallery() {
         Intent intent = new Intent();
         intent.setType("video/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent,getString(R.string.select_video)),ConfigurationFile.Constants.PERMISSION_GRANTED_VIDEO);
+        startActivityForResult(Intent.createChooser(intent, getString(R.string.select_video)), ConfigurationFile.Constants.PERMISSION_GRANTED_VIDEO);
     }
 
-    public void initializeRecycler(){
-        imagesAdapter=new ImagesAdapter(getApplicationContext(),bitmaps);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL,false);
+    public void initializeRecycler() {
+        imagesAdapter = new ImagesAdapter(getApplicationContext(), bitmaps);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
         binding.rvImages.setHasFixedSize(true);
         binding.rvImages.setItemViewCacheSize(20);
         binding.rvImages.setDrawingCacheEnabled(true);
@@ -131,33 +132,34 @@ public class AddRequestMediaActivity extends BaseActivity implements BaseInterfa
     }
 
     public void askForPermission(int checker) {
-        CustomUtils.getInstance().requirePermission(rxPermissions,checker,AddRequestMediaActivity.this);
+        CustomUtils.getInstance().requirePermission(rxPermissions, checker, AddRequestMediaActivity.this);
     }
 
     @Override
     public void updateUi(int code) {
-          if(code== ConfigurationFile.Constants.PERMISSION_DENIED)
+        if (code == ConfigurationFile.Constants.PERMISSION_DENIED)
             showSnackBar(getString(R.string.permission_denied));
-        else if(code==ConfigurationFile.Constants.PERMISSION_GRANTED_CAMERA)
+        else if (code == ConfigurationFile.Constants.PERMISSION_GRANTED_CAMERA)
             CustomUtils.getInstance().openCamera(AddRequestMediaActivity.this);
-        else if(code==ConfigurationFile.Constants.PERMISSION_GRANTED_GALLERY)
-            CustomUtils.getInstance().openGallery(AddRequestMediaActivity.this,true);
+        else if (code == ConfigurationFile.Constants.PERMISSION_GRANTED_GALLERY)
+            CustomUtils.getInstance().openGallery(AddRequestMediaActivity.this, true);
 
-        else if(code==ConfigurationFile.Constants.PERMISSION_GRANTED_VIDEO)
-             startVideoFromGallery();
+        else if (code == ConfigurationFile.Constants.PERMISSION_GRANTED_VIDEO)
+            startVideoFromGallery();
     }
 
-    public void showSnackBar(String message){
-        Snackbar.make(binding.getRoot(),message, Snackbar.LENGTH_LONG).show();
+    public void showSnackBar(String message) {
+        Snackbar.make(binding.getRoot(), message, Snackbar.LENGTH_LONG).show();
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-       // infoViewModel.onActivityResult(requestCode,resultCode,data);
+        // infoViewModel.onActivityResult(requestCode,resultCode,data);
         if (resultCode == RESULT_OK) {
             if (requestCode == ConfigurationFile.Constants.PERMISSION_GRANTED_VIDEO) {
-                 selectedVideoPathUri = data.getData();
+                selectedVideoPathUri = data.getData();
 
-                 binding.ivVideoPlaceholder.setVisibility(View.VISIBLE);
+                binding.ivVideoPlaceholder.setVisibility(View.VISIBLE);
                 Glide.with(getApplicationContext())
                         .load(selectedVideoPathUri)
                         .into(binding.ivVideoPlaceholder);
@@ -175,21 +177,21 @@ public class AddRequestMediaActivity extends BaseActivity implements BaseInterfa
 
                 }
             } else {
-                if (data.getData()!=null) {
+                if (data.getData() != null) {
                     convertImageToBase64(data.getData());
                     selectedImageUri = data.getData();
                     uris.add(selectedImageUri);
-                }else {
-                    if (data.getClipData()!=null){
+                } else {
+                    if (data.getClipData() != null) {
                         ClipData mClipData = data.getClipData();
-                        if(mClipData.getItemCount()+uris.size()<=5) {
+                        if (mClipData.getItemCount() + uris.size() <= 5) {
                             for (int i = 0; i < mClipData.getItemCount(); i++) {
                                 ClipData.Item item = mClipData.getItemAt(i);
                                 Uri uri = item.getUri();
                                 convertImageToBase64(uri);
                                 uris.add(uri);
                             }
-                        }else {
+                        } else {
                             showSnackBar(getString(R.string.maxmimum_image_num));
                         }
                     }
@@ -220,7 +222,7 @@ public class AddRequestMediaActivity extends BaseActivity implements BaseInterfa
             selectedImageBitmap = CustomUtils.getInstance().modifyOrientation(selectedImageBitmap, RealPicturePath);
             bitmaps.add(selectedImageBitmap);
             imagesAdapter.notifyDataSetChanged();
-           // setPicBitmap(selectedImageBitmap);
+            // setPicBitmap(selectedImageBitmap);
             //    encodedImage = CustomUtils.getInstance().encodeImage(selectedImageBitmap);
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
@@ -229,30 +231,30 @@ public class AddRequestMediaActivity extends BaseActivity implements BaseInterfa
         }
     }
 
-    public void setUpActionBar(){
-        setSupportActionBar( binding.toolbar.toolbar);
-        binding.toolbar.setViewmodel(new ToolbarViewModel(AddRequestMediaActivity.this, ConfigurationFile.Constants.HANDLE_NORMAL_REQUEST_SECONDARY_TOOLBAR));}
+    public void setUpActionBar() {
+        setSupportActionBar(binding.toolbar.toolbar);
+        binding.toolbar.setViewmodel(new ToolbarViewModel(AddRequestMediaActivity.this, ConfigurationFile.Constants.HANDLE_NORMAL_REQUEST_SECONDARY_TOOLBAR));
+    }
 
 
-    public void uploadImagesToFireBase(){
+    public void uploadImagesToFireBase() {
         System.out.println("Photo Url uploaded: Start");
         showProgressDialog(getString(R.string.uploading_pictures));
-        for (int i=0;i<uris.size();i++){
-            index=i;
-            UploadTask photoRef=storageReference.child(uris.get(i).getLastPathSegment()).putFile(uris.get(i));
+        for (int i = 0; i < uris.size(); i++) {
+            index = i;
+            UploadTask photoRef = storageReference.child(uris.get(i).getLastPathSegment()).putFile(uris.get(i));
             photoRef.addOnSuccessListener(taskSnapshot -> {
 
-                Uri photoUrl=taskSnapshot.getDownloadUrl();
+                Uri photoUrl = taskSnapshot.getDownloadUrl();
                 photoUrls.add(photoUrl.toString());
-                System.out.println("Uploaded Media Photo :"+photoUrl.toString()+" index:"+index);
-                if (photoUrls.size()==uris.size()){
-
-                        progressdialog.setProgress(100);
-                        progressdialog.dismiss();
-                        progressdialog=null;
-                        if (selectedVideoPathUri!=null)
-                            uploadVideoTOFireBase();
-                        else moveTonextAct();
+                System.out.println("Uploaded Media Photo :" + photoUrl.toString() + " index:" + index);
+                if (photoUrls.size() == uris.size()) {
+                    progressdialog.setProgress(100);
+                    progressdialog.dismiss();
+                    progressdialog = null;
+                    if (selectedVideoPathUri != null)
+                        uploadVideoTOFireBase();
+                    else moveTonextAct();
 
                 }
 
@@ -260,49 +262,51 @@ public class AddRequestMediaActivity extends BaseActivity implements BaseInterfa
 
 
             photoRef.addOnProgressListener(taskSnapshot -> {
-                progressImages = progressImages+ (((100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount())/uris.size());
+                progressImages = progressImages + (((100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount()) / uris.size());
                 System.out.println("Upload is " + progressImages + "% done");
-                if ((int)progressImages>=100)
+                if ((int) progressImages >= 100)
                     progressdialog.setProgress(98);
                 else
-                progressdialog.setProgress((int) progressImages); });
-        }}
+                    progressdialog.setProgress((int) progressImages);
+            });
+        }
+    }
 
-     public void uploadVideoTOFireBase(){
-         showProgressDialog(getString(R.string.uploading_videos));
-         StorageMetadata metadata = new StorageMetadata.Builder()
-                 .setContentType("video/mp4")
-                 .build();
-         UploadTask photoRef=storageReference.child(selectedVideoPathUri.getLastPathSegment()).putFile(selectedVideoPathUri,metadata);
-         photoRef.addOnSuccessListener(taskSnapshot -> {
-             Uri videourl=taskSnapshot.getDownloadUrl();
-             uploadedVideoUrl=videourl.toString();
-             if (uploadedVideoUrl!=null){
-                 progressdialog.setProgress(100);
-                 progressdialog.dismiss();
-                 moveTonextAct();
-             }
-             System.out.println("Uploaded Media Video :"+videourl.toString());
-             });
+    public void uploadVideoTOFireBase() {
+        showProgressDialog(getString(R.string.uploading_videos));
+        StorageMetadata metadata = new StorageMetadata.Builder()
+                .setContentType("video/mp4")
+                .build();
+        UploadTask photoRef = storageReference.child(selectedVideoPathUri.getLastPathSegment()).putFile(selectedVideoPathUri, metadata);
+        photoRef.addOnSuccessListener(taskSnapshot -> {
+            Uri videourl = taskSnapshot.getDownloadUrl();
+            uploadedVideoUrl = videourl.toString();
+            if (uploadedVideoUrl != null) {
+                progressdialog.setProgress(100);
+                progressdialog.dismiss();
+                moveTonextAct();
+            }
+            System.out.println("Uploaded Media Video :" + videourl.toString());
+        });
 
 
-         photoRef.addOnProgressListener(taskSnapshot -> {
+        photoRef.addOnProgressListener(taskSnapshot -> {
             double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
-             System.out.println("Upload is " + progress + "% done");
-             if ((int)progress<100)
-             progressdialog.setProgress((int) progress);
-             else
-                 progressdialog.setProgress(98);
+            System.out.println("Upload is " + progress + "% done");
+            if ((int) progress < 100)
+                progressdialog.setProgress((int) progress);
+            else
+                progressdialog.setProgress(98);
            /*  if ((int)progress>=100){
                  progressdialog.dismiss();
                  moveTonextAct();
              }*/
 
-             });
-     }
+        });
+    }
 
 
-public void showProgressDialog(String title){
+    public void showProgressDialog(String title) {
 
         progressdialog = new ProgressDialog(AddRequestMediaActivity.this);
 
@@ -319,19 +323,19 @@ public void showProgressDialog(String title){
         progressdialog.show();
 
 
-}
+    }
 
-public void moveTonextAct(){
-        if (photoUrls.size()>0)
+    public void moveTonextAct() {
+        if (photoUrls.size() > 0)
             addNormalRequest.setImages(photoUrls);
         else addNormalRequest.setImages(null);
         addNormalRequest.setVideo(uploadedVideoUrl);
         bitmaps.clear();
         uris.clear();
         binding.btnNext.setEnabled(true);
-    Intent i=new Intent(AddRequestMediaActivity.this,AddRequestNotesActivity.class);
-    i.putExtra(ConfigurationFile.IntentsConstants.CAR_OWNER_ADD_REQUEST_OBJ,addNormalRequest);
-    startActivity(i);
-}
+        Intent i = new Intent(AddRequestMediaActivity.this, AddRequestNotesActivity.class);
+        i.putExtra(ConfigurationFile.IntentsConstants.CAR_OWNER_ADD_REQUEST_OBJ, addNormalRequest);
+        startActivity(i);
+    }
 
 }

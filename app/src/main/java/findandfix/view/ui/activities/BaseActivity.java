@@ -2,6 +2,8 @@ package findandfix.view.ui.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -20,6 +22,9 @@ public class BaseActivity extends AppCompatActivity  implements ConnectionReceiv
         String lang=(CustomUtils.getInstance().getAppLanguage(getApplicationContext())!=null ? CustomUtils.getInstance().getAppLanguage(getApplicationContext()) : "en");
         CustomUtils.getInstance().saveAppLanguage(getApplicationContext(),lang);
         checkConnection();
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
     }
 
     @Override

@@ -340,5 +340,7 @@ To provide a wide array of vehicle maintenance and repair services to suit all k
     <string name="active_by_mail">Active By Mail</string>
     <string name="active_account">Activate Account</string>
     <string name="try_again_later">Please Try Again Later</string>
+    <string name="profile_pics">Profile Pics</string>
+    <string name="profile_pictures">Profile Pictures</string>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 </resources>
