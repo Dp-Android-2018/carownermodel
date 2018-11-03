@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+      <variable
+            name="viewmodel"
+            type="findandfix.viewmodel.EditProfileInfoViewModel"/>
+
+        <!-- <variable
+           name="specializeviewmodel"
+           type="com.example.dell.workshopmodule.viewmodel.EditProfileSpecializationViewModel"/>
+
+       <variable
+           name="editprofileviewmodel"
+           type="com.example.dell.workshopmodule.viewmodel.HandleEditProfileViewModel"/>-->
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar_layout"
+            android:id="@+id/toolbar"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/ll_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_owner_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp143w"
+                    android:background="@color/colorOrange">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dp74w"
+                        android:layout_height="@dimen/dp74w"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp22w"
+                        android:layout_centerInParent="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="@dimen/dp74w"
+                        android:layout_height="@dimen/dp74w"
+                        android:src="@drawable/ic_find_fix_logo"
+                        bind:picUrl="@{viewmodel.picUrl}"
+                        android:visibility="@{viewmodel.picBitmap!=null ? View.INVISIBLE : View.VISIBLE}"
+                       />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+
+                            android:id="@+id/iv_car_owner_image"
+                            android:layout_width="@dimen/dp74w"
+                            android:layout_height="@dimen/dp74w"
+                            bind:imageBitmap="@{viewmodel.picBitmap}"
+                            android:visibility="@{viewmodel.picBitmap!=null ? View.VISIBLE : View.INVISIBLE}"
+                            />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp24h"
+                            android:layout_height="@dimen/dp25h"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:src="@mipmap/ic_camera"
+                            android:onClick="@{viewmodel::displayDialog}"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_below="@+id/rl_car_owner_pic"
+                    android:id="@+id/tv_workshop_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp13_5"
+                    android:layout_marginTop="@dimen/dp18h"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorOrange"
+                    android:text="@string/personal_information"
+                    android:layout_marginStart="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp15h"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_workshop_info"
+                    android:layout_below="@+id/tv_workshop_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_profile_background"
+                    android:layout_marginStart="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp15h"
+                    android:layout_marginTop="@dimen/dp3h"
+                    android:padding="@dimen/dp6h"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/et_edit_profile_workshop_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp35w"
+                        android:background="@drawable/et_edit_profile_carowner_background"
+                        android:textSize="@dimen/sp12"
+                        android:fontFamily="sans-serif"
+                        android:textStyle="normal"
+                        android:textColorHint="@color/colorWhiteLevel3"
+                        android:textColor="@color/colorWhiteLevel3"
+                        android:hint="@string/first_name"
+                        android:textDirection="locale"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/dp12w"
+                        android:inputType="text"
+                        android:text="@={viewmodel.fname}"/>
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp35w"
+                        android:background="@drawable/et_edit_profile_carowner_background"
+                        android:textSize="@dimen/sp12"
+                        android:fontFamily="sans-serif"
+                        android:textStyle="normal"
+                        android:textDirection="locale"
+                        android:textColorHint="@color/colorWhiteLevel3"
+                        android:textColor="@color/colorWhiteLevel3"
+                        android:hint="@string/last_name"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/dp12w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:inputType="textEmailAddress"
+                        android:text="@={viewmodel.lname}"/>
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp35w"
+                        android:background="@drawable/et_edit_profile_carowner_background"
+                        android:textSize="@dimen/sp12"
+                        android:fontFamily="sans-serif"
+                        android:textDirection="locale"
+                        android:textStyle="normal"
+                        android:textColorHint="@color/colorWhiteLevel3"
+                        android:textColor="@color/colorWhiteLevel3"
+                        android:hint="@string/phone"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/dp12w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:inputType="phone"
+                        android:text="@={viewmodel.phone}"
+                        />
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp35w"
+                        android:background="@drawable/et_edit_profile_carowner_background"
+                        android:textSize="@dimen/sp12"
+                        android:fontFamily="sans-serif"
+                        android:textStyle="normal"
+                        android:textDirection="locale"
+                        android:textColorHint="@color/colorWhiteLevel3"
+                        android:textColor="@color/colorWhiteLevel3"
+                        android:hint="@string/email"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/dp12w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:inputType="phone"
+                        android:text="@={viewmodel.email}"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp35w"
+                        android:background="@drawable/et_edit_profile_carowner_background"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:paddingStart="@dimen/dp12h"
+                        android:paddingEnd="@dimen/dp12h">
+                        <ImageView
+                            android:id="@+id/iv_countries_dialog"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_group"
+                            android:tint="@color/colorWhiteLevel3"
+                            android:onClick="@{viewmodel::showCountries}"/>
+                          <!--  android:onClick="@{viewmodel::showDialog}"-->
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp5h"
+                            android:textSize="@dimen/sp12"
+                            android:fontFamily="sans-serif"
+                            android:textStyle="normal"
+                            android:textColorHint="@color/colorWhiteLevel3"
+                            android:textColor="@color/colorWhiteLevel3"
+                            android:gravity="center_vertical"
+                            android:textDirection="locale"
+                            android:hint="@string/country"
+                            android:layout_marginTop="@dimen/dp13h"
+                            android:inputType="text"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:onClick="@{viewmodel::showCountries}"
+                            android:text="@={viewmodel.country}"/>
+                           <!-- android:text="@{viewmodel.workshopCountry}"-->
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp35w"
+                        android:background="@drawable/et_edit_profile_carowner_background"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:paddingStart="@dimen/dp12h"
+                        android:paddingEnd="@dimen/dp12h">
+                        <ImageView
+                            android:id="@+id/iv_cities_dialog"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:tint="@color/colorWhiteLevel3"
+                            android:src="@mipmap/ic_group"
+                            android:onClick="@{viewmodel::showCities}"/>
+                            <!--android:onClick="@{viewmodel::showDialog}"-->
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp5h"
+                            android:textSize="@dimen/sp12"
+                            android:fontFamily="sans-serif"
+                            android:textStyle="normal"
+                            android:textColorHint="@color/colorWhiteLevel3"
+                            android:textColor="@color/colorWhiteLevel3"
+                            android:gravity="center_vertical"
+                            android:textDirection="locale"
+                            android:hint="@string/city"
+                            android:layout_marginTop="@dimen/dp13h"
+                            android:inputType="text"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:onClick="@{viewmodel::showCities}"
+                            android:text="@={viewmodel.city}"/>
+                           <!-- android:text="@{viewmodel.workshopCity}"-->
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"/>
+                   <!-- android:visibility="@{editprofileviewmodel.progressDialog}"-->
+
+
+                <TextView
+                    android:id="@+id/tv_workshop_specialization"
+                    android:layout_below="@+id/ll_workshop_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp13_5"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorOrange"
+                    android:text="@string/car_information"
+                    android:layout_marginStart="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp15h"
+                    android:layout_marginTop="@dimen/dp12h"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_workshop_specialization"
+                    android:layout_below="@+id/tv_workshop_specialization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_profile_background"
+                    android:layout_marginStart="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp15h"
+                    android:layout_marginTop="@dimen/dp3h"
+                    android:padding="@dimen/dp6h"
+
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp35w"
+                        android:background="@drawable/et_edit_profile_carowner_background"
+                        android:paddingStart="@dimen/dp12h"
+                        android:paddingEnd="@dimen/dp12h">
+                        <ImageView
+                            android:id="@+id/iv_brands"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_group"
+                            android:tint="@color/colorWhiteLevel3"
+                            android:onClick="@{viewmodel::showCarBrands}"/>
+                           <!-- android:onClick="@{specializeviewmodel::showDialog}"-->
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp5h"
+                            android:textSize="@dimen/sp12"
+                            android:fontFamily="sans-serif"
+                            android:textDirection="locale"
+                            android:textStyle="normal"
+                            android:textColorHint="@color/colorWhiteLevel3"
+                            android:textColor="@color/colorWhiteLevel3"
+                            android:gravity="center_vertical"
+                            android:hint="@string/brand"
+                            android:layout_marginTop="@dimen/dp13h"
+                            android:inputType="text"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:text="@={viewmodel.brand}"
+                            android:onClick="@{viewmodel::showCarBrands}"/>
+                          <!--  android:text="@={specializeviewmodel.brands}"-->
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp35w"
+                        android:background="@drawable/et_edit_profile_carowner_background"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:paddingStart="@dimen/dp12h"
+                        android:paddingEnd="@dimen/dp12h">
+                        <ImageView
+                            android:id="@+id/iv_specialization"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_group"
+                            android:tint="@color/colorWhiteLevel3"
+                            android:onClick="@{viewmodel::showModels}"/>
+                          <!--  android:onClick="@{specializeviewmodel::showDialog}"-->
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp5h"
+                            android:textSize="@dimen/sp12"
+                            android:fontFamily="sans-serif"
+                            android:textStyle="normal"
+                            android:textDirection="locale"
+                            android:textColorHint="@color/colorWhiteLevel3"
+                            android:textColor="@color/colorWhiteLevel3"
+                            android:gravity="center_vertical"
+                            android:hint="@string/model"
+                            android:layout_marginTop="@dimen/dp13h"
+                            android:inputType="text"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:text="@={viewmodel.model}"
+                            android:onClick="@{viewmodel::showModels}"/>
+                        <!--    android:text="@={specializeviewmodel.specialization}"-->
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp35w"
+                        android:background="@drawable/et_edit_profile_carowner_background"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:paddingStart="@dimen/dp12h"
+                        android:paddingEnd="@dimen/dp12h">
+                        <ImageView
+                            android:id="@+id/iv_urgents"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_group"
+                            android:tint="@color/colorWhiteLevel3"
+                            android:onClick="@{viewmodel::showYears}"
+                           />
+<!-- android:onClick="@{specializeviewmodel::showDialog}"-->
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp5h"
+                            android:textSize="@dimen/sp12"
+                            android:fontFamily="sans-serif"
+                            android:textStyle="normal"
+                            android:textColorHint="@color/colorWhiteLevel3"
+                            android:textColor="@color/colorWhiteLevel3"
+                            android:gravity="center_vertical"
+                            android:textDirection="locale"
+                            android:hint="@string/year"
+                            android:layout_marginTop="@dimen/dp13h"
+                            android:inputType="text"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:onClick="@{viewmodel::showYears}"
+                            android:text="@={viewmodel.year}"/>
+                        <!--android:text="@={specializeviewmodel.urgentRequest}"-->
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_change_password"
+                    android:layout_below="@+id/ll_workshop_specialization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp13_5"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorOrange"
+                    android:text="@string/change_password"
+                    android:layout_marginStart="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp15h"
+                    android:layout_marginTop="@dimen/dp12h"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_change_password"
+                    android:layout_below="@+id/tv_change_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_profile_background"
+                    android:layout_marginStart="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp15h"
+                    android:layout_marginTop="@dimen/dp3h"
+                    android:padding="@dimen/dp6h"
+                    android:orientation="vertical"
+                    android:onClick="@{viewmodel::changePasswordAct}">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp35w"
+                        android:background="@drawable/et_edit_profile_carowner_background"
+                        android:paddingStart="@dimen/dp12h"
+                        android:paddingEnd="@dimen/dp12h">
+                        <ImageView
+                            android:id="@+id/iv_change_password_page"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_down_arrow"
+                            android:tint="@color/colorWhiteLevel3"
+                            />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp5h"
+                            android:textSize="@dimen/sp12"
+                            android:fontFamily="sans-serif"
+                            android:textStyle="normal"
+                            android:textColorHint="@color/colorWhiteLevel3"
+                            android:textColor="@color/colorWhiteLevel3"
+                            android:textDirection="locale"
+                            android:gravity="center_vertical"
+                            android:hint="@string/change_password"
+                            android:layout_marginTop="@dimen/dp13h"
+                            android:inputType="text"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:editable="false"
+                            android:focusable="false"
+
+                            />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_below="@+id/ll_change_password"
+                    android:id="@+id/btn_submit"
+                    android:layout_width="@dimen/dp146h"
+                    android:layout_height="@dimen/dp41w"
+                    android:layout_marginTop="@dimen/dp16w"
+                    android:layout_marginBottom="@dimen/dp10h"
+                    android:background="@drawable/button_edit_profile_background"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/submit"
+                    android:textColor="@color/colorWhiteLevel3"
+
+                    android:textSize="@dimen/sp13_5"
+                    android:fontFamily="sans-serif-black"
+                    android:textStyle="normal"
+                    android:textAllCaps="false"
+                    android:onClick="@{viewmodel::validate}"
+                    />
+                <!--  android:onClick="@{editprofileviewmodel::completeEditProfileRequest}"-->
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

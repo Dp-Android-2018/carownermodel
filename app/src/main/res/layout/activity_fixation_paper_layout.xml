@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="UploadImageModelView"
+            type="findandfix.viewmodel.FixationPaperViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhiteLevel3"
+        android:id="@+id/rl_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_layout"
+            android:id="@+id/toolbar"/>
+
+        <TextView
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/tv_fixation_paper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/if_you_have_fixation_paper"
+            android:textSize="@dimen/sp16_5"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dp35w"
+            />
+        <TextView
+            android:layout_below="@+id/tv_fixation_paper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/please_upload_it"
+            android:textSize="@dimen/sp16_5"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dp5w"
+            android:layout_marginBottom="@dimen/dp15h"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_container"
+            android:layout_width="@dimen/dp180w"
+            android:layout_height="@dimen/dp180w"
+            android:background="@drawable/rl_circle_background"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp14_5"
+                android:textColor="@color/colorGray"
+                android:lineSpacingExtra="-5.5sp"
+                android:text="@string/label_upload"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp30h"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_layer"
+                android:layout_centerInParent="true"
+                android:visibility="@{UploadImageModelView.picBitmap==null ? View.VISIBLE : View.INVISIBLE}"
+                android:onClick="@{UploadImageModelView::displayDialog}"
+                />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:id="@+id/iv_car_owner_image"
+                android:layout_width="@dimen/dp171h"
+                android:layout_height="@dimen/dp171h"
+                android:layout_centerInParent="true"
+                bind:imageBitmap="@{UploadImageModelView.picBitmap}"
+                android:onClick="@{UploadImageModelView::displayDialog}"
+                android:visibility="@{UploadImageModelView.picBitmap!=null ? View.VISIBLE : View.INVISIBLE}"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp171h"
+            android:layout_height="@dimen/dp171h"
+            android:layout_centerInParent="true"
+            android:background="@color/colorwhitetransparent">
+
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="@dimen/dp50h"
+                android:layout_height="@dimen/dp50h"
+                app:lottie_fileName="loadingLine.json"
+                app:lottie_loop="false"
+                app:lottie_autoPlay="false"
+                bind:setprogress="@{UploadImageModelView.progress}"
+
+                bind:animation="@{UploadImageModelView.onAnimationEnd}"
+                android:layout_centerInParent="true"
+                android:visibility="@{UploadImageModelView.loading}"
+                />
+
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="@dimen/dp130w"
+            android:layout_height="@dimen/dp30h"
+            android:layout_above="@+id/btn_skip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp15h"
+            android:background="@{UploadImageModelView.enabled ? @drawable/btn_check_activation_code_background :@drawable/btn_disactive_background}"
+            android:onClick="@{UploadImageModelView::validate}"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:enabled="@{UploadImageModelView.enabled}"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btn_skip"
+            android:layout_width="@dimen/dp130w"
+            android:layout_height="@dimen/dp30h"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp30h"
+            android:background="@drawable/btn_check_activation_code_background"
+            android:onClick="@{UploadImageModelView::skip}"
+            android:text="@string/skip_this_step"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentBottom="true"/>
+
+
+
+
+    </RelativeLayout>
+
+</layout>

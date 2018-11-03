@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_content_background"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <!-- content header line -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tv_top_border_background"
+        android:paddingLeft="12dp"
+        android:paddingTop="7dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="7dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/workshop_offer"
+            android:textColor="@color/gray_background"
+            android:textSize="@dimen/sp10_5"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <!-- content header image -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/head_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp81h"
+            android:scaleType="centerCrop"
+
+            android:src="@drawable/img_temp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp81h"
+            android:background="#80000000"></FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_distance_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/head_image"
+            android:paddingStart="@dimen/dp20h"
+            android:paddingBottom="@dimen/dp9h"
+            android:text="@string/requests_count_mock"
+            android:textColor="@color/gray_background"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_distance_content"
+            android:layout_alignParentStart="true"
+            android:gravity="center_horizontal"
+            android:paddingStart="@dimen/dp18h"
+            android:text="@string/distance"
+            android:textColor="@color/gray_background"
+            android:textSize="@dimen/sp9" />
+
+        <TextView
+            android:id="@+id/tv_urgent_request_num_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/head_image"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="@dimen/dp20h"
+            android:paddingBottom="@dimen/dp9h"
+            android:text="@string/weight_mock"
+            android:textColor="@color/gray_background"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_urgent_request_num_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp18h"
+            android:text="@string/urgent_request_text"
+            android:textColor="@color/gray_background"
+            android:textSize="@dimen/sp9" />
+
+        <TextView
+            android:id="@+id/tv_normal_request_num_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/head_image"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="@dimen/dp9h"
+            android:text="@string/pledge_mock"
+            android:textColor="@color/gray_background"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_normal_request_num_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/normal_request_text"
+            android:textColor="@color/gray_background"
+            android:textSize="@dimen/sp9" />
+
+
+    </RelativeLayout>
+
+    <!-- content body layout -->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_background"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="9dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="6dp">
+
+        <!-- avatar and name part -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tv_workshop_name_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/dp9h"
+                android:layout_marginBottom="@dimen/dp4h"
+                android:text="@string/client_name_mock"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+
+            <RatingBar
+                android:id="@+id/rating_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp5h"
+                android:layout_toStartOf="@+id/tv_rate_value_content" />
+
+            <TextView
+                android:id="@+id/tv_rate_value_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="20sp"
+                android:text="( 0.0 ) rate"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp6"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <!-- divider line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1w"
+            android:background="@color/colorPrimary" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp89w">
+
+            <TextView
+                android:id="@+id/tv_desc_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp5w"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp7_5"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1w"
+            android:background="@color/colorPrimary" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp1w"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_price_label_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/dp4h"
+                android:layout_marginTop="@dimen/dp5h"
+                android:gravity="center"
+                android:text="@string/label_average_price"
+                android:textColor="@color/colorDarkGray3"
+                android:textSize="@dimen/sp7_5" />
+
+            <TextView
+                android:id="@+id/tv_price_value_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_price_label_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/dp4h"
+                android:layout_marginTop="@dimen/dp5h"
+                android:layout_marginBottom="@dimen/dp5h"
+                android:gravity="center"
+                android:text="@string/label_average_price"
+                android:textColor="@color/colorDarkGray3"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:id="@+id/tv_average_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp5h"
+                android:gravity="center"
+                android:text="@string/average_time"
+                android:textColor="@color/colorDarkGray3"
+                android:textSize="@dimen/sp7_5" />
+
+
+            <TextView
+                android:id="@+id/tv_avg_time_value_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_average_time_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp5h"
+                android:layout_marginBottom="@dimen/dp5h"
+                android:text="@string/label_average_price"
+                android:textColor="@color/colorDarkGray3"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:id="@+id/tv_offer_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp5h"
+                android:gravity="center"
+                android:text="@string/offer_time"
+                android:textColor="@color/colorDarkGray3"
+                android:textSize="@dimen/sp7_5" />
+
+            <TextView
+                android:id="@+id/tv_offer_time_value_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_offer_time_text"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp5h"
+                android:layout_marginBottom="@dimen/dp5h"
+                android:gravity="center"
+                android:text="@string/label_average_price"
+                android:textColor="@color/colorDarkGray3"
+                android:textSize="@dimen/sp12" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1w"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/tv_achievments_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rounded_white_background"
+                android:padding="@dimen/dp5h"
+                android:text="@string/achievments"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:id="@+id/tv_workshop_profile_pics"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rounded_white_background"
+                android:padding="@dimen/dp5h"
+                android:text="@string/profile_pics"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:id="@+id/tv_working_time_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rounded_white_background"
+                android:padding="@dimen/dp5h"
+                android:text="@string/working_time"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1w"
+            android:layout_marginTop="@dimen/dp5h"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tv_accept_offer_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp6h"
+            android:layout_marginBottom="@dimen/dp5h"
+            android:background="@drawable/btn_roundedc_blue_background"
+            android:padding="@dimen/dp5h"
+            android:text="@string/accept_offer"
+            android:textAlignment="center"
+            android:textColor="@color/gray_background"
+            android:textSize="@dimen/sp12" />
+
+    </LinearLayout>
+
+</LinearLayout>

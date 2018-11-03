@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data></data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_parent"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar_layout"
+            android:id="@+id/toolbar"/>
+
+        <TextView
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/tv_waiting_work_shop_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10h"
+            android:gravity="center"
+            android:text="@string/waiting"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorRed"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp16"/>
+        <TextView
+            android:id="@+id/tv_search_work_shop_text"
+            android:layout_below="@+id/tv_waiting_work_shop_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp2h"
+            android:gravity="center"
+            android:text="@string/search_for_workshop"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorRed"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp16"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="@dimen/dp202h"
+            android:layout_height="@dimen/dp202h"
+            android:padding="@dimen/dp30w"
+            app:lottie_autoPlay="true"
+            android:layout_centerInParent="true"
+            app:lottie_fileName="UrgentSearchLoading.json"
+            app:lottie_loop="true" />
+
+        <Button
+            android:id="@+id/btn_cancel_search"
+            android:layout_width="@dimen/dp120h"
+            android:layout_height="@dimen/dp45h"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp15h"
+            android:text="@string/cancel_search"
+            android:textAllCaps="false"
+            android:textColor="@color/colorRed"
+            android:background="@drawable/button_cancel_urgent_background"/>
+
+
+
+
+
+
+
+    </RelativeLayout>
+</layout>

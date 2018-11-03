@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+
+        <ImageView
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/iv_active_mail_logo"
+            android:layout_width="@dimen/dp170w"
+            android:layout_height="@dimen/dp90h"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp15h"
+            android:src="@drawable/img_find_fix_logo" />
+
+        <TextView
+            android:id="@+id/tv_active_phone_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_active_mail_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp10h"
+            android:text="@string/phone_number_recived"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/et_activate_code"
+            android:layout_width="@dimen/dp100h"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_active_phone_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp60h"
+            android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/btn_active_mobile"
+            android:layout_width="@dimen/dp130h"
+            android:layout_height="@dimen/dp30h"
+            android:text="@string/check"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@+id/et_activate_code"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp25w"
+            android:background="@drawable/btn_check_activation_code_background"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp12" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp7_5"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textColor="@color/darkbluecolor"
+            android:gravity="center_horizontal"
+            android:layout_above="@+id/btn_active_mail"
+            android:layout_centerHorizontal="true"
+            android:text="@string/you_can_active_your_account_by_mobile"
+            />
+
+
+        <Button
+            android:id="@+id/btn_active_mail"
+            android:layout_width="@dimen/dp130h"
+            android:layout_height="@dimen/dp30h"
+            android:text="@string/active_by_mail"
+            android:textColor="@color/colorWhite"
+           android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp15h"
+            android:layout_marginTop="@dimen/dp6h"
+            android:background="@drawable/btn_check_activation_code_background"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp12" />
+
+
+    </RelativeLayout>
+
+</layout>

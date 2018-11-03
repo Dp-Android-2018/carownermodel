@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="foo" type="int"/>
+        <variable
+            name="viewmodel"
+            type="findandfix.viewmodel.ToolbarViewModel"/>
+    </data>
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        bind:toolbarBackground="@{viewmodel.toolbarColor}">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16h"
+            android:layout_marginEnd="@dimen/dp16h">
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_home"
+                android:layout_centerVertical="true"
+                android:visibility="@{viewmodel.imageVisibility}"
+                android:onClick="@{viewmodel::backToMainAct}"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_back"
+                android:layout_centerVertical="true"
+                android:rotation="@{viewmodel.rotation}"
+                android:visibility="@{viewmodel.backimageVisibility}"
+                android:onClick="@{viewmodel::FinishAct}"/>
+
+            <TextView
+                android:id="@+id/tv_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:layout_marginStart="@dimen/dp49h"
+                android:textColor="@color/colorWhite2"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="8sp"
+                android:text="@={viewmodel.toolbarTitle}"
+                />
+
+            <ImageView
+                android:id="@+id/iv_toolbar_messages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_chat"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="@{viewmodel.convVisibility}"
+                android:onClick="@{viewmodel::openChatAct}"/>
+
+            <ImageView
+                android:id="@+id/iv_toolbar_notification"
+                android:layout_toStartOf="@+id/iv_toolbar_messages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_notification"
+                android:layout_centerVertical="true"
+                android:visibility="@{viewmodel.convVisibility}"
+                android:layout_marginEnd="@dimen/dp18h"/>
+
+
+            <ImageView
+                android:id="@+id/iv_toolbar_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_filter"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+              />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+</layout>

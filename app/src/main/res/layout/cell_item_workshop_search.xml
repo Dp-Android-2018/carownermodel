@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tv_top_border_background"
+
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="@dimen/dp10h"
+        android:layout_height="match_parent"
+        android:background="@drawable/view_to_bottom_left_border_background" />
+    <!-- LEFT TITLE PART -->
+
+    <RelativeLayout
+        android:id="@+id/rl_workshop_data"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp120h"
+        android:background="@color/gray_background"
+        android:paddingBottom="@dimen/dp18h"
+        android:paddingEnd="@dimen/dp18h"
+        android:paddingLeft="@dimen/dp13h"
+        android:paddingRight="@dimen/dp18h"
+        android:paddingStart="@dimen/dp13h"
+        android:paddingTop="@dimen/dp18h">
+
+
+
+        <TextView
+            android:id="@+id/title_from_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="-5dp"
+
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlueDark2"
+            android:textSize="@dimen/sp14_5" />
+
+
+
+        <RatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_marginTop="@dimen/dp5h"
+            android:layout_below="@+id/title_from_address" />
+
+        <View
+            android:layout_below="@+id/rating"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="@dimen/dp10h"/>
+
+
+        <TextView
+            android:id="@+id/title_requests_count"
+            android:textSize="@dimen/sp8_5"
+            android:textColor="@color/colorGrayLevel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/tv_distance_label"
+            android:textSize="@dimen/sp8_5"
+            android:textColor="@color/colorGrayLevel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/title_requests_count"
+            android:layout_alignStart="@id/title_requests_count"
+            android:text="@string/distance" />
+
+        <TextView
+            android:id="@+id/title_urgent_request_num"
+            android:textSize="@dimen/sp8_5"
+            android:textColor="@color/colorGrayLevel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+
+            android:text="@string/weight_mock" />
+
+        <TextView
+            android:textSize="@dimen/sp8_5"
+            android:textColor="@color/colorGrayLevel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/title_urgent_request_num"
+            android:layout_alignParentEnd="true"
+            android:text="@string/urgent_request_text" />
+
+        <TextView
+            android:id="@+id/title_normal_request_num"
+            android:textSize="@dimen/sp8_5"
+            android:textColor="@color/colorGrayLevel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:text="123"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp5h"
+            android:layout_marginEnd="@dimen/dp5h"
+            android:layout_above="@+id/title_normal_request_num"
+            android:layout_centerInParent="true"
+            android:text="@string/normal_request_text"
+            android:textSize="@dimen/sp8_5"
+
+            android:textColor="@color/colorGrayLevel3"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data> </data>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_parent">
+
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar"
+        android:visibility="gone"/>
+<ListView
+    android:paddingTop="@dimen/dp10h"
+    android:paddingStart="@dimen/dp5h"
+    android:paddingEnd="@dimen/dp5h"
+    android:layout_below="@+id/toolbar"
+    android:id="@+id/mainListView"
+    android:layout_centerHorizontal="true"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="10dp"
+
+    android:scrollbars="none"
+    tools:context="findandfix.view.ui.activities.WorkShopOffersActivity"
+   />
+</RelativeLayout>
+</layout>
+

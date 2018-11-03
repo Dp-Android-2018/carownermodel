@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10w"
+        android:layout_marginBottom="@dimen/dp10w"
+        android:background="@drawable/dialog_border_background">
+
+
+        <TextView
+            android:id="@+id/tv_spinner_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp7w"
+            android:text="@string/service_type"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view_spinner_splitter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1w"
+            android:layout_below="@+id/tv_spinner_title"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tv_winch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp7w"
+            android:text="@string/winch"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view_winch_splitter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1w"
+            android:layout_below="@+id/tv_spinner_title"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tv_service_provider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp7w"
+            android:text="@string/service_provider"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+
+        <View
+            android:id="@+id/view_hydrolic_winch_splitter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1w"
+            android:layout_below="@+id/tv_spinner_title"
+            android:background="@color/colorPrimary" />
+
+
+
+    </LinearLayout>
+</RelativeLayout>
