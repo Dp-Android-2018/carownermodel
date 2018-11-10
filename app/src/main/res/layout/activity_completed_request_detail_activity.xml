@@ -4,7 +4,7 @@
         <import type="android.view.View"/>
         <variable
             name="requestDetailViewModel"
-            type="findandfix.viewmodel.CompletedRequestDetailViewModel"/>
+            type="com.findandfix.carowner.viewmodel.CompletedRequestDetailViewModel"/>
     </data>
 
 

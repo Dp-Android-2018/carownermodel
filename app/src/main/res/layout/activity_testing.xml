@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="findandfix.view.ui.activities.Testing">
+    tools:context="com.findandfix.carowner.ui.activities.Testing">
 
 </android.support.constraint.ConstraintLayout>

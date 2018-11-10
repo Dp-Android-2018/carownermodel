@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -34,9 +34,9 @@ public class ActivityRegister3Binding extends android.databinding.ViewDataBindin
     public final android.widget.RelativeLayout rlParent;
     // variables
     @Nullable
-    private findandfix.viewmodel.UploadImageModelView mUploadImageModelView;
+    private com.findandfix.carowner.viewmodel.UploadImageModelView mUploadImageModelView;
     @Nullable
-    private findandfix.viewmodel.HandleRegisterViewModel mRegisterviewmodel;
+    private com.findandfix.carowner.viewmodel.HandleRegisterViewModel mRegisterviewmodel;
     // values
     // listeners
     private OnClickListenerImpl mUploadImageModelViewValidateAndroidViewViewOnClickListener;
@@ -86,10 +86,10 @@ public class ActivityRegister3Binding extends android.databinding.ViewDataBindin
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.UploadImageModelView == variableId) {
-            setUploadImageModelView((findandfix.viewmodel.UploadImageModelView) variable);
+            setUploadImageModelView((com.findandfix.carowner.viewmodel.UploadImageModelView) variable);
         }
         else if (BR.registerviewmodel == variableId) {
-            setRegisterviewmodel((findandfix.viewmodel.HandleRegisterViewModel) variable);
+            setRegisterviewmodel((com.findandfix.carowner.viewmodel.HandleRegisterViewModel) variable);
         }
         else {
             variableSet = false;
@@ -97,7 +97,7 @@ public class ActivityRegister3Binding extends android.databinding.ViewDataBindin
             return variableSet;
     }
 
-    public void setUploadImageModelView(@Nullable findandfix.viewmodel.UploadImageModelView UploadImageModelView) {
+    public void setUploadImageModelView(@Nullable com.findandfix.carowner.viewmodel.UploadImageModelView UploadImageModelView) {
         updateRegistration(2, UploadImageModelView);
         this.mUploadImageModelView = UploadImageModelView;
         synchronized(this) {
@@ -107,10 +107,10 @@ public class ActivityRegister3Binding extends android.databinding.ViewDataBindin
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.UploadImageModelView getUploadImageModelView() {
+    public com.findandfix.carowner.viewmodel.UploadImageModelView getUploadImageModelView() {
         return mUploadImageModelView;
     }
-    public void setRegisterviewmodel(@Nullable findandfix.viewmodel.HandleRegisterViewModel Registerviewmodel) {
+    public void setRegisterviewmodel(@Nullable com.findandfix.carowner.viewmodel.HandleRegisterViewModel Registerviewmodel) {
         this.mRegisterviewmodel = Registerviewmodel;
         synchronized(this) {
             mDirtyFlags |= 0x10L;
@@ -119,7 +119,7 @@ public class ActivityRegister3Binding extends android.databinding.ViewDataBindin
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.HandleRegisterViewModel getRegisterviewmodel() {
+    public com.findandfix.carowner.viewmodel.HandleRegisterViewModel getRegisterviewmodel() {
         return mRegisterviewmodel;
     }
 
@@ -131,7 +131,7 @@ public class ActivityRegister3Binding extends android.databinding.ViewDataBindin
             case 1 :
                 return onChangeRegisterviewmodelProgressDialog((android.databinding.ObservableField<java.lang.Integer>) object, fieldId);
             case 2 :
-                return onChangeUploadImageModelView((findandfix.viewmodel.UploadImageModelView) object, fieldId);
+                return onChangeUploadImageModelView((com.findandfix.carowner.viewmodel.UploadImageModelView) object, fieldId);
             case 3 :
                 return onChangeUploadImageModelViewLoading((android.databinding.ObservableField<java.lang.Integer>) object, fieldId);
         }
@@ -155,7 +155,7 @@ public class ActivityRegister3Binding extends android.databinding.ViewDataBindin
         }
         return false;
     }
-    private boolean onChangeUploadImageModelView(findandfix.viewmodel.UploadImageModelView UploadImageModelView, int fieldId) {
+    private boolean onChangeUploadImageModelView(com.findandfix.carowner.viewmodel.UploadImageModelView UploadImageModelView, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x4L;
@@ -193,12 +193,12 @@ public class ActivityRegister3Binding extends android.databinding.ViewDataBindin
         android.databinding.ObservableField<java.lang.Integer> registerviewmodelProgressDialog = null;
         int uploadImageModelViewPicBitmapJavaLangObjectNullViewVISIBLEViewINVISIBLE = 0;
         int UploadImageModelViewPicBitmapJavaLangObjectNullViewVISIBLEViewINVISIBLE1 = 0;
-        findandfix.viewmodel.UploadImageModelView uploadImageModelView = mUploadImageModelView;
+        com.findandfix.carowner.viewmodel.UploadImageModelView uploadImageModelView = mUploadImageModelView;
         int androidDatabindingDynamicUtilSafeUnboxRegisterviewmodelProgressDialogGet = 0;
         boolean uploadImageModelViewPicBitmapJavaLangObjectNull = false;
         boolean UploadImageModelViewPicBitmapJavaLangObjectNull1 = false;
         java.lang.Integer uploadImageModelViewLoadingGet = null;
-        findandfix.viewmodel.HandleRegisterViewModel registerviewmodel = mRegisterviewmodel;
+        com.findandfix.carowner.viewmodel.HandleRegisterViewModel registerviewmodel = mRegisterviewmodel;
         android.databinding.ObservableField<java.lang.Integer> uploadImageModelViewLoading = null;
         android.view.View.OnClickListener uploadImageModelViewValidateAndroidViewViewOnClickListener = null;
         android.graphics.Bitmap uploadImageModelViewPicBitmap = null;
@@ -312,12 +312,12 @@ public class ActivityRegister3Binding extends android.databinding.ViewDataBindin
         if ((dirtyFlags & 0x45L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.progress(this.animationView, uploadImageModelViewProgressGet);
+            com.findandfix.carowner.utils.CustomBinder.progress(this.animationView, uploadImageModelViewProgressGet);
         }
         if ((dirtyFlags & 0x44L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.onAnimationEnd(this.animationView, uploadImageModelViewOnAnimationEnd);
+            com.findandfix.carowner.utils.CustomBinder.onAnimationEnd(this.animationView, uploadImageModelViewOnAnimationEnd);
             this.btnRegister2Next.setOnClickListener(uploadImageModelViewValidateAndroidViewViewOnClickListener);
             this.ivCarOwnerImage.setOnClickListener(uploadImageModelViewDisplayDialogAndroidViewViewOnClickListener);
             this.mboundView1.setOnClickListener(uploadImageModelViewDisplayDialogAndroidViewViewOnClickListener);
@@ -330,7 +330,7 @@ public class ActivityRegister3Binding extends android.databinding.ViewDataBindin
         if ((dirtyFlags & 0x64L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setImageBitmap(this.ivCarOwnerImage, uploadImageModelViewPicBitmap);
+            com.findandfix.carowner.utils.CustomBinder.setImageBitmap(this.ivCarOwnerImage, uploadImageModelViewPicBitmap);
             this.ivCarOwnerImage.setVisibility(uploadImageModelViewPicBitmapJavaLangObjectNullViewVISIBLEViewINVISIBLE);
             this.mboundView1.setVisibility(UploadImageModelViewPicBitmapJavaLangObjectNullViewVISIBLEViewINVISIBLE1);
         }
@@ -342,8 +342,8 @@ public class ActivityRegister3Binding extends android.databinding.ViewDataBindin
     }
     // Listener Stub Implementations
     public static class OnClickListenerImpl implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.UploadImageModelView value;
-        public OnClickListenerImpl setValue(findandfix.viewmodel.UploadImageModelView value) {
+        private com.findandfix.carowner.viewmodel.UploadImageModelView value;
+        public OnClickListenerImpl setValue(com.findandfix.carowner.viewmodel.UploadImageModelView value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -353,8 +353,8 @@ public class ActivityRegister3Binding extends android.databinding.ViewDataBindin
         }
     }
     public static class OnClickListenerImpl1 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.UploadImageModelView value;
-        public OnClickListenerImpl1 setValue(findandfix.viewmodel.UploadImageModelView value) {
+        private com.findandfix.carowner.viewmodel.UploadImageModelView value;
+        public OnClickListenerImpl1 setValue(com.findandfix.carowner.viewmodel.UploadImageModelView value) {
             this.value = value;
             return value == null ? null : this;
         }

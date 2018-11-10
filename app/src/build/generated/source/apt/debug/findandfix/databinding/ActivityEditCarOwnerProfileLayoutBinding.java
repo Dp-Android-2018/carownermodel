@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -89,7 +89,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
     public final android.widget.TextView tvWorkshopSpecialization;
     // variables
     @Nullable
-    private findandfix.viewmodel.EditProfileInfoViewModel mViewmodel;
+    private com.findandfix.carowner.viewmodel.EditProfileInfoViewModel mViewmodel;
     // values
     // listeners
     private OnClickListenerImpl mViewmodelShowCountriesAndroidViewViewOnClickListener;
@@ -117,7 +117,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
             // viewmodel.fname != null
             boolean viewmodelFnameJavaLangObjectNull = false;
             // viewmodel
-            findandfix.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
+            com.findandfix.carowner.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
 
 
 
@@ -154,7 +154,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
             // viewmodel.city
             android.databinding.ObservableField<java.lang.String> viewmodelCity = null;
             // viewmodel
-            findandfix.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
+            com.findandfix.carowner.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
 
 
 
@@ -191,7 +191,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
             // viewmodel.brand.get()
             java.lang.String viewmodelBrandGet = null;
             // viewmodel
-            findandfix.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
+            com.findandfix.carowner.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
 
 
 
@@ -228,7 +228,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
             // viewmodel.model.get()
             java.lang.String viewmodelModelGet = null;
             // viewmodel
-            findandfix.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
+            com.findandfix.carowner.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
 
 
 
@@ -265,7 +265,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
             // viewmodel.year != null
             boolean viewmodelYearJavaLangObjectNull = false;
             // viewmodel
-            findandfix.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
+            com.findandfix.carowner.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
 
 
 
@@ -302,7 +302,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
             // viewmodel.lname
             android.databinding.ObservableField<java.lang.String> viewmodelLname = null;
             // viewmodel
-            findandfix.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
+            com.findandfix.carowner.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
 
 
 
@@ -339,7 +339,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
             // viewmodel.phone != null
             boolean viewmodelPhoneJavaLangObjectNull = false;
             // viewmodel
-            findandfix.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
+            com.findandfix.carowner.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
 
 
 
@@ -376,7 +376,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
             // viewmodel.email.get()
             java.lang.String viewmodelEmailGet = null;
             // viewmodel
-            findandfix.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
+            com.findandfix.carowner.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
 
 
 
@@ -413,7 +413,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
             // viewmodel.country != null
             boolean viewmodelCountryJavaLangObjectNull = false;
             // viewmodel
-            findandfix.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
+            com.findandfix.carowner.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
 
 
 
@@ -519,7 +519,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((findandfix.viewmodel.EditProfileInfoViewModel) variable);
+            setViewmodel((com.findandfix.carowner.viewmodel.EditProfileInfoViewModel) variable);
         }
         else {
             variableSet = false;
@@ -527,7 +527,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable findandfix.viewmodel.EditProfileInfoViewModel Viewmodel) {
+    public void setViewmodel(@Nullable com.findandfix.carowner.viewmodel.EditProfileInfoViewModel Viewmodel) {
         updateRegistration(5, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
@@ -537,7 +537,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.EditProfileInfoViewModel getViewmodel() {
+    public com.findandfix.carowner.viewmodel.EditProfileInfoViewModel getViewmodel() {
         return mViewmodel;
     }
 
@@ -555,7 +555,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
             case 4 :
                 return onChangeViewmodelModel((android.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 5 :
-                return onChangeViewmodel((findandfix.viewmodel.EditProfileInfoViewModel) object, fieldId);
+                return onChangeViewmodel((com.findandfix.carowner.viewmodel.EditProfileInfoViewModel) object, fieldId);
             case 6 :
                 return onChangeViewmodelCountry((android.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 7 :
@@ -616,7 +616,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
         }
         return false;
     }
-    private boolean onChangeViewmodel(findandfix.viewmodel.EditProfileInfoViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodel(com.findandfix.carowner.viewmodel.EditProfileInfoViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x20L;
@@ -712,7 +712,7 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
         java.lang.String viewmodelLnameGet = null;
         java.lang.String viewmodelPhoneGet = null;
         java.lang.String viewmodelBrandGet = null;
-        findandfix.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
+        com.findandfix.carowner.viewmodel.EditProfileInfoViewModel viewmodel = mViewmodel;
         android.databinding.ObservableField<java.lang.String> viewmodelCountry = null;
         java.lang.String viewmodelCountryGet = null;
         android.databinding.ObservableField<java.lang.String> viewmodelEmail = null;
@@ -958,14 +958,14 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
         if ((dirtyFlags & 0x3020L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setImageBitmap(this.ivCarOwnerImage, viewmodelPicBitmap);
+            com.findandfix.carowner.utils.CustomBinder.setImageBitmap(this.ivCarOwnerImage, viewmodelPicBitmap);
             this.ivCarOwnerImage.setVisibility(viewmodelPicBitmapJavaLangObjectNullViewVISIBLEViewINVISIBLE);
             this.ivLogo.setVisibility(viewmodelPicBitmapJavaLangObjectNullViewINVISIBLEViewVISIBLE);
         }
         if ((dirtyFlags & 0x2120L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setImageConv(this.ivLogo, viewmodelPicUrlGet);
+            com.findandfix.carowner.utils.CustomBinder.setImageConv(this.ivLogo, viewmodelPicUrlGet);
         }
         if ((dirtyFlags & 0x2022L) != 0) {
             // api target 1
@@ -1011,8 +1011,8 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
     }
     // Listener Stub Implementations
     public static class OnClickListenerImpl implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.EditProfileInfoViewModel value;
-        public OnClickListenerImpl setValue(findandfix.viewmodel.EditProfileInfoViewModel value) {
+        private com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value;
+        public OnClickListenerImpl setValue(com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -1022,8 +1022,8 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
         }
     }
     public static class OnClickListenerImpl1 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.EditProfileInfoViewModel value;
-        public OnClickListenerImpl1 setValue(findandfix.viewmodel.EditProfileInfoViewModel value) {
+        private com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value;
+        public OnClickListenerImpl1 setValue(com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -1033,8 +1033,8 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
         }
     }
     public static class OnClickListenerImpl2 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.EditProfileInfoViewModel value;
-        public OnClickListenerImpl2 setValue(findandfix.viewmodel.EditProfileInfoViewModel value) {
+        private com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value;
+        public OnClickListenerImpl2 setValue(com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -1044,8 +1044,8 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
         }
     }
     public static class OnClickListenerImpl3 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.EditProfileInfoViewModel value;
-        public OnClickListenerImpl3 setValue(findandfix.viewmodel.EditProfileInfoViewModel value) {
+        private com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value;
+        public OnClickListenerImpl3 setValue(com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -1055,8 +1055,8 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
         }
     }
     public static class OnClickListenerImpl4 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.EditProfileInfoViewModel value;
-        public OnClickListenerImpl4 setValue(findandfix.viewmodel.EditProfileInfoViewModel value) {
+        private com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value;
+        public OnClickListenerImpl4 setValue(com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -1066,8 +1066,8 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
         }
     }
     public static class OnClickListenerImpl5 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.EditProfileInfoViewModel value;
-        public OnClickListenerImpl5 setValue(findandfix.viewmodel.EditProfileInfoViewModel value) {
+        private com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value;
+        public OnClickListenerImpl5 setValue(com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -1077,8 +1077,8 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
         }
     }
     public static class OnClickListenerImpl6 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.EditProfileInfoViewModel value;
-        public OnClickListenerImpl6 setValue(findandfix.viewmodel.EditProfileInfoViewModel value) {
+        private com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value;
+        public OnClickListenerImpl6 setValue(com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -1088,8 +1088,8 @@ public class ActivityEditCarOwnerProfileLayoutBinding extends android.databindin
         }
     }
     public static class OnClickListenerImpl7 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.EditProfileInfoViewModel value;
-        public OnClickListenerImpl7 setValue(findandfix.viewmodel.EditProfileInfoViewModel value) {
+        private com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value;
+        public OnClickListenerImpl7 setValue(com.findandfix.carowner.viewmodel.EditProfileInfoViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }

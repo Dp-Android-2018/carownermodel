@@ -8,11 +8,11 @@
         <import type="android.view.View" />
         <variable
             name="UploadImageModelView"
-            type="findandfix.viewmodel.UploadImageModelView" />
+            type="com.findandfix.carowner.viewmodel.UploadImageModelView" />
 
         <variable
             name="registerviewmodel"
-            type="findandfix.viewmodel.HandleRegisterViewModel"/>
+            type="com.findandfix.carowner.viewmodel.HandleRegisterViewModel"/>
     </data>
 
     <RelativeLayout

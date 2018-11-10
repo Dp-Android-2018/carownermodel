@@ -6,7 +6,7 @@
         <import type="android.view.View" />
       <variable
             name="viewmodel"
-            type="findandfix.viewmodel.EditProfileInfoViewModel"/>
+            type="com.findandfix.carowner.viewmodel.EditProfileInfoViewModel"/>
 
         <!-- <variable
            name="specializeviewmodel"

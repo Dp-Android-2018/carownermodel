@@ -25,7 +25,7 @@
             android:dividerHeight="10dp"
 
             android:scrollbars="none"
-            tools:context="findandfix.view.ui.activities.WorkShopOffersActivity"
+            tools:context="com.findandfix.carowner.ui.activities.WorkShopOffersActivity"
             />
     </RelativeLayout>
 </layout>

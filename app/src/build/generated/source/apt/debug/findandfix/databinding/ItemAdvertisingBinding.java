@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -27,7 +27,7 @@ public class ItemAdvertisingBinding extends android.databinding.ViewDataBinding 
     public final android.widget.TextView textView2;
     // variables
     @Nullable
-    private findandfix.viewmodel.ItemOfferViewModel mViewmodel;
+    private com.findandfix.carowner.viewmodel.ItemOfferViewModel mViewmodel;
     // values
     // listeners
     private OnClickListenerImpl mViewmodelOnItemClickAndroidViewViewOnClickListener;
@@ -71,7 +71,7 @@ public class ItemAdvertisingBinding extends android.databinding.ViewDataBinding 
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((findandfix.viewmodel.ItemOfferViewModel) variable);
+            setViewmodel((com.findandfix.carowner.viewmodel.ItemOfferViewModel) variable);
         }
         else {
             variableSet = false;
@@ -79,7 +79,7 @@ public class ItemAdvertisingBinding extends android.databinding.ViewDataBinding 
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable findandfix.viewmodel.ItemOfferViewModel Viewmodel) {
+    public void setViewmodel(@Nullable com.findandfix.carowner.viewmodel.ItemOfferViewModel Viewmodel) {
         updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
@@ -89,7 +89,7 @@ public class ItemAdvertisingBinding extends android.databinding.ViewDataBinding 
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.ItemOfferViewModel getViewmodel() {
+    public com.findandfix.carowner.viewmodel.ItemOfferViewModel getViewmodel() {
         return mViewmodel;
     }
 
@@ -97,11 +97,11 @@ public class ItemAdvertisingBinding extends android.databinding.ViewDataBinding 
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewmodel((findandfix.viewmodel.ItemOfferViewModel) object, fieldId);
+                return onChangeViewmodel((com.findandfix.carowner.viewmodel.ItemOfferViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(findandfix.viewmodel.ItemOfferViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodel(com.findandfix.carowner.viewmodel.ItemOfferViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -120,7 +120,7 @@ public class ItemAdvertisingBinding extends android.databinding.ViewDataBinding 
         }
         java.lang.String viewmodelAdvTitle = null;
         java.lang.String viewmodelAdvContent = null;
-        findandfix.viewmodel.ItemOfferViewModel viewmodel = mViewmodel;
+        com.findandfix.carowner.viewmodel.ItemOfferViewModel viewmodel = mViewmodel;
         android.view.View.OnClickListener viewmodelOnItemClickAndroidViewViewOnClickListener = null;
         java.lang.String viewmodelImage = null;
 
@@ -143,7 +143,7 @@ public class ItemAdvertisingBinding extends android.databinding.ViewDataBinding 
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setImageConv(this.ivAdv, viewmodelImage);
+            com.findandfix.carowner.utils.CustomBinder.setImageConv(this.ivAdv, viewmodelImage);
             this.llParent.setOnClickListener(viewmodelOnItemClickAndroidViewViewOnClickListener);
             android.databinding.adapters.TextViewBindingAdapter.setText(this.textView, viewmodelAdvTitle);
             android.databinding.adapters.TextViewBindingAdapter.setText(this.textView2, viewmodelAdvContent);
@@ -151,8 +151,8 @@ public class ItemAdvertisingBinding extends android.databinding.ViewDataBinding 
     }
     // Listener Stub Implementations
     public static class OnClickListenerImpl implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.ItemOfferViewModel value;
-        public OnClickListenerImpl setValue(findandfix.viewmodel.ItemOfferViewModel value) {
+        private com.findandfix.carowner.viewmodel.ItemOfferViewModel value;
+        public OnClickListenerImpl setValue(com.findandfix.carowner.viewmodel.ItemOfferViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }

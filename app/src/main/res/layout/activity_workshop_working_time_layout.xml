@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="findandfix.viewmodel.WorkingDaysViewModel"/>
+            type="com.findandfix.carowner.viewmodel.WorkingDaysViewModel"/>
     </data>
     <RelativeLayout
         android:layout_width="match_parent"

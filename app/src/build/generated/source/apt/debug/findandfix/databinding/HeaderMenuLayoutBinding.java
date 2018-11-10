@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -33,7 +33,7 @@ public class HeaderMenuLayoutBinding extends android.databinding.ViewDataBinding
     public final android.widget.TextView tvWorkshopTitle;
     // variables
     @Nullable
-    private findandfix.viewmodel.MainActViewModel mHeaderviewmodel;
+    private com.findandfix.carowner.viewmodel.MainActViewModel mHeaderviewmodel;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -74,7 +74,7 @@ public class HeaderMenuLayoutBinding extends android.databinding.ViewDataBinding
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.headerviewmodel == variableId) {
-            setHeaderviewmodel((findandfix.viewmodel.MainActViewModel) variable);
+            setHeaderviewmodel((com.findandfix.carowner.viewmodel.MainActViewModel) variable);
         }
         else {
             variableSet = false;
@@ -82,11 +82,11 @@ public class HeaderMenuLayoutBinding extends android.databinding.ViewDataBinding
             return variableSet;
     }
 
-    public void setHeaderviewmodel(@Nullable findandfix.viewmodel.MainActViewModel Headerviewmodel) {
+    public void setHeaderviewmodel(@Nullable com.findandfix.carowner.viewmodel.MainActViewModel Headerviewmodel) {
         this.mHeaderviewmodel = Headerviewmodel;
     }
     @Nullable
-    public findandfix.viewmodel.MainActViewModel getHeaderviewmodel() {
+    public com.findandfix.carowner.viewmodel.MainActViewModel getHeaderviewmodel() {
         return mHeaderviewmodel;
     }
 

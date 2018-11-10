@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;

@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -40,7 +40,7 @@ public class ActivityMainBinding extends android.databinding.ViewDataBinding  {
     public final findandfix.databinding.ToolbarLayoutBinding toolbar;
     // variables
     @Nullable
-    private findandfix.viewmodel.MainActViewModel mViewModel;
+    private com.findandfix.carowner.viewmodel.MainActViewModel mViewModel;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -90,7 +90,7 @@ public class ActivityMainBinding extends android.databinding.ViewDataBinding  {
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewModel == variableId) {
-            setViewModel((findandfix.viewmodel.MainActViewModel) variable);
+            setViewModel((com.findandfix.carowner.viewmodel.MainActViewModel) variable);
         }
         else {
             variableSet = false;
@@ -98,7 +98,7 @@ public class ActivityMainBinding extends android.databinding.ViewDataBinding  {
             return variableSet;
     }
 
-    public void setViewModel(@Nullable findandfix.viewmodel.MainActViewModel ViewModel) {
+    public void setViewModel(@Nullable com.findandfix.carowner.viewmodel.MainActViewModel ViewModel) {
         this.mViewModel = ViewModel;
         synchronized(this) {
             mDirtyFlags |= 0x2L;
@@ -107,7 +107,7 @@ public class ActivityMainBinding extends android.databinding.ViewDataBinding  {
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.MainActViewModel getViewModel() {
+    public com.findandfix.carowner.viewmodel.MainActViewModel getViewModel() {
         return mViewModel;
     }
 
@@ -137,7 +137,7 @@ public class ActivityMainBinding extends android.databinding.ViewDataBinding  {
             mDirtyFlags = 0;
         }
         android.support.design.widget.NavigationView.OnNavigationItemSelectedListener viewModelHandleNavigation = null;
-        findandfix.viewmodel.MainActViewModel viewModel = mViewModel;
+        com.findandfix.carowner.viewmodel.MainActViewModel viewModel = mViewModel;
 
         if ((dirtyFlags & 0x6L) != 0) {
 
@@ -152,7 +152,7 @@ public class ActivityMainBinding extends android.databinding.ViewDataBinding  {
         if ((dirtyFlags & 0x6L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.navigationEvent(this.navigationView, viewModelHandleNavigation);
+            com.findandfix.carowner.utils.CustomBinder.navigationEvent(this.navigationView, viewModelHandleNavigation);
         }
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1

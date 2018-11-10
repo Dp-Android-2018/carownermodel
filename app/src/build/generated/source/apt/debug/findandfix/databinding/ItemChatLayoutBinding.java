@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -55,7 +55,7 @@ public class ItemChatLayoutBinding extends android.databinding.ViewDataBinding  
     public final android.widget.TextView tvWorkshopTitle;
     // variables
     @Nullable
-    private findandfix.viewmodel.ItemChatDetailViewModel mViewmodel;
+    private com.findandfix.carowner.viewmodel.ItemChatDetailViewModel mViewmodel;
     // values
     // listeners
     private OnClickListenerImpl mViewmodelShowZoomAbleImageAndroidViewViewOnClickListener;
@@ -124,7 +124,7 @@ public class ItemChatLayoutBinding extends android.databinding.ViewDataBinding  
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((findandfix.viewmodel.ItemChatDetailViewModel) variable);
+            setViewmodel((com.findandfix.carowner.viewmodel.ItemChatDetailViewModel) variable);
         }
         else {
             variableSet = false;
@@ -132,7 +132,7 @@ public class ItemChatLayoutBinding extends android.databinding.ViewDataBinding  
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable findandfix.viewmodel.ItemChatDetailViewModel Viewmodel) {
+    public void setViewmodel(@Nullable com.findandfix.carowner.viewmodel.ItemChatDetailViewModel Viewmodel) {
         updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
@@ -142,7 +142,7 @@ public class ItemChatLayoutBinding extends android.databinding.ViewDataBinding  
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.ItemChatDetailViewModel getViewmodel() {
+    public com.findandfix.carowner.viewmodel.ItemChatDetailViewModel getViewmodel() {
         return mViewmodel;
     }
 
@@ -150,11 +150,11 @@ public class ItemChatLayoutBinding extends android.databinding.ViewDataBinding  
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewmodel((findandfix.viewmodel.ItemChatDetailViewModel) object, fieldId);
+                return onChangeViewmodel((com.findandfix.carowner.viewmodel.ItemChatDetailViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(findandfix.viewmodel.ItemChatDetailViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodel(com.findandfix.carowner.viewmodel.ItemChatDetailViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -179,7 +179,7 @@ public class ItemChatLayoutBinding extends android.databinding.ViewDataBinding  
         boolean viewmodelLoc = false;
         int viewmodelTextViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelTime = null;
-        findandfix.viewmodel.ItemChatDetailViewModel viewmodel = mViewmodel;
+        com.findandfix.carowner.viewmodel.ItemChatDetailViewModel viewmodel = mViewmodel;
         java.lang.String viewmodelContent = null;
         boolean viewmodelText = false;
         int viewmodelSenderViewGONEViewVISIBLE = 0;
@@ -273,12 +273,12 @@ public class ItemChatLayoutBinding extends android.databinding.ViewDataBinding  
             this.mboundView12.setVisibility(viewmodelLocViewVISIBLEViewGONE);
             android.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelContent);
             this.mboundView2.setVisibility(viewmodelTextViewVISIBLEViewGONE);
-            findandfix.utils.CustomBinder.setImageConv(this.mboundView4, viewmodelContent);
+            com.findandfix.carowner.utils.CustomBinder.setImageConv(this.mboundView4, viewmodelContent);
             this.mboundView4.setOnClickListener(viewmodelShowZoomAbleImageAndroidViewViewOnClickListener);
             this.mboundView5.setVisibility(viewmodelLocViewVISIBLEViewGONE);
             this.mboundView5.setOnClickListener(viewmodelNavigateAndroidViewViewOnClickListener);
             this.mboundView8.setOnClickListener(viewmodelShowZoomAbleImageAndroidViewViewOnClickListener);
-            findandfix.utils.CustomBinder.setImageConv(this.mboundView8, viewmodelContent);
+            com.findandfix.carowner.utils.CustomBinder.setImageConv(this.mboundView8, viewmodelContent);
             this.rlRecieverMessage.setVisibility(viewmodelSenderViewVISIBLEViewGONE);
             this.rlSenderMessage.setVisibility(viewmodelSenderViewGONEViewVISIBLE);
             android.databinding.adapters.TextViewBindingAdapter.setText(this.tvRecieverTime, viewmodelTime);
@@ -289,8 +289,8 @@ public class ItemChatLayoutBinding extends android.databinding.ViewDataBinding  
     }
     // Listener Stub Implementations
     public static class OnClickListenerImpl implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.ItemChatDetailViewModel value;
-        public OnClickListenerImpl setValue(findandfix.viewmodel.ItemChatDetailViewModel value) {
+        private com.findandfix.carowner.viewmodel.ItemChatDetailViewModel value;
+        public OnClickListenerImpl setValue(com.findandfix.carowner.viewmodel.ItemChatDetailViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -300,8 +300,8 @@ public class ItemChatLayoutBinding extends android.databinding.ViewDataBinding  
         }
     }
     public static class OnClickListenerImpl1 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.ItemChatDetailViewModel value;
-        public OnClickListenerImpl1 setValue(findandfix.viewmodel.ItemChatDetailViewModel value) {
+        private com.findandfix.carowner.viewmodel.ItemChatDetailViewModel value;
+        public OnClickListenerImpl1 setValue(com.findandfix.carowner.viewmodel.ItemChatDetailViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }

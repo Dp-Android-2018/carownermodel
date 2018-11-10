@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -36,7 +36,7 @@ public class FragmentActiveAccountBinding extends android.databinding.ViewDataBi
     public final android.widget.TextView tvActiveMailText;
     // variables
     @Nullable
-    private findandfix.viewmodel.ActivateAccountViewModel mViewmodel;
+    private com.findandfix.carowner.viewmodel.ActivateAccountViewModel mViewmodel;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -78,7 +78,7 @@ public class FragmentActiveAccountBinding extends android.databinding.ViewDataBi
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((findandfix.viewmodel.ActivateAccountViewModel) variable);
+            setViewmodel((com.findandfix.carowner.viewmodel.ActivateAccountViewModel) variable);
         }
         else {
             variableSet = false;
@@ -86,11 +86,11 @@ public class FragmentActiveAccountBinding extends android.databinding.ViewDataBi
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable findandfix.viewmodel.ActivateAccountViewModel Viewmodel) {
+    public void setViewmodel(@Nullable com.findandfix.carowner.viewmodel.ActivateAccountViewModel Viewmodel) {
         this.mViewmodel = Viewmodel;
     }
     @Nullable
-    public findandfix.viewmodel.ActivateAccountViewModel getViewmodel() {
+    public com.findandfix.carowner.viewmodel.ActivateAccountViewModel getViewmodel() {
         return mViewmodel;
     }
 
@@ -98,11 +98,11 @@ public class FragmentActiveAccountBinding extends android.databinding.ViewDataBi
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewmodel((findandfix.viewmodel.ActivateAccountViewModel) object, fieldId);
+                return onChangeViewmodel((com.findandfix.carowner.viewmodel.ActivateAccountViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(findandfix.viewmodel.ActivateAccountViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodel(com.findandfix.carowner.viewmodel.ActivateAccountViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;

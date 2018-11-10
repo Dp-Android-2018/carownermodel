@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -29,7 +29,7 @@ public class ToolbarLayoutBinding extends android.databinding.ViewDataBinding  {
     public final android.widget.TextView tvToolbarTitle;
     // variables
     @Nullable
-    private findandfix.viewmodel.ToolbarViewModel mViewmodel;
+    private com.findandfix.carowner.viewmodel.ToolbarViewModel mViewmodel;
     @Nullable
     private int mFoo;
     // values
@@ -54,7 +54,7 @@ public class ToolbarLayoutBinding extends android.databinding.ViewDataBinding  {
             // viewmodel.toolbarTitle != null
             boolean viewmodelToolbarTitleJavaLangObjectNull = false;
             // viewmodel
-            findandfix.viewmodel.ToolbarViewModel viewmodel = mViewmodel;
+            com.findandfix.carowner.viewmodel.ToolbarViewModel viewmodel = mViewmodel;
 
 
 
@@ -116,7 +116,7 @@ public class ToolbarLayoutBinding extends android.databinding.ViewDataBinding  {
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((findandfix.viewmodel.ToolbarViewModel) variable);
+            setViewmodel((com.findandfix.carowner.viewmodel.ToolbarViewModel) variable);
         }
         else if (BR.foo == variableId) {
             setFoo((int) variable);
@@ -127,7 +127,7 @@ public class ToolbarLayoutBinding extends android.databinding.ViewDataBinding  {
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable findandfix.viewmodel.ToolbarViewModel Viewmodel) {
+    public void setViewmodel(@Nullable com.findandfix.carowner.viewmodel.ToolbarViewModel Viewmodel) {
         updateRegistration(1, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
@@ -137,7 +137,7 @@ public class ToolbarLayoutBinding extends android.databinding.ViewDataBinding  {
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.ToolbarViewModel getViewmodel() {
+    public com.findandfix.carowner.viewmodel.ToolbarViewModel getViewmodel() {
         return mViewmodel;
     }
     public void setFoo(int Foo) {
@@ -153,7 +153,7 @@ public class ToolbarLayoutBinding extends android.databinding.ViewDataBinding  {
             case 0 :
                 return onChangeViewmodelToolbarTitle((android.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 1 :
-                return onChangeViewmodel((findandfix.viewmodel.ToolbarViewModel) object, fieldId);
+                return onChangeViewmodel((com.findandfix.carowner.viewmodel.ToolbarViewModel) object, fieldId);
             case 2 :
                 return onChangeViewmodelToolbarColor((android.databinding.ObservableInt) object, fieldId);
             case 3 :
@@ -172,7 +172,7 @@ public class ToolbarLayoutBinding extends android.databinding.ViewDataBinding  {
         }
         return false;
     }
-    private boolean onChangeViewmodel(findandfix.viewmodel.ToolbarViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodel(com.findandfix.carowner.viewmodel.ToolbarViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
@@ -219,7 +219,7 @@ public class ToolbarLayoutBinding extends android.databinding.ViewDataBinding  {
         android.view.View.OnClickListener viewmodelFinishActAndroidViewViewOnClickListener = null;
         android.view.View.OnClickListener viewmodelBackToMainActAndroidViewViewOnClickListener = null;
         android.databinding.ObservableField<java.lang.String> viewmodelToolbarTitle = null;
-        findandfix.viewmodel.ToolbarViewModel viewmodel = mViewmodel;
+        com.findandfix.carowner.viewmodel.ToolbarViewModel viewmodel = mViewmodel;
         int viewmodelToolbarColorGet = 0;
         android.databinding.ObservableInt viewmodelToolbarColor = null;
         android.databinding.ObservableInt viewmodelBackimageVisibility = null;
@@ -321,7 +321,7 @@ public class ToolbarLayoutBinding extends android.databinding.ViewDataBinding  {
         if ((dirtyFlags & 0x46L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setToolBarBackground(this.toolbar, viewmodelToolbarColorGet);
+            com.findandfix.carowner.utils.CustomBinder.setToolBarBackground(this.toolbar, viewmodelToolbarColorGet);
         }
         if ((dirtyFlags & 0x43L) != 0) {
             // api target 1
@@ -336,8 +336,8 @@ public class ToolbarLayoutBinding extends android.databinding.ViewDataBinding  {
     }
     // Listener Stub Implementations
     public static class OnClickListenerImpl implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.ToolbarViewModel value;
-        public OnClickListenerImpl setValue(findandfix.viewmodel.ToolbarViewModel value) {
+        private com.findandfix.carowner.viewmodel.ToolbarViewModel value;
+        public OnClickListenerImpl setValue(com.findandfix.carowner.viewmodel.ToolbarViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -347,8 +347,8 @@ public class ToolbarLayoutBinding extends android.databinding.ViewDataBinding  {
         }
     }
     public static class OnClickListenerImpl1 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.ToolbarViewModel value;
-        public OnClickListenerImpl1 setValue(findandfix.viewmodel.ToolbarViewModel value) {
+        private com.findandfix.carowner.viewmodel.ToolbarViewModel value;
+        public OnClickListenerImpl1 setValue(com.findandfix.carowner.viewmodel.ToolbarViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -358,8 +358,8 @@ public class ToolbarLayoutBinding extends android.databinding.ViewDataBinding  {
         }
     }
     public static class OnClickListenerImpl2 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.ToolbarViewModel value;
-        public OnClickListenerImpl2 setValue(findandfix.viewmodel.ToolbarViewModel value) {
+        private com.findandfix.carowner.viewmodel.ToolbarViewModel value;
+        public OnClickListenerImpl2 setValue(com.findandfix.carowner.viewmodel.ToolbarViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }

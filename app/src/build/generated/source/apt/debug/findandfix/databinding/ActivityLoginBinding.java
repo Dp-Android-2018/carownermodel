@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -31,7 +31,7 @@ public class ActivityLoginBinding extends android.databinding.ViewDataBinding  {
     public final android.widget.RelativeLayout rlParent;
     // variables
     @Nullable
-    private findandfix.viewmodel.LoginViewModel mLoginViewModel;
+    private com.findandfix.carowner.viewmodel.LoginViewModel mLoginViewModel;
     // values
     // listeners
     private OnClickListenerImpl mLoginViewModelCheckLoginAndroidViewViewOnClickListener;
@@ -45,7 +45,7 @@ public class ActivityLoginBinding extends android.databinding.ViewDataBinding  {
             java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(etRegisterEmail);
             // localize variables for thread safety
             // LoginViewModel
-            findandfix.viewmodel.LoginViewModel loginViewModel = mLoginViewModel;
+            com.findandfix.carowner.viewmodel.LoginViewModel loginViewModel = mLoginViewModel;
             // LoginViewModel.email != null
             boolean loginViewModelEmailJavaLangObjectNull = false;
             // LoginViewModel != null
@@ -82,7 +82,7 @@ public class ActivityLoginBinding extends android.databinding.ViewDataBinding  {
             java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(etRegisterPassword);
             // localize variables for thread safety
             // LoginViewModel
-            findandfix.viewmodel.LoginViewModel loginViewModel = mLoginViewModel;
+            com.findandfix.carowner.viewmodel.LoginViewModel loginViewModel = mLoginViewModel;
             // LoginViewModel.password.get()
             java.lang.String loginViewModelPasswordGet = null;
             // LoginViewModel != null
@@ -154,7 +154,7 @@ public class ActivityLoginBinding extends android.databinding.ViewDataBinding  {
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.LoginViewModel == variableId) {
-            setLoginViewModel((findandfix.viewmodel.LoginViewModel) variable);
+            setLoginViewModel((com.findandfix.carowner.viewmodel.LoginViewModel) variable);
         }
         else {
             variableSet = false;
@@ -162,7 +162,7 @@ public class ActivityLoginBinding extends android.databinding.ViewDataBinding  {
             return variableSet;
     }
 
-    public void setLoginViewModel(@Nullable findandfix.viewmodel.LoginViewModel LoginViewModel) {
+    public void setLoginViewModel(@Nullable com.findandfix.carowner.viewmodel.LoginViewModel LoginViewModel) {
         this.mLoginViewModel = LoginViewModel;
         synchronized(this) {
             mDirtyFlags |= 0x8L;
@@ -171,7 +171,7 @@ public class ActivityLoginBinding extends android.databinding.ViewDataBinding  {
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.LoginViewModel getLoginViewModel() {
+    public com.findandfix.carowner.viewmodel.LoginViewModel getLoginViewModel() {
         return mLoginViewModel;
     }
 
@@ -229,7 +229,7 @@ public class ActivityLoginBinding extends android.databinding.ViewDataBinding  {
         android.view.View.OnClickListener loginViewModelCheckLoginAndroidViewViewOnClickListener = null;
         android.databinding.ObservableField<java.lang.String> loginViewModelPassword = null;
         android.databinding.ObservableInt loginViewModelProgressDialog = null;
-        findandfix.viewmodel.LoginViewModel loginViewModel = mLoginViewModel;
+        com.findandfix.carowner.viewmodel.LoginViewModel loginViewModel = mLoginViewModel;
         android.view.View.OnClickListener loginViewModelMoveToRegisterActAndroidViewViewOnClickListener = null;
 
         if ((dirtyFlags & 0x1fL) != 0) {
@@ -318,8 +318,8 @@ public class ActivityLoginBinding extends android.databinding.ViewDataBinding  {
     }
     // Listener Stub Implementations
     public static class OnClickListenerImpl implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.LoginViewModel value;
-        public OnClickListenerImpl setValue(findandfix.viewmodel.LoginViewModel value) {
+        private com.findandfix.carowner.viewmodel.LoginViewModel value;
+        public OnClickListenerImpl setValue(com.findandfix.carowner.viewmodel.LoginViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -329,8 +329,8 @@ public class ActivityLoginBinding extends android.databinding.ViewDataBinding  {
         }
     }
     public static class OnClickListenerImpl1 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.LoginViewModel value;
-        public OnClickListenerImpl1 setValue(findandfix.viewmodel.LoginViewModel value) {
+        private com.findandfix.carowner.viewmodel.LoginViewModel value;
+        public OnClickListenerImpl1 setValue(com.findandfix.carowner.viewmodel.LoginViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }

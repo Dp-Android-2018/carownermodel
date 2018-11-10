@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -47,7 +47,7 @@ public class FragmentHomeBinding extends android.databinding.ViewDataBinding  {
     public final android.widget.TextView tvUrgentRequest;
     // variables
     @Nullable
-    private findandfix.viewmodel.HomeFragViewModel mViewModel;
+    private com.findandfix.carowner.viewmodel.HomeFragViewModel mViewModel;
     // values
     // listeners
     private OnClickListenerImpl mViewModelStartEngineAndroidViewViewOnClickListener;
@@ -99,7 +99,7 @@ public class FragmentHomeBinding extends android.databinding.ViewDataBinding  {
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewModel == variableId) {
-            setViewModel((findandfix.viewmodel.HomeFragViewModel) variable);
+            setViewModel((com.findandfix.carowner.viewmodel.HomeFragViewModel) variable);
         }
         else {
             variableSet = false;
@@ -107,7 +107,7 @@ public class FragmentHomeBinding extends android.databinding.ViewDataBinding  {
             return variableSet;
     }
 
-    public void setViewModel(@Nullable findandfix.viewmodel.HomeFragViewModel ViewModel) {
+    public void setViewModel(@Nullable com.findandfix.carowner.viewmodel.HomeFragViewModel ViewModel) {
         this.mViewModel = ViewModel;
         synchronized(this) {
             mDirtyFlags |= 0x4L;
@@ -116,7 +116,7 @@ public class FragmentHomeBinding extends android.databinding.ViewDataBinding  {
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.HomeFragViewModel getViewModel() {
+    public com.findandfix.carowner.viewmodel.HomeFragViewModel getViewModel() {
         return mViewModel;
     }
 
@@ -166,7 +166,7 @@ public class FragmentHomeBinding extends android.databinding.ViewDataBinding  {
         android.view.View.OnClickListener viewModelStartEngineAndroidViewViewOnClickListener = null;
         android.databinding.ObservableBoolean viewModelIsImageVisible = null;
         android.animation.Animator.AnimatorListener viewModelOnAnimationEnd = null;
-        findandfix.viewmodel.HomeFragViewModel viewModel = mViewModel;
+        com.findandfix.carowner.viewmodel.HomeFragViewModel viewModel = mViewModel;
 
         if ((dirtyFlags & 0xfL) != 0) {
 
@@ -243,8 +243,8 @@ public class FragmentHomeBinding extends android.databinding.ViewDataBinding  {
         if ((dirtyFlags & 0xcL) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.onAnimationEnd(this.animationView, viewModelOnAnimationEnd);
-            findandfix.utils.CustomBinder.onTouch(this.animationView, viewModelOnTouchEvent);
+            com.findandfix.carowner.utils.CustomBinder.onAnimationEnd(this.animationView, viewModelOnAnimationEnd);
+            com.findandfix.carowner.utils.CustomBinder.onTouch(this.animationView, viewModelOnTouchEvent);
             this.ivLogo.setOnClickListener(viewModelStartEngineAndroidViewViewOnClickListener);
             this.tvStartEngine.setOnClickListener(viewModelStartEngineAndroidViewViewOnClickListener);
         }
@@ -262,8 +262,8 @@ public class FragmentHomeBinding extends android.databinding.ViewDataBinding  {
     }
     // Listener Stub Implementations
     public static class OnClickListenerImpl implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.HomeFragViewModel value;
-        public OnClickListenerImpl setValue(findandfix.viewmodel.HomeFragViewModel value) {
+        private com.findandfix.carowner.viewmodel.HomeFragViewModel value;
+        public OnClickListenerImpl setValue(com.findandfix.carowner.viewmodel.HomeFragViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }

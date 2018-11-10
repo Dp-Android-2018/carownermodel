@@ -8,7 +8,7 @@
         <import type="android.view.View" />
         <variable
             name="UploadImageModelView"
-            type="findandfix.viewmodel.FixationPaperViewModel" />
+            type="com.findandfix.carowner.viewmodel.FixationPaperViewModel" />
     </data>
 
     <RelativeLayout

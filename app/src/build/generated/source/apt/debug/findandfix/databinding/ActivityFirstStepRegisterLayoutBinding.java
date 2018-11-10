@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -37,9 +37,9 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
     public final android.widget.RelativeLayout rlParent;
     // variables
     @Nullable
-    private findandfix.viewmodel.RegisterViewModel mRegisterModelView;
+    private com.findandfix.carowner.viewmodel.RegisterViewModel mRegisterModelView;
     @Nullable
-    private findandfix.viewmodel.FirstStepRegisterValidation mValidator;
+    private com.findandfix.carowner.viewmodel.FirstStepRegisterValidation mValidator;
     // values
     // listeners
     private AfterTextChangedImpl mRegisterModelViewOnPasswordChangedAndroidDatabindingAdaptersTextViewBindingAdapterAfterTextChanged;
@@ -55,7 +55,7 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
             java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(etSignUpCarOwnerConfirmPassword);
             // localize variables for thread safety
             // RegisterModelView
-            findandfix.viewmodel.RegisterViewModel registerModelView = mRegisterModelView;
+            com.findandfix.carowner.viewmodel.RegisterViewModel registerModelView = mRegisterModelView;
             // RegisterModelView.confirmPassword
             android.databinding.ObservableField<java.lang.String> registerModelViewConfirmPassword = null;
             // RegisterModelView.confirmPassword.get()
@@ -92,7 +92,7 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
             java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(etSignUpCarOwnerEmail);
             // localize variables for thread safety
             // RegisterModelView
-            findandfix.viewmodel.RegisterViewModel registerModelView = mRegisterModelView;
+            com.findandfix.carowner.viewmodel.RegisterViewModel registerModelView = mRegisterModelView;
             // RegisterModelView.email.get()
             java.lang.String registerModelViewEmailGet = null;
             // RegisterModelView != null
@@ -129,7 +129,7 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
             java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(etSignUpCarOwnerPassword);
             // localize variables for thread safety
             // RegisterModelView
-            findandfix.viewmodel.RegisterViewModel registerModelView = mRegisterModelView;
+            com.findandfix.carowner.viewmodel.RegisterViewModel registerModelView = mRegisterModelView;
             // RegisterModelView.password
             android.databinding.ObservableField<java.lang.String> registerModelViewPassword = null;
             // RegisterModelView != null
@@ -207,10 +207,10 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.RegisterModelView == variableId) {
-            setRegisterModelView((findandfix.viewmodel.RegisterViewModel) variable);
+            setRegisterModelView((com.findandfix.carowner.viewmodel.RegisterViewModel) variable);
         }
         else if (BR.validator == variableId) {
-            setValidator((findandfix.viewmodel.FirstStepRegisterValidation) variable);
+            setValidator((com.findandfix.carowner.viewmodel.FirstStepRegisterValidation) variable);
         }
         else {
             variableSet = false;
@@ -218,7 +218,7 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
             return variableSet;
     }
 
-    public void setRegisterModelView(@Nullable findandfix.viewmodel.RegisterViewModel RegisterModelView) {
+    public void setRegisterModelView(@Nullable com.findandfix.carowner.viewmodel.RegisterViewModel RegisterModelView) {
         this.mRegisterModelView = RegisterModelView;
         synchronized(this) {
             mDirtyFlags |= 0x100L;
@@ -227,10 +227,10 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.RegisterViewModel getRegisterModelView() {
+    public com.findandfix.carowner.viewmodel.RegisterViewModel getRegisterModelView() {
         return mRegisterModelView;
     }
-    public void setValidator(@Nullable findandfix.viewmodel.FirstStepRegisterValidation Validator) {
+    public void setValidator(@Nullable com.findandfix.carowner.viewmodel.FirstStepRegisterValidation Validator) {
         updateRegistration(6, Validator);
         this.mValidator = Validator;
         synchronized(this) {
@@ -240,7 +240,7 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.FirstStepRegisterValidation getValidator() {
+    public com.findandfix.carowner.viewmodel.FirstStepRegisterValidation getValidator() {
         return mValidator;
     }
 
@@ -260,7 +260,7 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
             case 5 :
                 return onChangeValidatorPasswordError((android.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 6 :
-                return onChangeValidator((findandfix.viewmodel.FirstStepRegisterValidation) object, fieldId);
+                return onChangeValidator((com.findandfix.carowner.viewmodel.FirstStepRegisterValidation) object, fieldId);
             case 7 :
                 return onChangeRegisterModelViewVisibleprogress((android.databinding.ObservableField<java.lang.Integer>) object, fieldId);
         }
@@ -320,7 +320,7 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
         }
         return false;
     }
-    private boolean onChangeValidator(findandfix.viewmodel.FirstStepRegisterValidation Validator, int fieldId) {
+    private boolean onChangeValidator(com.findandfix.carowner.viewmodel.FirstStepRegisterValidation Validator, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x40L;
@@ -351,7 +351,7 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
         java.lang.String registerModelViewPasswordGet = null;
         android.view.View.OnClickListener registerModelViewValidatorAndroidViewViewOnClickListener = null;
         android.databinding.ObservableField<java.lang.String> registerModelViewPassword = null;
-        findandfix.viewmodel.RegisterViewModel registerModelView = mRegisterModelView;
+        com.findandfix.carowner.viewmodel.RegisterViewModel registerModelView = mRegisterModelView;
         java.lang.String validatorPasswordErrorGet = null;
         java.lang.String validatorConfirmPasswordErrorGet = null;
         android.databinding.adapters.TextViewBindingAdapter.AfterTextChanged registerModelViewOnEmailChangedAndroidDatabindingAdaptersTextViewBindingAdapterAfterTextChanged = null;
@@ -361,7 +361,7 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
         android.databinding.ObservableField<java.lang.String> validatorConfirmPasswordError = null;
         android.databinding.ObservableField<java.lang.String> validatorPasswordError = null;
         java.lang.Integer registerModelViewVisibleprogressGet = null;
-        findandfix.viewmodel.FirstStepRegisterValidation validator = mValidator;
+        com.findandfix.carowner.viewmodel.FirstStepRegisterValidation validator = mValidator;
         java.lang.String registerModelViewEmailGet = null;
         android.databinding.ObservableField<java.lang.Integer> registerModelViewVisibleprogress = null;
         java.lang.String registerModelViewConfirmPasswordGet = null;
@@ -518,17 +518,17 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
         if ((dirtyFlags & 0x250L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setErrorMessage(this.inputLayoutSignUpConfirmPassword, validatorConfirmPasswordErrorGet);
+            com.findandfix.carowner.utils.CustomBinder.setErrorMessage(this.inputLayoutSignUpConfirmPassword, validatorConfirmPasswordErrorGet);
         }
         if ((dirtyFlags & 0x248L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setErrorMessage(this.inputLayoutSignUpEmail, validatorEmailErrorGet);
+            com.findandfix.carowner.utils.CustomBinder.setErrorMessage(this.inputLayoutSignUpEmail, validatorEmailErrorGet);
         }
         if ((dirtyFlags & 0x260L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setErrorMessage(this.inputLayoutSignUpPassword, validatorPasswordErrorGet);
+            com.findandfix.carowner.utils.CustomBinder.setErrorMessage(this.inputLayoutSignUpPassword, validatorPasswordErrorGet);
         }
         if ((dirtyFlags & 0x380L) != 0) {
             // api target 1
@@ -538,8 +538,8 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
     }
     // Listener Stub Implementations
     public static class AfterTextChangedImpl implements android.databinding.adapters.TextViewBindingAdapter.AfterTextChanged{
-        private findandfix.viewmodel.RegisterViewModel value;
-        public AfterTextChangedImpl setValue(findandfix.viewmodel.RegisterViewModel value) {
+        private com.findandfix.carowner.viewmodel.RegisterViewModel value;
+        public AfterTextChangedImpl setValue(com.findandfix.carowner.viewmodel.RegisterViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -549,8 +549,8 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
         }
     }
     public static class OnClickListenerImpl implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.RegisterViewModel value;
-        public OnClickListenerImpl setValue(findandfix.viewmodel.RegisterViewModel value) {
+        private com.findandfix.carowner.viewmodel.RegisterViewModel value;
+        public OnClickListenerImpl setValue(com.findandfix.carowner.viewmodel.RegisterViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -560,8 +560,8 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
         }
     }
     public static class AfterTextChangedImpl1 implements android.databinding.adapters.TextViewBindingAdapter.AfterTextChanged{
-        private findandfix.viewmodel.RegisterViewModel value;
-        public AfterTextChangedImpl1 setValue(findandfix.viewmodel.RegisterViewModel value) {
+        private com.findandfix.carowner.viewmodel.RegisterViewModel value;
+        public AfterTextChangedImpl1 setValue(com.findandfix.carowner.viewmodel.RegisterViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -571,8 +571,8 @@ public class ActivityFirstStepRegisterLayoutBinding extends android.databinding.
         }
     }
     public static class AfterTextChangedImpl2 implements android.databinding.adapters.TextViewBindingAdapter.AfterTextChanged{
-        private findandfix.viewmodel.RegisterViewModel value;
-        public AfterTextChangedImpl2 setValue(findandfix.viewmodel.RegisterViewModel value) {
+        private com.findandfix.carowner.viewmodel.RegisterViewModel value;
+        public AfterTextChangedImpl2 setValue(com.findandfix.carowner.viewmodel.RegisterViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }

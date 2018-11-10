@@ -5,7 +5,7 @@
 
         <variable
             name="LoginViewModel"
-            type="findandfix.viewmodel.LoginViewModel" />
+            type="com.findandfix.carowner.viewmodel.LoginViewModel" />
     </data>
 
     <RelativeLayout

@@ -3,7 +3,7 @@
 <data>
     <variable
         name="headerviewmodel"
-        type="findandfix.viewmodel.MainActViewModel"/>
+        type="com.findandfix.carowner.viewmodel.MainActViewModel"/>
 </data>
 
 <LinearLayout

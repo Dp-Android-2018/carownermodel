@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -57,9 +57,9 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
     public final android.widget.RelativeLayout rlParent;
     // variables
     @Nullable
-    private findandfix.viewmodel.SecondStepRegisterValidation mValidation;
+    private com.findandfix.carowner.viewmodel.SecondStepRegisterValidation mValidation;
     @Nullable
-    private findandfix.viewmodel.SecondStepRegisterViewModel mRegisterModelView2;
+    private com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel mRegisterModelView2;
     // values
     // listeners
     private OnClickListenerImpl mRegisterModelView2ShowCarBrandsAndroidViewViewOnClickListener;
@@ -77,7 +77,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
             java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(etRegister2CarBrand);
             // localize variables for thread safety
             // RegisterModelView2
-            findandfix.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
+            com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
             // RegisterModelView2.brand != null
             boolean registerModelView2BrandJavaLangObjectNull = false;
             // RegisterModelView2.brand
@@ -114,7 +114,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
             java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(etRegister2City);
             // localize variables for thread safety
             // RegisterModelView2
-            findandfix.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
+            com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
             // RegisterModelView2.city != null
             boolean registerModelView2CityJavaLangObjectNull = false;
             // RegisterModelView2.city
@@ -151,7 +151,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
             java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(etRegister2Country);
             // localize variables for thread safety
             // RegisterModelView2
-            findandfix.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
+            com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
             // RegisterModelView2.country != null
             boolean registerModelView2CountryJavaLangObjectNull = false;
             // RegisterModelView2.country
@@ -190,7 +190,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
             // RegisterModelView2.firstName != null
             boolean registerModelView2FirstNameJavaLangObjectNull = false;
             // RegisterModelView2
-            findandfix.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
+            com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
             // RegisterModelView2.firstName.get()
             java.lang.String registerModelView2FirstNameGet = null;
             // RegisterModelView2.firstName
@@ -225,7 +225,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
             java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(etRegister2LastName);
             // localize variables for thread safety
             // RegisterModelView2
-            findandfix.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
+            com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
             // RegisterModelView2 != null
             boolean registerModelView2JavaLangObjectNull = false;
             // RegisterModelView2.lastName
@@ -264,7 +264,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
             // RegisterModelView2.model
             android.databinding.ObservableField<java.lang.String> registerModelView2Model = null;
             // RegisterModelView2
-            findandfix.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
+            com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
             // RegisterModelView2.model.get()
             java.lang.String registerModelView2ModelGet = null;
             // RegisterModelView2 != null
@@ -299,7 +299,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
             java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(etRegister2PhoneNumber);
             // localize variables for thread safety
             // RegisterModelView2
-            findandfix.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
+            com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
             // RegisterModelView2.phoneNumber != null
             boolean registerModelView2PhoneNumberJavaLangObjectNull = false;
             // RegisterModelView2.phoneNumber.get()
@@ -336,7 +336,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
             java.lang.String callbackArg_0 = android.databinding.adapters.TextViewBindingAdapter.getTextString(etRegister2Year);
             // localize variables for thread safety
             // RegisterModelView2
-            findandfix.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
+            com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
             // RegisterModelView2.year
             android.databinding.ObservableField<java.lang.String> registerModelView2Year = null;
             // RegisterModelView2.year.get()
@@ -434,10 +434,10 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.validation == variableId) {
-            setValidation((findandfix.viewmodel.SecondStepRegisterValidation) variable);
+            setValidation((com.findandfix.carowner.viewmodel.SecondStepRegisterValidation) variable);
         }
         else if (BR.RegisterModelView2 == variableId) {
-            setRegisterModelView2((findandfix.viewmodel.SecondStepRegisterViewModel) variable);
+            setRegisterModelView2((com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel) variable);
         }
         else {
             variableSet = false;
@@ -445,7 +445,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
             return variableSet;
     }
 
-    public void setValidation(@Nullable findandfix.viewmodel.SecondStepRegisterValidation Validation) {
+    public void setValidation(@Nullable com.findandfix.carowner.viewmodel.SecondStepRegisterValidation Validation) {
         updateRegistration(4, Validation);
         this.mValidation = Validation;
         synchronized(this) {
@@ -455,10 +455,10 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.SecondStepRegisterValidation getValidation() {
+    public com.findandfix.carowner.viewmodel.SecondStepRegisterValidation getValidation() {
         return mValidation;
     }
-    public void setRegisterModelView2(@Nullable findandfix.viewmodel.SecondStepRegisterViewModel RegisterModelView2) {
+    public void setRegisterModelView2(@Nullable com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel RegisterModelView2) {
         this.mRegisterModelView2 = RegisterModelView2;
         synchronized(this) {
             mDirtyFlags |= 0x40000L;
@@ -467,7 +467,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.SecondStepRegisterViewModel getRegisterModelView2() {
+    public com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel getRegisterModelView2() {
         return mRegisterModelView2;
     }
 
@@ -483,7 +483,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
             case 3 :
                 return onChangeRegisterModelView2FirstName((android.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 4 :
-                return onChangeValidation((findandfix.viewmodel.SecondStepRegisterValidation) object, fieldId);
+                return onChangeValidation((com.findandfix.carowner.viewmodel.SecondStepRegisterValidation) object, fieldId);
             case 5 :
                 return onChangeValidationFnameError((android.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 6 :
@@ -549,7 +549,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
         }
         return false;
     }
-    private boolean onChangeValidation(findandfix.viewmodel.SecondStepRegisterValidation Validation, int fieldId) {
+    private boolean onChangeValidation(com.findandfix.carowner.viewmodel.SecondStepRegisterValidation Validation, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x10L;
@@ -694,7 +694,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
         android.databinding.ObservableField<java.lang.String> registerModelView2LastName = null;
         android.view.View.OnClickListener registerModelView2ShowCountriesAndroidViewViewOnClickListener = null;
         android.databinding.ObservableField<java.lang.String> registerModelView2FirstName = null;
-        findandfix.viewmodel.SecondStepRegisterValidation validation = mValidation;
+        com.findandfix.carowner.viewmodel.SecondStepRegisterValidation validation = mValidation;
         android.view.View.OnClickListener registerModelView2ShowModelsAndroidViewViewOnClickListener = null;
         java.lang.String validationModelErrorGet = null;
         android.databinding.ObservableField<java.lang.String> validationFnameError = null;
@@ -712,7 +712,7 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
         android.databinding.ObservableField<java.lang.String> validationBrandError = null;
         android.view.View.OnClickListener registerModelView2NextAndroidViewViewOnClickListener = null;
         android.databinding.ObservableField<java.lang.String> registerModelView2Brand = null;
-        findandfix.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
+        com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel registerModelView2 = mRegisterModelView2;
         java.lang.String registerModelView2ModelGet = null;
         android.databinding.ObservableField<java.lang.String> validationModelError = null;
         java.lang.String validationLnameErrorGet = null;
@@ -1055,42 +1055,42 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
         if ((dirtyFlags & 0x80030L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setErrorMessage(this.inputLayoutSignUpFname, validationFnameErrorGet);
+            com.findandfix.carowner.utils.CustomBinder.setErrorMessage(this.inputLayoutSignUpFname, validationFnameErrorGet);
         }
         if ((dirtyFlags & 0x80410L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setErrorMessage(this.inputSignUpBrand, validationBrandErrorGet);
+            com.findandfix.carowner.utils.CustomBinder.setErrorMessage(this.inputSignUpBrand, validationBrandErrorGet);
         }
         if ((dirtyFlags & 0x82010L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setErrorMessage(this.inputSignUpCity, validationCityErrorGet);
+            com.findandfix.carowner.utils.CustomBinder.setErrorMessage(this.inputSignUpCity, validationCityErrorGet);
         }
         if ((dirtyFlags & 0x84010L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setErrorMessage(this.inputSignUpCountry, validationCountryErrorGet);
+            com.findandfix.carowner.utils.CustomBinder.setErrorMessage(this.inputSignUpCountry, validationCountryErrorGet);
         }
         if ((dirtyFlags & 0x88010L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setErrorMessage(this.inputSignUpLname, validationLnameErrorGet);
+            com.findandfix.carowner.utils.CustomBinder.setErrorMessage(this.inputSignUpLname, validationLnameErrorGet);
         }
         if ((dirtyFlags & 0x81010L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setErrorMessage(this.inputSignUpModel, validationModelErrorGet);
+            com.findandfix.carowner.utils.CustomBinder.setErrorMessage(this.inputSignUpModel, validationModelErrorGet);
         }
         if ((dirtyFlags & 0x80011L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setErrorMessage(this.inputSignUpPhone, validationPhoneErrorGet);
+            com.findandfix.carowner.utils.CustomBinder.setErrorMessage(this.inputSignUpPhone, validationPhoneErrorGet);
         }
         if ((dirtyFlags & 0x80110L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setErrorMessage(this.inputSignUpYear, validationYearErrorGet);
+            com.findandfix.carowner.utils.CustomBinder.setErrorMessage(this.inputSignUpYear, validationYearErrorGet);
         }
         if ((dirtyFlags & 0xc0040L) != 0) {
             // api target 1
@@ -1100,8 +1100,8 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
     }
     // Listener Stub Implementations
     public static class OnClickListenerImpl implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.SecondStepRegisterViewModel value;
-        public OnClickListenerImpl setValue(findandfix.viewmodel.SecondStepRegisterViewModel value) {
+        private com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel value;
+        public OnClickListenerImpl setValue(com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -1111,8 +1111,8 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
         }
     }
     public static class OnClickListenerImpl1 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.SecondStepRegisterViewModel value;
-        public OnClickListenerImpl1 setValue(findandfix.viewmodel.SecondStepRegisterViewModel value) {
+        private com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel value;
+        public OnClickListenerImpl1 setValue(com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -1122,8 +1122,8 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
         }
     }
     public static class OnClickListenerImpl2 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.SecondStepRegisterViewModel value;
-        public OnClickListenerImpl2 setValue(findandfix.viewmodel.SecondStepRegisterViewModel value) {
+        private com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel value;
+        public OnClickListenerImpl2 setValue(com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -1133,8 +1133,8 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
         }
     }
     public static class OnClickListenerImpl3 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.SecondStepRegisterViewModel value;
-        public OnClickListenerImpl3 setValue(findandfix.viewmodel.SecondStepRegisterViewModel value) {
+        private com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel value;
+        public OnClickListenerImpl3 setValue(com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -1144,8 +1144,8 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
         }
     }
     public static class OnClickListenerImpl4 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.SecondStepRegisterViewModel value;
-        public OnClickListenerImpl4 setValue(findandfix.viewmodel.SecondStepRegisterViewModel value) {
+        private com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel value;
+        public OnClickListenerImpl4 setValue(com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -1155,8 +1155,8 @@ public class ActivitySecondStepRegisterLayoutBinding extends android.databinding
         }
     }
     public static class OnClickListenerImpl5 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.SecondStepRegisterViewModel value;
-        public OnClickListenerImpl5 setValue(findandfix.viewmodel.SecondStepRegisterViewModel value) {
+        private com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel value;
+        public OnClickListenerImpl5 setValue(com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }

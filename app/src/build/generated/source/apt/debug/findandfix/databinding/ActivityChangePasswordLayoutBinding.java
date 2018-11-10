@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -46,7 +46,7 @@ public class ActivityChangePasswordLayoutBinding extends android.databinding.Vie
     public final android.widget.TextView tvWorkshopInfo;
     // variables
     @Nullable
-    private findandfix.viewmodel.ChangePasswordViewModel mChangepasswordviewmodel;
+    private com.findandfix.carowner.viewmodel.ChangePasswordViewModel mChangepasswordviewmodel;
     // values
     // listeners
     private OnClickListenerImpl mChangepasswordviewmodelChangePasswordActionAndroidViewViewOnClickListener;
@@ -63,7 +63,7 @@ public class ActivityChangePasswordLayoutBinding extends android.databinding.Vie
             // changepasswordviewmodel.currentpassword.get()
             java.lang.String changepasswordviewmodelCurrentpasswordGet = null;
             // changepasswordviewmodel
-            findandfix.viewmodel.ChangePasswordViewModel changepasswordviewmodel = mChangepasswordviewmodel;
+            com.findandfix.carowner.viewmodel.ChangePasswordViewModel changepasswordviewmodel = mChangepasswordviewmodel;
             // changepasswordviewmodel != null
             boolean changepasswordviewmodelJavaLangObjectNull = false;
             // changepasswordviewmodel.currentpassword
@@ -102,7 +102,7 @@ public class ActivityChangePasswordLayoutBinding extends android.databinding.Vie
             // changepasswordviewmodel.newPassword.get()
             java.lang.String changepasswordviewmodelNewPasswordGet = null;
             // changepasswordviewmodel
-            findandfix.viewmodel.ChangePasswordViewModel changepasswordviewmodel = mChangepasswordviewmodel;
+            com.findandfix.carowner.viewmodel.ChangePasswordViewModel changepasswordviewmodel = mChangepasswordviewmodel;
             // changepasswordviewmodel != null
             boolean changepasswordviewmodelJavaLangObjectNull = false;
 
@@ -139,7 +139,7 @@ public class ActivityChangePasswordLayoutBinding extends android.databinding.Vie
             // changepasswordviewmodel.cofirmNewPassword != null
             boolean changepasswordviewmodelCofirmNewPasswordJavaLangObjectNull = false;
             // changepasswordviewmodel
-            findandfix.viewmodel.ChangePasswordViewModel changepasswordviewmodel = mChangepasswordviewmodel;
+            com.findandfix.carowner.viewmodel.ChangePasswordViewModel changepasswordviewmodel = mChangepasswordviewmodel;
             // changepasswordviewmodel != null
             boolean changepasswordviewmodelJavaLangObjectNull = false;
 
@@ -214,7 +214,7 @@ public class ActivityChangePasswordLayoutBinding extends android.databinding.Vie
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.changepasswordviewmodel == variableId) {
-            setChangepasswordviewmodel((findandfix.viewmodel.ChangePasswordViewModel) variable);
+            setChangepasswordviewmodel((com.findandfix.carowner.viewmodel.ChangePasswordViewModel) variable);
         }
         else {
             variableSet = false;
@@ -222,7 +222,7 @@ public class ActivityChangePasswordLayoutBinding extends android.databinding.Vie
             return variableSet;
     }
 
-    public void setChangepasswordviewmodel(@Nullable findandfix.viewmodel.ChangePasswordViewModel Changepasswordviewmodel) {
+    public void setChangepasswordviewmodel(@Nullable com.findandfix.carowner.viewmodel.ChangePasswordViewModel Changepasswordviewmodel) {
         updateRegistration(3, Changepasswordviewmodel);
         this.mChangepasswordviewmodel = Changepasswordviewmodel;
         synchronized(this) {
@@ -232,7 +232,7 @@ public class ActivityChangePasswordLayoutBinding extends android.databinding.Vie
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.ChangePasswordViewModel getChangepasswordviewmodel() {
+    public com.findandfix.carowner.viewmodel.ChangePasswordViewModel getChangepasswordviewmodel() {
         return mChangepasswordviewmodel;
     }
 
@@ -246,7 +246,7 @@ public class ActivityChangePasswordLayoutBinding extends android.databinding.Vie
             case 2 :
                 return onChangeChangepasswordviewmodelProgress((android.databinding.ObservableInt) object, fieldId);
             case 3 :
-                return onChangeChangepasswordviewmodel((findandfix.viewmodel.ChangePasswordViewModel) object, fieldId);
+                return onChangeChangepasswordviewmodel((com.findandfix.carowner.viewmodel.ChangePasswordViewModel) object, fieldId);
             case 4 :
                 return onChangeChangepasswordviewmodelCurrentpassword((android.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 5 :
@@ -281,7 +281,7 @@ public class ActivityChangePasswordLayoutBinding extends android.databinding.Vie
         }
         return false;
     }
-    private boolean onChangeChangepasswordviewmodel(findandfix.viewmodel.ChangePasswordViewModel Changepasswordviewmodel, int fieldId) {
+    private boolean onChangeChangepasswordviewmodel(com.findandfix.carowner.viewmodel.ChangePasswordViewModel Changepasswordviewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x8L;
@@ -322,7 +322,7 @@ public class ActivityChangePasswordLayoutBinding extends android.databinding.Vie
         android.databinding.ObservableField<java.lang.String> changepasswordviewmodelCofirmNewPassword = null;
         android.databinding.ObservableField<java.lang.String> changepasswordviewmodelNewPassword = null;
         android.databinding.ObservableInt changepasswordviewmodelProgress = null;
-        findandfix.viewmodel.ChangePasswordViewModel changepasswordviewmodel = mChangepasswordviewmodel;
+        com.findandfix.carowner.viewmodel.ChangePasswordViewModel changepasswordviewmodel = mChangepasswordviewmodel;
         android.databinding.ObservableField<java.lang.String> changepasswordviewmodelCurrentpassword = null;
         int changepasswordviewmodelProgressGet = 0;
         android.view.View.OnClickListener changepasswordviewmodelChangePasswordActionAndroidViewViewOnClickListener = null;
@@ -431,8 +431,8 @@ public class ActivityChangePasswordLayoutBinding extends android.databinding.Vie
     }
     // Listener Stub Implementations
     public static class OnClickListenerImpl implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.ChangePasswordViewModel value;
-        public OnClickListenerImpl setValue(findandfix.viewmodel.ChangePasswordViewModel value) {
+        private com.findandfix.carowner.viewmodel.ChangePasswordViewModel value;
+        public OnClickListenerImpl setValue(com.findandfix.carowner.viewmodel.ChangePasswordViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }

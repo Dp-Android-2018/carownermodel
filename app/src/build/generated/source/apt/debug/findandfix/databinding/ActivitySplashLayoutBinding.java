@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -21,7 +21,7 @@ public class ActivitySplashLayoutBinding extends android.databinding.ViewDataBin
     public final android.widget.RelativeLayout rlLayout;
     // variables
     @Nullable
-    private findandfix.viewmodel.SplashViewModel mViewmodel;
+    private com.findandfix.carowner.viewmodel.SplashViewModel mViewmodel;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -58,7 +58,7 @@ public class ActivitySplashLayoutBinding extends android.databinding.ViewDataBin
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((findandfix.viewmodel.SplashViewModel) variable);
+            setViewmodel((com.findandfix.carowner.viewmodel.SplashViewModel) variable);
         }
         else {
             variableSet = false;
@@ -66,11 +66,11 @@ public class ActivitySplashLayoutBinding extends android.databinding.ViewDataBin
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable findandfix.viewmodel.SplashViewModel Viewmodel) {
+    public void setViewmodel(@Nullable com.findandfix.carowner.viewmodel.SplashViewModel Viewmodel) {
         this.mViewmodel = Viewmodel;
     }
     @Nullable
-    public findandfix.viewmodel.SplashViewModel getViewmodel() {
+    public com.findandfix.carowner.viewmodel.SplashViewModel getViewmodel() {
         return mViewmodel;
     }
 
@@ -78,11 +78,11 @@ public class ActivitySplashLayoutBinding extends android.databinding.ViewDataBin
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewmodel((findandfix.viewmodel.SplashViewModel) object, fieldId);
+                return onChangeViewmodel((com.findandfix.carowner.viewmodel.SplashViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(findandfix.viewmodel.SplashViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodel(com.findandfix.carowner.viewmodel.SplashViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;

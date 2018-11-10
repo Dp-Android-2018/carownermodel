@@ -6,10 +6,10 @@
 
         <variable
             name="RegisterModelView2"
-            type="findandfix.viewmodel.SecondStepRegisterViewModel" />
+            type="com.findandfix.carowner.viewmodel.SecondStepRegisterViewModel" />
         <variable
             name="validation"
-            type="findandfix.viewmodel.SecondStepRegisterValidation"/>
+            type="com.findandfix.carowner.viewmodel.SecondStepRegisterValidation"/>
     </data>
 
     <RelativeLayout

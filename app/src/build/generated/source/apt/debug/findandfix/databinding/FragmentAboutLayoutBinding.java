@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -21,7 +21,7 @@ public class FragmentAboutLayoutBinding extends android.databinding.ViewDataBind
     private final android.widget.ScrollView mboundView0;
     // variables
     @Nullable
-    private findandfix.viewmodel.AboutViewModel mViewmodel;
+    private com.findandfix.carowner.viewmodel.AboutViewModel mViewmodel;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -58,7 +58,7 @@ public class FragmentAboutLayoutBinding extends android.databinding.ViewDataBind
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((findandfix.viewmodel.AboutViewModel) variable);
+            setViewmodel((com.findandfix.carowner.viewmodel.AboutViewModel) variable);
         }
         else {
             variableSet = false;
@@ -66,11 +66,11 @@ public class FragmentAboutLayoutBinding extends android.databinding.ViewDataBind
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable findandfix.viewmodel.AboutViewModel Viewmodel) {
+    public void setViewmodel(@Nullable com.findandfix.carowner.viewmodel.AboutViewModel Viewmodel) {
         this.mViewmodel = Viewmodel;
     }
     @Nullable
-    public findandfix.viewmodel.AboutViewModel getViewmodel() {
+    public com.findandfix.carowner.viewmodel.AboutViewModel getViewmodel() {
         return mViewmodel;
     }
 

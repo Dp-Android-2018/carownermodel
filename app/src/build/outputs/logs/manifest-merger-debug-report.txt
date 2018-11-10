@@ -486,59 +486,59 @@ MERGED from [com.google.android.gms:play-services-wearable-license:11.8.0] C:\Us
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:24:9-40
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:17:9-50
-activity#findandfix.view.ui.activities.Testing
+activity#com.findandfix.carowner.ui.activities.Testing
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:25:9-63
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:25:19-61
-activity#findandfix.view.ui.activities.ActivityAddUrgentRequestLocation
+activity#com.findandfix.carowner.ui.activities.ActivityAddUrgentRequestLocation
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:27:9-28:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:28:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:27:19-86
-activity#findandfix.view.ui.activities.ActivityAddUrgentRequestType
+activity#com.findandfix.carowner.ui.activities.ActivityAddUrgentRequestType
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:30:9-31:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:31:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:30:19-82
-activity#findandfix.view.ui.activities.ActivityAddUrgentRequestWinchType
+activity#com.findandfix.carowner.ui.activities.ActivityAddUrgentRequestWinchType
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:34:9-35:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:35:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:34:19-87
-activity#findandfix.view.ui.activities.UrgentOffersActivity
+activity#com.findandfix.carowner.ui.activities.UrgentOffersActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:37:9-38:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:38:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:37:19-74
-activity#findandfix.view.ui.activities.MainActivity
+activity#com.findandfix.carowner.ui.activities.MainActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:42:9-43:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:43:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:42:19-66
-activity#findandfix.view.ui.activities.ActivityUrgentRequestNotesActivity
+activity#com.findandfix.carowner.ui.activities.ActivityUrgentRequestNotesActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:45:9-46:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:46:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:45:19-88
-activity#findandfix.view.ui.activities.WaitingOffersUrgentActivity
+activity#com.findandfix.carowner.ui.activities.WaitingOffersUrgentActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:48:9-49:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:49:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:48:19-81
-activity#findandfix.view.ui.activities.EditProfileInfoActivity
+activity#com.findandfix.carowner.ui.activities.EditProfileInfoActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:54:1-55:50
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:55:5-48
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:54:11-69
-activity#findandfix.view.ui.activities.SplashActivity
+activity#com.findandfix.carowner.ui.activities.SplashActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:56:1-63:12
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:57:5-48
@@ -554,121 +554,121 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:61:9-69
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:61:19-66
-activity#findandfix.view.ui.activities.FirstStepRegister
+activity#com.findandfix.carowner.ui.activities.FirstStepRegister
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:64:9-65:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:65:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:64:19-71
-activity#findandfix.view.ui.activities.SecondStepRegister
+activity#com.findandfix.carowner.ui.activities.SecondStepRegister
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:69:9-70:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:70:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:69:19-72
-activity#findandfix.view.ui.activities.ChatActivity
+activity#com.findandfix.carowner.ui.activities.ChatActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:72:9-73:59
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:73:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:72:19-66
-activity#findandfix.view.ui.activities.MyConversationsActivity
+activity#com.findandfix.carowner.ui.activities.MyConversationsActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:74:9-75:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:75:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:74:19-77
-activity#findandfix.view.ui.activities.UploadImageActivity
+activity#com.findandfix.carowner.ui.activities.UploadImageActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:77:9-78:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:78:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:77:19-73
-activity#findandfix.view.ui.activities.LoginActivity
+activity#com.findandfix.carowner.ui.activities.LoginActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:79:9-80:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:80:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:79:19-67
-activity#findandfix.view.ui.activities.ChangePasswordActivity
+activity#com.findandfix.carowner.ui.activities.ChangePasswordActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:82:9-83:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:83:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:82:19-76
-activity#findandfix.view.ui.activities.OffersActivity
+activity#com.findandfix.carowner.ui.activities.OffersActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:84:9-85:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:85:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:84:19-68
-activity#findandfix.view.ui.activities.UrgentRequestDetailActivity
+activity#com.findandfix.carowner.ui.activities.UrgentRequestDetailActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:87:9-88:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:88:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:87:19-81
-activity#findandfix.view.ui.activities.OffersDetailActivity
+activity#com.findandfix.carowner.ui.activities.OffersDetailActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:90:9-91:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:91:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:90:19-74
-activity#findandfix.view.ui.activities.AddRequestCarInfoActivity
+activity#com.findandfix.carowner.ui.activities.AddRequestCarInfoActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:93:9-94:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:94:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:93:19-79
-activity#findandfix.view.ui.activities.AddRequestProblemActivity
+activity#com.findandfix.carowner.ui.activities.AddRequestProblemActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:95:9-96:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:96:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:95:19-79
-activity#findandfix.view.ui.activities.AddGarageActivity
+activity#com.findandfix.carowner.ui.activities.AddGarageActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:97:9-98:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:98:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:97:19-71
-activity#findandfix.view.ui.activities.AddRequestLocationActivity
+activity#com.findandfix.carowner.ui.activities.AddRequestLocationActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:99:9-100:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:100:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:99:19-80
-activity#findandfix.view.ui.activities.AddRequestNotesActivity
+activity#com.findandfix.carowner.ui.activities.AddRequestNotesActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:102:9-103:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:103:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:102:19-77
-activity#findandfix.view.ui.activities.AddRequestMediaActivity
+activity#com.findandfix.carowner.ui.activities.AddRequestMediaActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:105:9-106:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:106:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:105:19-77
-activity#findandfix.view.ui.activities.RequestDetailActivity
+activity#com.findandfix.carowner.ui.activities.RequestDetailActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:108:8-109:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:109:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:108:18-74
-activity#findandfix.view.ui.activities.WorkShopOffersActivity
+activity#com.findandfix.carowner.ui.activities.WorkShopOffersActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:111:1-112:50
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:112:5-48
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:111:11-68
-activity#findandfix.view.ui.activities.WorkShopAchievmentActivity
+activity#com.findandfix.carowner.ui.activities.WorkShopAchievmentActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:114:9-115:58
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:115:13-56
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:114:19-80
-activity#findandfix.view.ui.activities.FindRequestsActivity
+activity#com.findandfix.carowner.ui.activities.FindRequestsActivity
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:117:1-118:50
 	android:theme
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:118:5-48
@@ -688,7 +688,7 @@ MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Moha
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:124:13-66
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:123:13-58
-service#findandfix.notification.FirebaseMessageService
+service#com.findandfix.carowner.notification.FirebaseMessageService
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:126:9-130:19
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:126:18-69
@@ -698,7 +698,7 @@ action#com.google.firebase.MESSAGING_EVENT
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:128:17-77
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:128:25-75
-service#findandfix.notification.MyFirebaseInstanceIdService
+service#com.findandfix.carowner.notification.MyFirebaseInstanceIdService
 ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:132:9-136:19
 	android:name
 		ADDED from C:\Users\Mohamed Atef\Desktop\projects\carownermodel\app\src\main\AndroidManifest.xml:132:18-74

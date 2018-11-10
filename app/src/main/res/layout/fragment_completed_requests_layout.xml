@@ -4,7 +4,7 @@
     <data>
         <variable
             name="completedViewModel"
-            type="findandfix.viewmodel.CompletedRequestsViewModel"/>
+            type="com.findandfix.carowner.viewmodel.CompletedRequestsViewModel"/>
     </data>
 
 <RelativeLayout

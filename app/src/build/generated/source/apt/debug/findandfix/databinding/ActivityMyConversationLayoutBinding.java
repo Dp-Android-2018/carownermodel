@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -34,7 +34,7 @@ public class ActivityMyConversationLayoutBinding extends android.databinding.Vie
     public final android.widget.TextView tv1;
     // variables
     @Nullable
-    private findandfix.viewmodel.ConversationViewModel mConversationviewmodel;
+    private com.findandfix.carowner.viewmodel.ConversationViewModel mConversationviewmodel;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -82,7 +82,7 @@ public class ActivityMyConversationLayoutBinding extends android.databinding.Vie
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.conversationviewmodel == variableId) {
-            setConversationviewmodel((findandfix.viewmodel.ConversationViewModel) variable);
+            setConversationviewmodel((com.findandfix.carowner.viewmodel.ConversationViewModel) variable);
         }
         else {
             variableSet = false;
@@ -90,7 +90,7 @@ public class ActivityMyConversationLayoutBinding extends android.databinding.Vie
             return variableSet;
     }
 
-    public void setConversationviewmodel(@Nullable findandfix.viewmodel.ConversationViewModel Conversationviewmodel) {
+    public void setConversationviewmodel(@Nullable com.findandfix.carowner.viewmodel.ConversationViewModel Conversationviewmodel) {
         updateRegistration(4, Conversationviewmodel);
         this.mConversationviewmodel = Conversationviewmodel;
         synchronized(this) {
@@ -100,7 +100,7 @@ public class ActivityMyConversationLayoutBinding extends android.databinding.Vie
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.ConversationViewModel getConversationviewmodel() {
+    public com.findandfix.carowner.viewmodel.ConversationViewModel getConversationviewmodel() {
         return mConversationviewmodel;
     }
 
@@ -108,7 +108,7 @@ public class ActivityMyConversationLayoutBinding extends android.databinding.Vie
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeConversationviewmodelHistories((android.databinding.ObservableList<findandfix.model.global.Conv.ConversationHistory>) object, fieldId);
+                return onChangeConversationviewmodelHistories((android.databinding.ObservableList<com.findandfix.carowner.model.global.Conv.ConversationHistory>) object, fieldId);
             case 1 :
                 return onChangeConversationviewmodelNoData((android.databinding.ObservableField<java.lang.Integer>) object, fieldId);
             case 2 :
@@ -116,11 +116,11 @@ public class ActivityMyConversationLayoutBinding extends android.databinding.Vie
             case 3 :
                 return onChangeConversationviewmodelHasData((android.databinding.ObservableField<java.lang.Integer>) object, fieldId);
             case 4 :
-                return onChangeConversationviewmodel((findandfix.viewmodel.ConversationViewModel) object, fieldId);
+                return onChangeConversationviewmodel((com.findandfix.carowner.viewmodel.ConversationViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeConversationviewmodelHistories(android.databinding.ObservableList<findandfix.model.global.Conv.ConversationHistory> ConversationviewmodelHistories, int fieldId) {
+    private boolean onChangeConversationviewmodelHistories(android.databinding.ObservableList<com.findandfix.carowner.model.global.Conv.ConversationHistory> ConversationviewmodelHistories, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -156,7 +156,7 @@ public class ActivityMyConversationLayoutBinding extends android.databinding.Vie
         }
         return false;
     }
-    private boolean onChangeConversationviewmodel(findandfix.viewmodel.ConversationViewModel Conversationviewmodel, int fieldId) {
+    private boolean onChangeConversationviewmodel(com.findandfix.carowner.viewmodel.ConversationViewModel Conversationviewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x10L;
@@ -174,13 +174,13 @@ public class ActivityMyConversationLayoutBinding extends android.databinding.Vie
             mDirtyFlags = 0;
         }
         java.lang.Integer conversationviewmodelNoDataGet = null;
-        android.databinding.ObservableList<findandfix.model.global.Conv.ConversationHistory> conversationviewmodelHistories = null;
+        android.databinding.ObservableList<com.findandfix.carowner.model.global.Conv.ConversationHistory> conversationviewmodelHistories = null;
         android.databinding.ObservableField<java.lang.Integer> conversationviewmodelNoData = null;
         int androidDatabindingDynamicUtilSafeUnboxConversationviewmodelHasDataGet = 0;
         java.lang.Integer conversationviewmodelHasDataGet = null;
         android.databinding.ObservableField<java.lang.Integer> conversationviewmodelHasData = null;
         int androidDatabindingDynamicUtilSafeUnboxConversationviewmodelNoDataGet = 0;
-        findandfix.viewmodel.ConversationViewModel conversationviewmodel = mConversationviewmodel;
+        com.findandfix.carowner.viewmodel.ConversationViewModel conversationviewmodel = mConversationviewmodel;
 
         if ((dirtyFlags & 0x3bL) != 0) {
 
@@ -244,7 +244,7 @@ public class ActivityMyConversationLayoutBinding extends android.databinding.Vie
         if ((dirtyFlags & 0x31L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setRecyclerConversation(this.rvMyConversation, conversationviewmodelHistories);
+            com.findandfix.carowner.utils.CustomBinder.setRecyclerConversation(this.rvMyConversation, conversationviewmodelHistories);
         }
         executeBindingsOn(toolbar);
     }

@@ -1,5 +1,5 @@
 package findandfix.databinding;
-import findandfix.R;
+import com.findandfix.carowner.R;
 import findandfix.BR;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -40,7 +40,7 @@ public class ActivityChatLayoutBinding extends android.databinding.ViewDataBindi
     public final findandfix.databinding.ToolbarLayoutBinding toolbar;
     // variables
     @Nullable
-    private findandfix.viewmodel.ChatViewModel mViewmodel;
+    private com.findandfix.carowner.viewmodel.ChatViewModel mViewmodel;
     // values
     // listeners
     private OnClickListenerImpl mViewmodelAddMessageActionAndroidViewViewOnClickListener;
@@ -63,7 +63,7 @@ public class ActivityChatLayoutBinding extends android.databinding.ViewDataBindi
             // viewmodel.message.get()
             java.lang.String viewmodelMessageGet = null;
             // viewmodel
-            findandfix.viewmodel.ChatViewModel viewmodel = mViewmodel;
+            com.findandfix.carowner.viewmodel.ChatViewModel viewmodel = mViewmodel;
 
 
 
@@ -134,7 +134,7 @@ public class ActivityChatLayoutBinding extends android.databinding.ViewDataBindi
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewmodel == variableId) {
-            setViewmodel((findandfix.viewmodel.ChatViewModel) variable);
+            setViewmodel((com.findandfix.carowner.viewmodel.ChatViewModel) variable);
         }
         else {
             variableSet = false;
@@ -142,7 +142,7 @@ public class ActivityChatLayoutBinding extends android.databinding.ViewDataBindi
             return variableSet;
     }
 
-    public void setViewmodel(@Nullable findandfix.viewmodel.ChatViewModel Viewmodel) {
+    public void setViewmodel(@Nullable com.findandfix.carowner.viewmodel.ChatViewModel Viewmodel) {
         updateRegistration(1, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
@@ -152,7 +152,7 @@ public class ActivityChatLayoutBinding extends android.databinding.ViewDataBindi
         super.requestRebind();
     }
     @Nullable
-    public findandfix.viewmodel.ChatViewModel getViewmodel() {
+    public com.findandfix.carowner.viewmodel.ChatViewModel getViewmodel() {
         return mViewmodel;
     }
 
@@ -162,9 +162,9 @@ public class ActivityChatLayoutBinding extends android.databinding.ViewDataBindi
             case 0 :
                 return onChangeViewmodelMessage((android.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 1 :
-                return onChangeViewmodel((findandfix.viewmodel.ChatViewModel) object, fieldId);
+                return onChangeViewmodel((com.findandfix.carowner.viewmodel.ChatViewModel) object, fieldId);
             case 2 :
-                return onChangeViewmodelMessages((android.databinding.ObservableList<findandfix.model.global.Conv.Message>) object, fieldId);
+                return onChangeViewmodelMessages((android.databinding.ObservableList<com.findandfix.carowner.model.global.Conv.Message>) object, fieldId);
             case 3 :
                 return onChangeToolbar((findandfix.databinding.ToolbarLayoutBinding) object, fieldId);
         }
@@ -179,7 +179,7 @@ public class ActivityChatLayoutBinding extends android.databinding.ViewDataBindi
         }
         return false;
     }
-    private boolean onChangeViewmodel(findandfix.viewmodel.ChatViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodel(com.findandfix.carowner.viewmodel.ChatViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
@@ -188,7 +188,7 @@ public class ActivityChatLayoutBinding extends android.databinding.ViewDataBindi
         }
         return false;
     }
-    private boolean onChangeViewmodelMessages(android.databinding.ObservableList<findandfix.model.global.Conv.Message> ViewmodelMessages, int fieldId) {
+    private boolean onChangeViewmodelMessages(android.databinding.ObservableList<com.findandfix.carowner.model.global.Conv.Message> ViewmodelMessages, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x4L;
@@ -218,8 +218,8 @@ public class ActivityChatLayoutBinding extends android.databinding.ViewDataBindi
         android.databinding.ObservableField<java.lang.String> viewmodelMessage = null;
         android.view.View.OnClickListener viewmodelDisplayDialogAndroidViewViewOnClickListener = null;
         java.lang.String viewmodelMessageGet = null;
-        findandfix.viewmodel.ChatViewModel viewmodel = mViewmodel;
-        android.databinding.ObservableList<findandfix.model.global.Conv.Message> viewmodelMessages = null;
+        com.findandfix.carowner.viewmodel.ChatViewModel viewmodel = mViewmodel;
+        android.databinding.ObservableList<com.findandfix.carowner.model.global.Conv.Message> viewmodelMessages = null;
         android.view.View.OnClickListener viewmodelShareLocationAndroidViewViewOnClickListener = null;
 
         if ((dirtyFlags & 0x17L) != 0) {
@@ -280,14 +280,14 @@ public class ActivityChatLayoutBinding extends android.databinding.ViewDataBindi
         if ((dirtyFlags & 0x16L) != 0) {
             // api target 1
 
-            findandfix.utils.CustomBinder.setRecyclerConversationDetails(this.rvChat, viewmodelMessages);
+            com.findandfix.carowner.utils.CustomBinder.setRecyclerConversationDetails(this.rvChat, viewmodelMessages);
         }
         executeBindingsOn(toolbar);
     }
     // Listener Stub Implementations
     public static class OnClickListenerImpl implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.ChatViewModel value;
-        public OnClickListenerImpl setValue(findandfix.viewmodel.ChatViewModel value) {
+        private com.findandfix.carowner.viewmodel.ChatViewModel value;
+        public OnClickListenerImpl setValue(com.findandfix.carowner.viewmodel.ChatViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -297,8 +297,8 @@ public class ActivityChatLayoutBinding extends android.databinding.ViewDataBindi
         }
     }
     public static class OnClickListenerImpl1 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.ChatViewModel value;
-        public OnClickListenerImpl1 setValue(findandfix.viewmodel.ChatViewModel value) {
+        private com.findandfix.carowner.viewmodel.ChatViewModel value;
+        public OnClickListenerImpl1 setValue(com.findandfix.carowner.viewmodel.ChatViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }
@@ -308,8 +308,8 @@ public class ActivityChatLayoutBinding extends android.databinding.ViewDataBindi
         }
     }
     public static class OnClickListenerImpl2 implements android.view.View.OnClickListener{
-        private findandfix.viewmodel.ChatViewModel value;
-        public OnClickListenerImpl2 setValue(findandfix.viewmodel.ChatViewModel value) {
+        private com.findandfix.carowner.viewmodel.ChatViewModel value;
+        public OnClickListenerImpl2 setValue(com.findandfix.carowner.viewmodel.ChatViewModel value) {
             this.value = value;
             return value == null ? null : this;
         }

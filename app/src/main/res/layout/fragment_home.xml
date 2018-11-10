@@ -4,7 +4,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewmodel"
-            type="findandfix.viewmodel.HomeFragViewModel"/>
+            type="com.findandfix.carowner.viewmodel.HomeFragViewModel"/>
     </data>
 
 
@@ -156,7 +156,7 @@ android:orientation="vertical">
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="findandfix.viewmodel.HomeFragViewModel"/>
+            type="com.findandfix.carowner.viewmodel.HomeFragViewModel"/>
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
